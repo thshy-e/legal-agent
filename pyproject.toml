@@ -1,0 +1,26 @@
+[project]
+name = "legal-ai-agent"
+version = "2.0.0"
+description = "Multi-agent Chinese labor law assistant with RAG, compensation calculation, session memory, and document generation."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain>=0.3",
+    "langchain-openai",
+    "langchain-community",
+    "langchain-chroma",
+    "langchain-text-splitters",
+    "langgraph",
+    "fastapi",
+    "uvicorn[standard]",
+    "httpx",
+    "pydantic",
+    "python-docx",
+]
+
+[tool.setuptools.packages.find]
+include = ["legal_ai_agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

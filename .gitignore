@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 环境变量（含 API 密钥）
+.env
+
+# 向量数据库
+chroma_db/
+
+# 本地会话状态（包含用户案件上下文）
+db/conversation_state.json
+db/conversation_state.json.tmp
+db/*.bak
+
+# IDE
+.idea/
+.vscode/
+
+# 临时调试日志
+*.log
+debug_report.txt
+init_test.txt
+init_test_err.txt
+server_log.txt
+server_debug_log.txt
+build_err.txt
+build_log.txt
+build_step.txt
+rebuild_err.txt
+rebuild_out.txt
+rebuild_stderr.txt
+rebuild_stdout.txt
+llm_test.txt
+api_test_result.txt
+uvicer_err.txt
+uvicorn_err.txt
+uvicorn_out.txt
+
+# Local-only legacy diagnostics
+scripts/legacy/
+
+# Evaluation intermediate outputs; keep final_* summaries for portfolio evidence.
+docs/evaluation/current_results/docx_evaluation_results_*

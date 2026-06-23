@@ -1,0 +1,12 @@
+# 劳法智枢 - 依赖清单
+langchain>=0.3
+langchain-openai
+langchain-community
+langchain-chroma
+langchain-text-splitters
+langgraph
+fastapi
+uvicorn[standard]
+httpx
+pydantic
+python-docx
