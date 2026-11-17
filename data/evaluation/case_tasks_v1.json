@@ -1,0 +1,1277 @@
+{
+  "created_on": "2026-10-25",
+  "dataset_type": "public_engineering_not_blind",
+  "expert_reviewed": false,
+  "tasks": [
+    {
+      "expected": {
+        "missing_contains": [
+          "termination_basis"
+        ]
+      },
+      "group": "termination",
+      "id": "T01",
+      "kind": "workflow",
+      "name": "突然辞退",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "unknown",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "severance_cap"
+        ]
+      },
+      "group": "termination",
+      "id": "T02",
+      "kind": "workflow",
+      "name": "称违法解除",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "illegal_claim",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "severance_cap"
+        ]
+      },
+      "group": "termination",
+      "id": "T03",
+      "kind": "workflow",
+      "name": "单位协商",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "employer_agreement",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "severance_cap"
+        ]
+      },
+      "group": "termination",
+      "id": "T04",
+      "kind": "workflow",
+      "name": "第40条无通知",
+      "request": {
+        "facts": {
+          "article40_conditions": true,
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "protected_status": false,
+          "start_date": "2023-01-01",
+          "termination_basis": "article_40",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州",
+          "written_notice_30": false
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "severance_cap"
+        ]
+      },
+      "group": "termination",
+      "id": "T05",
+      "kind": "workflow",
+      "name": "第40条已通知",
+      "request": {
+        "facts": {
+          "article40_conditions": true,
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "protected_status": false,
+          "start_date": "2023-01-01",
+          "termination_basis": "article_40",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州",
+          "written_notice_30": true
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "article40_conditions"
+        ]
+      },
+      "group": "termination",
+      "id": "T06",
+      "kind": "workflow",
+      "name": "第40条条件缺失",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "article_40",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "severance_cap"
+        ],
+        "no_claims": [
+          "notice"
+        ]
+      },
+      "group": "termination",
+      "id": "T07",
+      "kind": "workflow",
+      "name": "第41条裁员",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "article_41",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州",
+          "written_notice_30": false
+        }
+      }
+    },
+    {
+      "expected": {
+        "no_conditional_claims": true
+      },
+      "group": "termination",
+      "id": "T08",
+      "kind": "workflow",
+      "name": "第39条",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "article_39",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "no_conditional_claims": true
+      },
+      "group": "termination",
+      "id": "T09",
+      "kind": "workflow",
+      "name": "个人辞职",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "worker",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "voluntary",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "severance_cap"
+        ]
+      },
+      "group": "termination",
+      "id": "T10",
+      "kind": "workflow",
+      "name": "第38条欠薪解除",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "worker",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "worker_38",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "termination_basis"
+        ]
+      },
+      "group": "termination",
+      "id": "T11",
+      "kind": "workflow",
+      "name": "未满半年",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2025-09-01",
+          "termination_basis": "unknown",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "termination_basis"
+        ]
+      },
+      "group": "termination",
+      "id": "T12",
+      "kind": "workflow",
+      "name": "恰好半年",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2025-07-01",
+          "termination_basis": "unknown",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "severance_cap"
+        ],
+        "review_codes": [
+          "pre2008"
+        ]
+      },
+      "group": "termination",
+      "id": "T13",
+      "kind": "workflow",
+      "name": "跨2008年",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2007-01-01",
+          "termination_basis": "unknown",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "termination_basis"
+        ],
+        "review_codes": [
+          "special_employment"
+        ]
+      },
+      "group": "termination",
+      "id": "T14",
+      "kind": "workflow",
+      "name": "派遣",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "employment_type": "dispatch",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "unknown",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "severance_cap"
+        ]
+      },
+      "group": "termination",
+      "id": "T15",
+      "kind": "workflow",
+      "name": "高工资",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "80000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "unknown",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "severance_cap"
+        ]
+      },
+      "group": "termination",
+      "id": "T16",
+      "kind": "workflow",
+      "name": "补偿与通知工资不同",
+      "request": {
+        "facts": {
+          "article40_conditions": true,
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "12345.67",
+          "protected_status": false,
+          "start_date": "2023-01-01",
+          "termination_basis": "article_40",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州",
+          "written_notice_30": false
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "protected_status"
+        ]
+      },
+      "group": "termination",
+      "id": "T17",
+      "kind": "workflow",
+      "name": "保护期",
+      "request": {
+        "facts": {
+          "article40_conditions": true,
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "protected_status": true,
+          "start_date": "2023-01-01",
+          "termination_basis": "article_40",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "initiator"
+        ]
+      },
+      "group": "termination",
+      "id": "T18",
+      "kind": "workflow",
+      "name": "无提出方",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "unknown",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "unknown",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "termination_reason"
+        ]
+      },
+      "group": "termination",
+      "id": "T19",
+      "kind": "workflow",
+      "name": "无理由",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "unknown",
+          "termination_reason": null,
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "missing_contains": [
+          "monthly_average"
+        ]
+      },
+      "group": "termination",
+      "id": "T20",
+      "kind": "workflow",
+      "name": "无平均工资",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "end_date": "2025-12-31",
+          "initiator": "employer",
+          "monthly_average": null,
+          "previous_month_wage": "9500",
+          "start_date": "2023-01-01",
+          "termination_basis": "unknown",
+          "termination_reason": "用人单位提出解除，理由须核验",
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "amounts": {
+          "arrears": "8000.00"
+        },
+        "status": "awaiting_confirmation"
+      },
+      "group": "arrears",
+      "id": "W01",
+      "kind": "workflow",
+      "name": "全欠",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "wages": [
+            {
+              "due": "8000",
+              "end": "2026-06-28",
+              "paid": "0",
+              "start": "2026-06-01"
+            }
+          ],
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "amounts": {
+          "arrears": "5000.00"
+        },
+        "status": "awaiting_confirmation"
+      },
+      "group": "arrears",
+      "id": "W02",
+      "kind": "workflow",
+      "name": "部分支付",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "wages": [
+            {
+              "due": "8000",
+              "end": "2026-06-28",
+              "paid": "3000",
+              "start": "2026-06-01"
+            }
+          ],
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "amounts": {
+          "arrears": "8000.07"
+        },
+        "status": "awaiting_confirmation"
+      },
+      "group": "arrears",
+      "id": "W03",
+      "kind": "workflow",
+      "name": "小数",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "wages": [
+            {
+              "due": "8000.10",
+              "end": "2026-06-28",
+              "paid": "0.03",
+              "start": "2026-06-01"
+            }
+          ],
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "amounts": {
+          "arrears": "15500.00"
+        },
+        "status": "awaiting_confirmation"
+      },
+      "group": "arrears",
+      "id": "W04",
+      "kind": "workflow",
+      "name": "分期",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "wages": [
+            {
+              "due": "8000",
+              "end": "2026-06-28",
+              "paid": "500",
+              "start": "2026-06-01"
+            },
+            {
+              "due": "9000",
+              "end": "2026-07-28",
+              "paid": "1000",
+              "start": "2026-07-01"
+            }
+          ],
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "amounts": {
+          "arrears": "0.00"
+        },
+        "status": "awaiting_confirmation"
+      },
+      "group": "arrears",
+      "id": "W05",
+      "kind": "workflow",
+      "name": "足额支付",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "wages": [
+            {
+              "due": "8000",
+              "end": "2026-06-28",
+              "paid": "8000",
+              "start": "2026-06-01"
+            }
+          ],
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "amounts": {
+          "arrears": "0.00"
+        },
+        "status": "awaiting_confirmation"
+      },
+      "group": "arrears",
+      "id": "W06",
+      "kind": "workflow",
+      "name": "超付不负数",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "wages": [
+            {
+              "due": "100",
+              "end": "2026-06-28",
+              "paid": "150",
+              "start": "2026-06-01"
+            }
+          ],
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "amounts": {
+          "arrears": "0.00"
+        },
+        "status": "awaiting_confirmation"
+      },
+      "group": "arrears",
+      "id": "W07",
+      "kind": "workflow",
+      "name": "零应付",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "wages": [
+            {
+              "due": "0",
+              "end": "2026-06-28",
+              "paid": "0",
+              "start": "2026-06-01"
+            }
+          ],
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "amounts": {
+          "arrears": "5.06"
+        },
+        "status": "awaiting_confirmation"
+      },
+      "group": "arrears",
+      "id": "W08",
+      "kind": "workflow",
+      "name": "三期",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "wages": [
+            {
+              "due": "1.01",
+              "end": "2026-06-28",
+              "paid": "0",
+              "start": "2026-06-01"
+            },
+            {
+              "due": "2.02",
+              "end": "2026-07-28",
+              "paid": "1",
+              "start": "2026-07-01"
+            },
+            {
+              "due": "3.03",
+              "end": "2026-08-28",
+              "paid": "0",
+              "start": "2026-08-01"
+            }
+          ],
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "amounts": {
+          "arrears": "122999.99"
+        },
+        "status": "awaiting_confirmation"
+      },
+      "group": "arrears",
+      "id": "W09",
+      "kind": "workflow",
+      "name": "百万元内精度",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "wages": [
+            {
+              "due": "123456.78",
+              "end": "2026-06-28",
+              "paid": "456.79",
+              "start": "2026-06-01"
+            }
+          ],
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "expected": {
+        "amounts": {
+          "arrears": "7000.00"
+        },
+        "status": "awaiting_confirmation"
+      },
+      "group": "arrears",
+      "id": "W10",
+      "kind": "workflow",
+      "name": "跨期欠薪",
+      "request": {
+        "facts": {
+          "dispute_date": "2026-10-01",
+          "employer_city": "广州",
+          "wages": [
+            {
+              "due": "7000",
+              "end": "2026-06-28",
+              "paid": "0",
+              "start": "2026-06-01"
+            },
+            {
+              "due": "7000",
+              "end": "2026-07-28",
+              "paid": "7000",
+              "start": "2026-07-01"
+            }
+          ],
+          "workplace": "广州"
+        }
+      }
+    },
+    {
+      "city": "深圳",
+      "date": "2025-12-04",
+      "expected_source": "sz-wage-2022",
+      "group": "region_version",
+      "id": "G01",
+      "kind": "retrieval",
+      "name": "深圳旧版",
+      "query": "深圳市员工工资支付条例第22条"
+    },
+    {
+      "city": "深圳",
+      "date": "2025-12-05",
+      "expected_source": "sz-wage-2025",
+      "group": "region_version",
+      "id": "G02",
+      "kind": "retrieval",
+      "name": "深圳新版",
+      "query": "深圳市员工工资支付条例第22条"
+    },
+    {
+      "city": "广州",
+      "date": "2026-10-01",
+      "expected_source": null,
+      "group": "region_version",
+      "id": "G03",
+      "kind": "retrieval",
+      "name": "广州不混深圳",
+      "query": "深圳市员工工资支付条例第22条"
+    },
+    {
+      "city": "广州",
+      "date": "2026-10-01",
+      "expected_source": "labor-law-2018",
+      "group": "region_version",
+      "id": "G04",
+      "kind": "retrieval",
+      "name": "劳动法47",
+      "query": "劳动法第47条"
+    },
+    {
+      "city": "深圳",
+      "date": "2026-10-01",
+      "expected_source": "contract-law-2012",
+      "group": "region_version",
+      "id": "G05",
+      "kind": "retrieval",
+      "name": "合同法47",
+      "query": "劳动合同法第47条"
+    },
+    {
+      "city": "东莞",
+      "date": "2025-01-08",
+      "expected_source": "gd-disputes-2017",
+      "group": "region_version",
+      "id": "G06",
+      "kind": "retrieval",
+      "name": "广东旧版",
+      "query": "广东省劳动人事争议处理办法第74条"
+    },
+    {
+      "city": "东莞",
+      "date": "2025-01-09",
+      "expected_source": "gd-disputes-2025",
+      "group": "region_version",
+      "id": "G07",
+      "kind": "retrieval",
+      "name": "广东新版",
+      "query": "广东省劳动人事争议处理办法第74条"
+    },
+    {
+      "city": "香港",
+      "date": "2026-10-01",
+      "expected_source": null,
+      "group": "region_version",
+      "id": "G08",
+      "kind": "retrieval",
+      "name": "港澳隔离广东",
+      "query": "广东省工资支付条例第13条"
+    },
+    {
+      "city": null,
+      "date": "2026-10-01",
+      "expected_source": null,
+      "group": "region_version",
+      "id": "G09",
+      "kind": "retrieval",
+      "name": "未知城市不定深圳",
+      "query": "深圳市员工工资支付条例第13条"
+    },
+    {
+      "city": "广州",
+      "date": "2025-08-31",
+      "expected_source": null,
+      "group": "region_version",
+      "id": "G10",
+      "kind": "retrieval",
+      "name": "解释二生效前",
+      "query": "最高人民法院关于审理劳动争议案件适用法律问题的解释（二）第6条"
+    },
+    {
+      "changes": {
+        "wages": [
+          {
+            "due": "8100",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ]
+      },
+      "expected_version": 2,
+      "group": "multiturn",
+      "id": "M01",
+      "initial": {
+        "dispute_date": "2026-10-01",
+        "employer_city": "广州",
+        "wages": [
+          {
+            "due": "8000",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ],
+        "workplace": "广州"
+      },
+      "kind": "multiturn",
+      "name": "确认后修订1"
+    },
+    {
+      "changes": {
+        "wages": [
+          {
+            "due": "8200",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ]
+      },
+      "expected_version": 2,
+      "group": "multiturn",
+      "id": "M02",
+      "initial": {
+        "dispute_date": "2026-10-01",
+        "employer_city": "广州",
+        "wages": [
+          {
+            "due": "8000",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ],
+        "workplace": "广州"
+      },
+      "kind": "multiturn",
+      "name": "确认后修订2"
+    },
+    {
+      "changes": {
+        "wages": [
+          {
+            "due": "8300",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ]
+      },
+      "expected_version": 2,
+      "group": "multiturn",
+      "id": "M03",
+      "initial": {
+        "dispute_date": "2026-10-01",
+        "employer_city": "广州",
+        "wages": [
+          {
+            "due": "8000",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ],
+        "workplace": "广州"
+      },
+      "kind": "multiturn",
+      "name": "确认后修订3"
+    },
+    {
+      "changes": {
+        "wages": [
+          {
+            "due": "8400",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ]
+      },
+      "expected_version": 2,
+      "group": "multiturn",
+      "id": "M04",
+      "initial": {
+        "dispute_date": "2026-10-01",
+        "employer_city": "广州",
+        "wages": [
+          {
+            "due": "8000",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ],
+        "workplace": "广州"
+      },
+      "kind": "multiturn",
+      "name": "确认后修订4"
+    },
+    {
+      "changes": {
+        "wages": [
+          {
+            "due": "8500",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ]
+      },
+      "expected_version": 2,
+      "group": "multiturn",
+      "id": "M05",
+      "initial": {
+        "dispute_date": "2026-10-01",
+        "employer_city": "广州",
+        "wages": [
+          {
+            "due": "8000",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ],
+        "workplace": "广州"
+      },
+      "kind": "multiturn",
+      "name": "确认后修订5"
+    },
+    {
+      "changes": {
+        "dispute_date": "2026-10-07"
+      },
+      "expected_version": 2,
+      "group": "multiturn",
+      "id": "M06",
+      "initial": {
+        "dispute_date": "2026-10-01",
+        "employer_city": "广州",
+        "wages": [
+          {
+            "due": "8000",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ],
+        "workplace": "广州"
+      },
+      "kind": "multiturn",
+      "name": "确认后修订6"
+    },
+    {
+      "changes": {
+        "dispute_date": "2026-10-08"
+      },
+      "expected_version": 2,
+      "group": "multiturn",
+      "id": "M07",
+      "initial": {
+        "dispute_date": "2026-10-01",
+        "employer_city": "广州",
+        "wages": [
+          {
+            "due": "8000",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ],
+        "workplace": "广州"
+      },
+      "kind": "multiturn",
+      "name": "确认后修订7"
+    },
+    {
+      "changes": {
+        "dispute_date": "2026-10-09"
+      },
+      "expected_version": 2,
+      "group": "multiturn",
+      "id": "M08",
+      "initial": {
+        "dispute_date": "2026-10-01",
+        "employer_city": "广州",
+        "wages": [
+          {
+            "due": "8000",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ],
+        "workplace": "广州"
+      },
+      "kind": "multiturn",
+      "name": "确认后修订8"
+    },
+    {
+      "changes": {
+        "employer_city": "深圳",
+        "workplace": "深圳"
+      },
+      "expected_version": 2,
+      "group": "multiturn",
+      "id": "M09",
+      "initial": {
+        "dispute_date": "2026-10-01",
+        "employer_city": "广州",
+        "wages": [
+          {
+            "due": "8000",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ],
+        "workplace": "广州"
+      },
+      "kind": "multiturn",
+      "name": "确认后修订9"
+    },
+    {
+      "changes": {
+        "employer_city": "深圳",
+        "workplace": "深圳"
+      },
+      "expected_version": 2,
+      "group": "multiturn",
+      "id": "M10",
+      "initial": {
+        "dispute_date": "2026-10-01",
+        "employer_city": "广州",
+        "wages": [
+          {
+            "due": "8000",
+            "end": "2026-09-30",
+            "paid": "0",
+            "start": "2026-09-01"
+          }
+        ],
+        "workplace": "广州"
+      },
+      "kind": "multiturn",
+      "name": "确认后修订10"
+    },
+    {
+      "expected_field": "termination_basis",
+      "expected_value": "unknown",
+      "group": "negation_missing",
+      "id": "N01",
+      "kind": "extraction",
+      "name": "没有补偿",
+      "query": "没有补偿"
+    },
+    {
+      "expected_field": "termination_basis",
+      "expected_value": "unknown",
+      "group": "negation_missing",
+      "id": "N02",
+      "kind": "extraction",
+      "name": "突然辞退",
+      "query": "突然辞退"
+    },
+    {
+      "expected_field": "termination_basis",
+      "expected_value": "unknown",
+      "group": "negation_missing",
+      "id": "N03",
+      "kind": "extraction",
+      "name": "不是违法辞退",
+      "query": "不是违法辞退"
+    },
+    {
+      "expected_field": "evidence.考勤",
+      "expected_value": "missing",
+      "group": "negation_missing",
+      "id": "N04",
+      "kind": "extraction",
+      "name": "没有考勤",
+      "query": "没有考勤"
+    },
+    {
+      "expected_field": "evidence.考勤",
+      "expected_value": "claimed_present",
+      "group": "negation_missing",
+      "id": "N05",
+      "kind": "extraction",
+      "name": "有考勤",
+      "query": "有考勤"
+    },
+    {
+      "expected_field": "evidence.劳动合同",
+      "expected_value": "missing",
+      "group": "negation_missing",
+      "id": "N06",
+      "kind": "extraction",
+      "name": "没有劳动合同",
+      "query": "没有劳动合同"
+    },
+    {
+      "expected_field": "evidence.工资流水",
+      "expected_value": "missing",
+      "group": "negation_missing",
+      "id": "N07",
+      "kind": "extraction",
+      "name": "没有工资流水",
+      "query": "没有工资流水"
+    },
+    {
+      "expected_field": "evidence.工资流水",
+      "expected_value": "claimed_present",
+      "group": "negation_missing",
+      "id": "N08",
+      "kind": "extraction",
+      "name": "有工资流水",
+      "query": "有工资流水"
+    },
+    {
+      "expected_field": "actual_cross_border_work",
+      "expected_value": null,
+      "group": "negation_missing",
+      "id": "N09",
+      "kind": "extraction",
+      "name": "我是香港人，在广州工作，港资企业",
+      "query": "我是香港人，在广州工作，港资企业"
+    },
+    {
+      "expected_field": "actual_cross_border_work",
+      "expected_value": true,
+      "group": "negation_missing",
+      "id": "N10",
+      "kind": "extraction",
+      "name": "实际在香港工作",
+      "query": "实际在香港工作"
+    }
+  ],
+  "version": "case-tasks-v1"
+}

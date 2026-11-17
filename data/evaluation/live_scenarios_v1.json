@@ -1,0 +1,330 @@
+{
+  "version": "live-scenarios-v1",
+  "inputs": "synthetic",
+  "dataset_type": "public_engineering_not_blind",
+  "expert_reviewed": false,
+  "created_on": "2026-10-25",
+  "purpose": "Expand beyond one repeated arrears fixture; expected outputs are engineering contracts, not legal expert labels.",
+  "scenarios": [
+    {
+      "id": "S01",
+      "name": "深圳2026欠薪确认",
+      "request": {
+        "action": "analyze",
+        "facts": {
+          "workplace": "深圳",
+          "employer_city": "深圳",
+          "dispute_date": "2026-10-15",
+          "start_date": "2026-01-01",
+          "wage_statement": "我目前仍在职。2026年9月正常提供整月劳动，无缺勤。劳动合同约定当月应得工资9350.17元，不含争议绩效，无扣除抵扣，双方约定9月30日支付，仅收到3525.10元，欠薪至争议日仍未支付。材料未经核验。",
+          "wages": [
+            {
+              "start": "2026-09-01",
+              "end": "2026-09-30",
+              "due": "9350.17",
+              "paid": "3525.10"
+            }
+          ],
+          "evidence": {
+            "劳动合同": "claimed_present",
+            "工资流水": "claimed_present",
+            "工作沟通记录": "claimed_present",
+            "考勤": "missing"
+          }
+        }
+      },
+      "expected": {
+        "status": "awaiting_confirmation",
+        "amount": "5825.07",
+        "confirm": true
+      }
+    },
+    {
+      "id": "S02",
+      "name": "广州2025欠薪确认",
+      "request": {
+        "action": "analyze",
+        "facts": {
+          "workplace": "广州",
+          "employer_city": "广州",
+          "dispute_date": "2025-10-15",
+          "start_date": "2025-01-01",
+          "wage_statement": "我目前仍在职。2025年9月正常提供整月劳动，无缺勤。劳动合同约定当月应得工资8100.03元，不含争议绩效，无扣除抵扣，双方约定9月30日支付，仅收到2000元，欠薪至争议日仍未支付。材料未经核验。",
+          "wages": [
+            {
+              "start": "2025-09-01",
+              "end": "2025-09-30",
+              "due": "8100.03",
+              "paid": "2000"
+            }
+          ],
+          "evidence": {
+            "劳动合同": "claimed_present",
+            "工资流水": "claimed_present",
+            "工作沟通记录": "claimed_present",
+            "考勤": "missing"
+          }
+        }
+      },
+      "expected": {
+        "status": "awaiting_confirmation",
+        "amount": "6100.03",
+        "confirm": true
+      }
+    },
+    {
+      "id": "S03",
+      "name": "东莞2026欠薪确认",
+      "request": {
+        "action": "analyze",
+        "facts": {
+          "workplace": "东莞",
+          "employer_city": "东莞",
+          "dispute_date": "2026-10-15",
+          "start_date": "2026-01-01",
+          "wage_statement": "我目前仍在职。2026年9月正常提供整月劳动，无缺勤。劳动合同约定当月应得工资5200元，不含争议绩效，无扣除抵扣，双方约定9月30日支付，仅收到500元，欠薪至争议日仍未支付。材料未经核验。",
+          "wages": [
+            {
+              "start": "2026-09-01",
+              "end": "2026-09-30",
+              "due": "5200",
+              "paid": "500"
+            }
+          ],
+          "evidence": {
+            "劳动合同": "claimed_present",
+            "工资流水": "claimed_present",
+            "工作沟通记录": "claimed_present",
+            "考勤": "missing"
+          }
+        }
+      },
+      "expected": {
+        "status": "awaiting_confirmation",
+        "amount": "4700.00",
+        "confirm": true
+      }
+    },
+    {
+      "id": "S04",
+      "name": "深圳2024欠薪确认",
+      "request": {
+        "action": "analyze",
+        "facts": {
+          "workplace": "深圳",
+          "employer_city": "深圳",
+          "dispute_date": "2024-10-15",
+          "start_date": "2024-01-01",
+          "wage_statement": "我目前仍在职。2024年9月正常提供整月劳动，无缺勤。劳动合同约定当月应得工资9200.99元，不含争议绩效，无扣除抵扣，双方约定9月30日支付，仅收到3200.30元，欠薪至争议日仍未支付。材料未经核验。",
+          "wages": [
+            {
+              "start": "2024-09-01",
+              "end": "2024-09-30",
+              "due": "9200.99",
+              "paid": "3200.30"
+            }
+          ],
+          "evidence": {
+            "劳动合同": "claimed_present",
+            "工资流水": "claimed_present",
+            "工作沟通记录": "claimed_present",
+            "考勤": "missing"
+          }
+        }
+      },
+      "expected": {
+        "status": "awaiting_confirmation",
+        "amount": "6000.69",
+        "confirm": true
+      }
+    },
+    {
+      "id": "S05",
+      "name": "已足额支付无请求",
+      "request": {
+        "facts": {
+          "workplace": "广州",
+          "employer_city": "广州",
+          "dispute_date": "2026-10-01",
+          "start_date": "2026-01-01",
+          "wage_statement": "我目前仍在职，9月正常提供整月劳动，约定应得工资10000.10元，9月30日已收到全部10000.10元，无其他欠付项目。",
+          "wages": [
+            {
+              "start": "2026-09-01",
+              "end": "2026-09-30",
+              "due": "10000.10",
+              "paid": "10000.10"
+            }
+          ],
+          "evidence": {
+            "劳动合同": "claimed_present",
+            "工资流水": "claimed_present",
+            "工作沟通记录": "claimed_present",
+            "考勤": "missing"
+          }
+        }
+      },
+      "expected": {
+        "status": "no_supported_claim",
+        "amount": "0.00"
+      }
+    },
+    {
+      "id": "S06",
+      "name": "争议日期早于入职",
+      "request": {
+        "facts": {
+          "workplace": "广州",
+          "employer_city": "广州",
+          "dispute_date": "2026-10-01",
+          "start_date": "2026-11-01",
+          "wage_statement": "我目前仍在该单位工作，与单位存在普通劳动关系，2026年9月正常提供了整月劳动、无缺勤。劳动合同约定9月工资10000.10元，不含争议绩效、无代扣抵扣，9月30日应付、仅收到3000元。这些都是我的陈述，持有材料但未经核验。",
+          "wages": [
+            {
+              "start": "2026-09-01",
+              "end": "2026-09-30",
+              "due": "10000.10",
+              "paid": "3000"
+            }
+          ],
+          "evidence": {
+            "劳动合同": "claimed_present",
+            "工资流水": "claimed_present",
+            "工作沟通记录": "claimed_present",
+            "考勤": "missing"
+          }
+        }
+      },
+      "expected": {
+        "status": "review_blocked",
+        "critical_code": "dispute_before_employment"
+      }
+    },
+    {
+      "id": "S07",
+      "name": "实际跨境履行",
+      "request": {
+        "facts": {
+          "workplace": "广州",
+          "employer_city": "广州",
+          "dispute_date": "2026-10-01",
+          "start_date": "2026-01-01",
+          "wage_statement": "我目前仍在该单位工作，与单位存在普通劳动关系，2026年9月正常提供了整月劳动、无缺勤。劳动合同约定9月工资10000.10元，不含争议绩效、无代扣抵扣，9月30日应付、仅收到3000元。这些都是我的陈述，持有材料但未经核验。",
+          "wages": [
+            {
+              "start": "2026-09-01",
+              "end": "2026-09-30",
+              "due": "10000.10",
+              "paid": "3000"
+            }
+          ],
+          "evidence": {
+            "劳动合同": "claimed_present",
+            "工资流水": "claimed_present",
+            "工作沟通记录": "claimed_present",
+            "考勤": "missing"
+          },
+          "actual_cross_border_work": true
+        }
+      },
+      "expected": {
+        "status": "review_blocked",
+        "critical_code": "cross_border"
+      }
+    },
+    {
+      "id": "S08",
+      "name": "结构化状态与陈述矛盾",
+      "request": {
+        "facts": {
+          "workplace": "广州",
+          "employer_city": "广州",
+          "dispute_date": "2026-10-01",
+          "start_date": "2026-01-01",
+          "wage_statement": "我目前仍在该单位工作，与单位存在普通劳动关系，2026年9月正常提供了整月劳动、无缺勤。劳动合同约定9月工资10000.10元，不含争议绩效、无代扣抵扣，9月30日应付、仅收到3000元。这些都是我的陈述，持有材料但未经核验。",
+          "wages": [
+            {
+              "start": "2026-09-01",
+              "end": "2026-09-30",
+              "due": "10000.10",
+              "paid": "3000"
+            }
+          ],
+          "evidence": {
+            "劳动合同": "claimed_present",
+            "工资流水": "claimed_present",
+            "工作沟通记录": "claimed_present",
+            "考勤": "missing"
+          },
+          "employment_status": "terminated"
+        }
+      },
+      "expected": {
+        "status": "review_blocked",
+        "critical_code": "employment_statement_conflict"
+      }
+    },
+    {
+      "id": "S09",
+      "name": "第41条不自动添加代通知金",
+      "request": {
+        "facts": {
+          "workplace": "广州",
+          "employer_city": "广州",
+          "start_date": "2020-01-01",
+          "end_date": "2026-09-30",
+          "dispute_date": "2026-10-15",
+          "employment_status": "terminated",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "termination_basis": "article_41",
+          "termination_reason": "单位主张经营困难裁员，全部法定条件须结合材料核实",
+          "layoff_conditions": true,
+          "layoff_procedure": true,
+          "protected_status": false,
+          "written_notice_30": false,
+          "employment_type": "ordinary"
+        }
+      },
+      "expected": {
+        "status": "needs_information",
+        "missing_contains": [
+          "severance_cap"
+        ],
+        "no_notice": true
+      }
+    },
+    {
+      "id": "S10",
+      "name": "突然解除待澄清不认定2N",
+      "request": {
+        "facts": {
+          "workplace": "广州",
+          "employer_city": "广州",
+          "start_date": "2020-01-01",
+          "end_date": "2026-09-30",
+          "dispute_date": "2026-10-15",
+          "employment_status": "terminated",
+          "initiator": "employer",
+          "monthly_average": "8000",
+          "previous_month_wage": "9500",
+          "termination_basis": "unknown",
+          "termination_reason": "单位突然通知解除，没有说明具体解除事由；目前未支付补偿。",
+          "layoff_conditions": true,
+          "layoff_procedure": true,
+          "protected_status": false,
+          "written_notice_30": false,
+          "employment_type": "ordinary"
+        }
+      },
+      "expected": {
+        "status": "needs_information",
+        "missing_contains": [
+          "termination_basis"
+        ],
+        "no_notice": true
+      }
+    }
+  ]
+}

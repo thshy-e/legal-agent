@@ -1,0 +1,1102 @@
+{
+  "dataset_sha256": "e0fefc4372977ee664c79bf3538a615e89cacd677a26c8d01f3ad7d96c4c1097",
+  "knowledge_digest": "d360d5b99e8e",
+  "model": "qwen-plus",
+  "temperature": 0.1,
+  "max_tokens": 2400,
+  "status": "not_run",
+  "reason": "DASHSCOPE_API_KEY is not configured",
+  "rows": [
+    {
+      "id": "T01",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T01",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T01",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T02",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T02",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T02",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T03",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T03",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T03",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T04",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T04",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T04",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T05",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T05",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T05",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T06",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T06",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T06",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T07",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T07",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T07",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T08",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T08",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T08",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T09",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T09",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T09",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T10",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T10",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T10",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T11",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T11",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T11",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T12",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T12",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T12",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T13",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T13",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T13",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T14",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T14",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T14",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T15",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T15",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T15",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T16",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T16",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T16",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T17",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T17",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T17",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T18",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T18",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T18",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T19",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T19",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T19",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T20",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T20",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "T20",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W01",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W01",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W01",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W02",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W02",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W02",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W03",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W03",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W03",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W04",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W04",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W04",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W05",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W05",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W05",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W06",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W06",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W06",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W07",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W07",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W07",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W08",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W08",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W08",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W09",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W09",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W09",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W10",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W10",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "W10",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G01",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G01",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G01",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G02",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G02",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G02",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G03",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G03",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G03",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G04",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G04",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G04",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G05",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G05",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G05",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G06",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G06",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G06",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G07",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G07",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G07",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G08",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G08",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G08",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G09",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G09",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G09",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G10",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G10",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "G10",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M01",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M01",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M01",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M02",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M02",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M02",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M03",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M03",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M03",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M04",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M04",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M04",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M05",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M05",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M05",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M06",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M06",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M06",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M07",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M07",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M07",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M08",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M08",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M08",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M09",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M09",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M09",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M10",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M10",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "M10",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N01",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N01",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N01",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N02",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N02",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N02",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N03",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N03",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N03",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N04",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N04",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N04",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N05",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N05",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N05",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N06",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N06",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N06",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N07",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N07",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N07",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N08",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N08",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N08",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N09",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N09",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N09",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N10",
+      "variant": "single_agent",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N10",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "trace": []
+    },
+    {
+      "id": "N10",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "trace": []
+    }
+  ],
+  "expert_reviewed": false,
+  "blind_test": false,
+  "protocol_sha256": "80a2ecd3130a6b0f98be91398f06d8fb64d421e90a11baa08443977b21a4daca",
+  "model_config": {
+    "model": "qwen-plus",
+    "temperature": 0.1,
+    "timeout": 40,
+    "max_retries": 0,
+    "max_tokens": 2400
+  },
+  "protocol": "shared_tools_no_scoring_labels_or_production_review_v2"
+}

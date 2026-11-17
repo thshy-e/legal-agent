@@ -1,0 +1,44 @@
+[
+  {
+    "id": "sz-award-2023-11980",
+    "url": "https://hrss.sz.gov.cn/ztfw/cjjy/wsgk/content/post_11007184.html",
+    "sha256": "8b2af2ae0ec6830570338018ad1f49f9c321fe9652cc064d1315e2a54a1d5bb4",
+    "characters": 4492,
+    "status": "downloaded"
+  },
+  {
+    "id": "sz-award-2021-281",
+    "url": "https://hrss.sz.gov.cn/ztfw/cjjy/wsgk/content/post_10528740.html",
+    "sha256": "e95bc93f9b0f75e45994839cb7c396a6451adfa9eeeb1ad9691dedb5e48ecaa2",
+    "characters": 4155,
+    "status": "downloaded"
+  },
+  {
+    "id": "sz-award-2023-14951",
+    "url": "https://hrss.sz.gov.cn/ztfw/cjjy/wsgk/content/post_11219114.html",
+    "sha256": "2def28a72a506669ba06b2a819c6c0fff2c7323a95e12267993e61b79bf6d81f",
+    "characters": 7166,
+    "status": "downloaded"
+  },
+  {
+    "id": "sz-award-2022-8372",
+    "url": "https://hrss.sz.gov.cn/ztfw/cjjy/wsgk/content/post_11219002.html",
+    "sha256": "96a04b36f9b66423732690204e7095c8b8c054f2697741d39074907d2535210b",
+    "characters": 4212,
+    "status": "downloaded"
+  },
+  {
+    "id": "sz-award-2017-8169",
+    "url": "https://hrss.sz.gov.cn/ztfw/cjjy/wsgk/content/post_8146130.html",
+    "sha256": "6fb88abeefafdda1cfe82a9fc59cae2c6c0c6fe0d6eb1ca4760e283c922f746d",
+    "characters": 5167,
+    "status": "downloaded"
+  },
+  {
+    "id": "sz-award-2024-6977",
+    "url": "https://www.szns.gov.cn/xxgk/bmxxgk/qrzj/xxgk/qt/tzgg/zcwsgk/content/post_12574663.html",
+    "sha256": "0f5ca505542bad9efec56eb4c08ec64aa9f1b6ef21af0d02d480108faa56cfe8",
+    "characters": 5005,
+    "status": "downloaded"
+  }
+]

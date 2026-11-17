@@ -1,0 +1,16 @@
+{
+  "kind": "single_diagnostic_not_ablation_or_workflow_pass",
+  "requested_model": "qwen3-max",
+  "temperature": 0.1,
+  "timeout": 90,
+  "max_retries": 0,
+  "max_tokens": 2400,
+  "response_format": "json_object",
+  "case_source": "live_workflow_v10/summary-run01.json",
+  "system_sha256": "2acda701056b9f007a37e1300db6d1e4a6021d782badafc55b97cb594216292f",
+  "context_sha256": "ba730b549482fe7a537a45a71e78bc8ea7c5ab47a73545f596fc5c11d90c0421",
+  "expert_reviewed": false,
+  "status": "failed",
+  "error": "NotFoundError: Error code: 404 - {'error': {'message': 'Model not exist.', 'id': '987fc515-ab51-934e-ab1d-51206ff0b733', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "seconds": 1.75
+}

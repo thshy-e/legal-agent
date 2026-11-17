@@ -1,0 +1,4 @@
+﻿variant,label,outputs,automatic_flags,calls,total_tokens,median_seconds,max_seconds
+single_agent,单Agent,60,15,60,791864,4.827999999999999,16.157
+collaboration_no_review,协同无审查,60,2,120,1588002,7.125,16.281
+collaboration_review,协同有审查,60,8,180,2402071,7.3125,18.516

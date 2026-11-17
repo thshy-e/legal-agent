@@ -1,0 +1,1094 @@
+{
+  "schema_version": 1,
+  "kind": "model",
+  "dataset_sha256": "18553e8d07d29927600589709092b0392fff195d7c7f43b8a7b8faa27b5c7af2",
+  "report_sha256": "2100d7dcd4990bc6e635a96fb37220064e53b6b905166c83f3b2e1075dd9f6cd",
+  "knowledge_digest": "b9b3767d4c14",
+  "protocol_sha256": "7e6e0ee46e6eb1951448cd3d71746753e518a171e54b2d1f18bf0d1b1c7dd05e",
+  "dataset_type": "public_engineering_not_blind",
+  "blind_test": false,
+  "expert_reviewed": false,
+  "items": [],
+  "skipped": [
+    {
+      "task_id": "T01",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T01",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T01",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T02",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T02",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T02",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T03",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T03",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T03",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T04",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T04",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T04",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T05",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T05",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T05",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T06",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T06",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T06",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T07",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T07",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T07",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T08",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T08",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T08",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T09",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T09",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T09",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T10",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T10",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T10",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T11",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T11",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T11",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T12",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T12",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T12",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T13",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T13",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T13",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T14",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T14",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T14",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T15",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T15",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T15",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T16",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T16",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T16",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T17",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T17",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T17",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T18",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T18",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T18",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T19",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T19",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T19",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T20",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T20",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "T20",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W01",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W01",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W01",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W02",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W02",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W02",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W03",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W03",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W03",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W04",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W04",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W04",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W05",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W05",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W05",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W06",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W06",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W06",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W07",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W07",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W07",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W08",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W08",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W08",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W09",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W09",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W09",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W10",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W10",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "W10",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G01",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G01",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G01",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G02",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G02",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G02",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G03",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G03",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G03",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G04",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G04",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G04",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G05",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G05",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G05",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G06",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G06",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G06",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G07",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G07",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G07",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G08",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G08",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G08",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G09",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G09",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G09",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G10",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G10",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "G10",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M01",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M01",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M01",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M02",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M02",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M02",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M03",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M03",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M03",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M04",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M04",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M04",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M05",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M05",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M05",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M06",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M06",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M06",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M07",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M07",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M07",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M08",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M08",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M08",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M09",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M09",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M09",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M10",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M10",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "M10",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N01",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N01",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N01",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N02",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N02",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N02",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N03",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N03",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N03",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N04",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N04",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N04",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N05",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N05",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N05",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N06",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N06",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N06",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N07",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N07",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N07",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N08",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N08",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N08",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N09",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N09",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N09",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N10",
+      "variant": "single_agent",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N10",
+      "variant": "collaboration_no_review",
+      "status": "not_run",
+      "error": null
+    },
+    {
+      "task_id": "N10",
+      "variant": "collaboration_review",
+      "status": "not_run",
+      "error": null
+    }
+  ]
+}

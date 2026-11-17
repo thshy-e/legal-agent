@@ -1,127 +1,42 @@
+import os
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
-
+from fastapi.testclient import TestClient
 from legal_ai_agent.memory.memory_manager import ConversationStateStore
-
+from tests.test_conversation_state import WAGES
 
 class MultiTurnWorkflowTest(unittest.TestCase):
     def setUp(self):
-        self.tmpdir = tempfile.TemporaryDirectory()
-        self.store = ConversationStateStore(Path(self.tmpdir.name) / "conversation_state.json")
-
         import legal_ai_agent.api.server as server
+        self.server=server;self.tmp=tempfile.TemporaryDirectory();self.store=ConversationStateStore(Path(self.tmp.name)/'sessions.json')
+        self.patch=patch.object(server,'conversation_store',self.store);self.patch.start();self.env=patch.dict(os.environ,{'CASE_MODEL_ENABLED':'0'});self.env.start()
+    def tearDown(self): self.env.stop();self.patch.stop();self.tmp.cleanup()
+    def test_real_sse_node_order_and_confirmation_gate(self):
+        client=TestClient(self.server.app)
+        response=client.post('/api/chat/stream',json={'workflow':'case','session_id':'events','facts':WAGES})
+        self.assertEqual(response.status_code,200)
+        events=[line[7:] for line in response.text.splitlines() if line.startswith('event: ')]
+        self.assertEqual(events[:2],['task_started','task_completed'])
+        self.assertIn('confirmation_required',events);self.assertEqual(events[-1],'done')
+        self.assertNotIn('"task": "document"',response.text)
+    def test_supplemental_information_is_shared_and_negations_are_preserved(self):
+        first=self.server._build_chat_payload({'workflow':'case','session_id':'supplement','query':'在广州被突然辞退，没有考勤，没有补偿'})['structured']
+        self.assertEqual(first['facts']['evidence']['考勤'],'missing');self.assertEqual(first['facts']['termination_basis'],'unknown')
+        self.assertIsNone(first['facts']['workplace'])  # Meeting/dismissal location is not necessarily workplace.
+        second=self.server._build_chat_payload({'workflow':'case','session_id':'supplement','facts':{'workplace':'广州','employer_city':'广州','dispute_date':'2026-10-01'}})['structured']
+        self.assertEqual(second['facts']['workplace'],'广州');self.assertEqual(second['case_version'],2)
+        self.assertEqual(second['facts']['evidence']['考勤'],'missing')
+    def test_old_document_mode_requires_new_confirmation(self):
+        result=self.server._build_chat_payload({'session_id':'doc','query':'帮我写劳动仲裁申请书','preferred_mode':'doc'})
+        self.assertEqual(result['route'],'case');self.assertIsNone(result['structured']['confirmation']);self.assertIsNone(result['structured']['document'])
+    def test_no_key_required_for_non_monetary_general_qa_lookup(self):
+        result=self.server._build_chat_payload({'session_id':'general','query':'劳动合同法第47条是什么'})
+        self.assertIn('经济补偿',result['answer']);self.assertNotIn('工资分配',result['answer'])
+    def test_ordinary_exact_city_statute_lookup_honors_explicit_date(self):
+        old=self.server._build_chat_payload({'session_id':'general','query':'2025-12-04深圳市员工工资支付条例第22条是什么'})
+        new=self.server._build_chat_payload({'session_id':'general','query':'2025-12-05深圳市员工工资支付条例第22条是什么'})
+        self.assertIn('sz-wage-2022',old['answer']);self.assertIn('sz-wage-2025',new['answer'])
 
-        self.server = server
-        self.store_patch = patch.object(server, "conversation_store", self.store)
-        self.store_patch.start()
-        self.agent_patch = patch.object(server, "_run_agent", side_effect=self._fake_run_agent)
-        self.mock_run_agent = self.agent_patch.start()
-
-    def tearDown(self):
-        self.agent_patch.stop()
-        self.store_patch.stop()
-        self.tmpdir.cleanup()
-
-    def _fake_run_agent(self, route, query, session_id):
-        return f"ROUTE={route}\nSESSION={session_id}\nQUERY={query}"
-
-    def _chat(self, session_id, query, **extra):
-        return self.server._build_chat_payload({"session_id": session_id, "query": query, **extra})
-
-    def assert_clean_general_law_answer(self, payload):
-        text = payload["answer"]
-        self.assertNotIn("【前文案件状态】", text)
-        self.assertNotIn("【上次赔偿计算】", text)
-        self.assertNotIn("60000", text)
-        self.assertNotIn("300000", text)
-        self.assertNotIn("2N赔偿", text)
-        self.assertNotIn("计算公式", text)
-        timeline_text = str(payload["structured"].get("timeline", ""))
-        self.assertNotIn("2N赔偿", timeline_text)
-        self.assertNotIn("计算公式", timeline_text)
-
-    def test_full_session_mixes_all_features_without_polluting_general_qa(self):
-        session_id = "mixed-flow"
-
-        calc = self._chat(session_id, "月薪10000，工作3年，被公司突然辞退且无补偿，能拿多少？")
-        self.assertEqual(calc["route"], "qa")
-        self.assertEqual(calc["structured"]["calculation"]["amount"], "60000")
-        self.assertEqual(calc["structured"]["conversation"]["route_reason"], "explicit_calculation_intent")
-
-        general_law = self._chat(session_id, "劳动法第68条是什么")
-        self.assertEqual(general_law["route"], "qa")
-        self.assertEqual(general_law["structured"]["conversation"]["route_reason"], "router:qa")
-        self.assert_clean_general_law_answer(general_law)
-
-        case_law = self._chat(session_id, "结合我上面的情况，劳动合同法第47条怎么适用？")
-        self.assertEqual(case_law["route"], "qa")
-        self.assertIn("【前文案件状态】", case_law["answer"])
-        self.assertIn("60000", case_law["answer"])
-
-        judge = self._chat(session_id, "那我这个案子下一步怎么办？")
-        self.assertEqual(judge["route"], "judge")
-        self.assertIn("【前文案件状态】", judge["answer"])
-        self.assertIn("60000", judge["answer"])
-
-        doc = self._chat(session_id, "用以上内容生成仲裁申请书", preferred_mode="judge")
-        self.assertEqual(doc["route"], "doc")
-        self.assertEqual(doc["structured"]["conversation"]["route_reason"], "explicit_doc_intent")
-        self.assertIn("【前文案件状态】", doc["answer"])
-        self.assertIn("60000", doc["answer"])
-
-        risk = self._chat(session_id, "公司这样处理有什么法律风险？")
-        self.assertEqual(risk["route"], "risk")
-        self.assertIn("【前文案件状态】", risk["answer"])
-        self.assertIn("60000", risk["answer"])
-
-    def test_new_session_general_law_does_not_inherit_old_case(self):
-        self._chat("old-session", "月薪5000，工作30年，被公司突然辞退且无补偿，能拿多少？")
-
-        fresh = self._chat("fresh-session", "劳动合同法第47条是什么")
-
-        self.assertEqual(fresh["route"], "qa")
-        self.assertFalse(fresh["structured"]["conversation"]["is_continuation"])
-        self.assert_clean_general_law_answer(fresh)
-
-    def test_preferred_mode_and_force_mode_behaviour_in_mixed_session(self):
-        preferred_calc = self._chat(
-            "preference-flow",
-            "公司违法解除，月工资8000，工作20年，赔偿多少？",
-            preferred_mode="judge",
-        )
-        self.assertEqual(preferred_calc["route"], "qa")
-        self.assertEqual(preferred_calc["structured"]["calculation"]["amount"], "320000")
-
-        preferred_doc = self._chat(
-            "preference-flow",
-            "用以上内容生成仲裁文书",
-            preferred_mode="judge",
-        )
-        self.assertEqual(preferred_doc["route"], "doc")
-        self.assertIn("320000", preferred_doc["answer"])
-
-        forced = self._chat(
-            "preference-flow",
-            "公司违法解除，月工资8000，工作20年，赔偿多少？",
-            mode="judge",
-            force_mode=True,
-        )
-        self.assertEqual(forced["route"], "judge")
-        self.assertEqual(forced["structured"]["conversation"]["route_reason"], "force_mode:judge")
-        self.assertIn("ROUTE=judge", forced["answer"])
-
-    def test_missing_info_then_supplemental_numbers_calculates_from_session_state(self):
-        missing = self._chat("supplement-flow", "我被辞退了，能拿多少？")
-        self.assertEqual(missing["route"], "qa")
-        self.assertEqual(missing["structured"]["calculation"]["status"], "missing_info")
-
-        completed = self._chat("supplement-flow", "月薪8000，工作3年")
-        self.assertEqual(completed["route"], "qa")
-        self.assertEqual(completed["structured"]["calculation"]["amount"], "48000")
-        self.assertTrue(completed["structured"]["conversation"]["used_previous_calculation"])
-
-
-if __name__ == "__main__":
-    unittest.main()
+if __name__=='__main__':unittest.main()

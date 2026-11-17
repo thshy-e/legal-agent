@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "workflow_version": "casework-20261025-v15",
+  "mode": "rules_only",
+  "stale_confirmation_http": 409,
+  "phases": [
+    {
+      "phase": "analyze",
+      "status": "awaiting_confirmation"
+    },
+    {
+      "phase": "confirm",
+      "status": "draft_ready",
+      "amount": "7000.10"
+    },
+    {
+      "phase": "amend",
+      "status": "awaiting_confirmation",
+      "amount": "8000.10"
+    },
+    {
+      "phase": "reconfirm",
+      "status": "draft_ready",
+      "amount": "8000.10"
+    }
+  ]
+}

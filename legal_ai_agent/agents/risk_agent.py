@@ -3,6 +3,17 @@ from legal_ai_agent.llm.qwen_llm import get_llm
 from langchain_core.messages import HumanMessage
 
 class RiskAgent:
+    def check_case(self, case):
+        """Reusable condition checks; no invented score or victory probability."""
+        f=case['facts'];issues=[]
+        if f.get('termination_basis') in ('article_40','article_41') and f.get('protected_status') is True:
+            issues.append({'code':'protected_termination','severity':'critical','message':'所填事实涉及第四十二条保护情形，与第四十、四十一条解除路径冲突，需专业复核。'})
+        if f.get('termination_basis')=='illegal_claim':
+            issues.append({'code':'alleged_illegality','severity':'warning','message':'违法解除仅为劳动者主张；需核对解除理由、程序、证据及是否请求继续履行，不作已成立认定。'})
+        if f.get('wages') and not any(status=='claimed_present' for status in f.get('evidence',{}).values()):
+            issues.append({'code':'wage_evidence_missing','severity':'warning','message':'尚无用户称持有的材料，请补劳动关系、工资约定、劳动履行与支付记录；计算只是输入核算。'})
+        return issues
+
     def __init__(self):
         self.llm = None
 

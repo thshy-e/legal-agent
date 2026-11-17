@@ -1,0 +1,2750 @@
+{
+  "id": "S03",
+  "status": "completed",
+  "error": null,
+  "phases": [
+    {
+      "name": "analyze",
+      "case": {
+        "schema_version": 1,
+        "case_version": 1,
+        "facts": {
+          "workplace": "东莞",
+          "employer_city": "东莞",
+          "dispute_date": "2026-10-15",
+          "start_date": "2026-01-01",
+          "end_date": null,
+          "employment_status": "active",
+          "initiator": "unknown",
+          "termination_reason": null,
+          "termination_basis": "unknown",
+          "article40_conditions": null,
+          "article40_category": "unknown",
+          "agreement_reached": null,
+          "worker38_ground": "unknown",
+          "worker38_conditions": null,
+          "worker38_notice_delivered": null,
+          "layoff_conditions": null,
+          "layoff_procedure": null,
+          "continued_performance": "unknown",
+          "protected_status": null,
+          "written_notice_30": null,
+          "monthly_average": null,
+          "previous_month_wage": null,
+          "employment_type": "ordinary",
+          "actual_cross_border_work": null,
+          "cross_city_resolved": false,
+          "applicant": null,
+          "applicant_id": null,
+          "applicant_address": null,
+          "applicant_phone": null,
+          "employer_name": null,
+          "employer_address": null,
+          "employer_representative": null,
+          "employer_phone": null,
+          "wages": [
+            {
+              "start": "2026-09-01",
+              "end": "2026-09-30",
+              "due": "5200",
+              "paid": "500"
+            }
+          ],
+          "wage_statement": "我目前仍在职。2026年9月正常提供整月劳动，无缺勤。劳动合同约定当月应得工资5200元，不含争议绩效，无扣除抵扣，双方约定9月30日支付，仅收到500元，欠薪至争议日仍未支付。材料未经核验。",
+          "evidence": {
+            "劳动合同": "claimed_present",
+            "工资流水": "claimed_present",
+            "工作沟通记录": "claimed_present",
+            "考勤": "missing"
+          }
+        },
+        "fact_sources": {
+          "employment_status": {
+            "source": "user_statement_extraction",
+            "input_field": "wage_statement",
+            "statement": "我目前仍在职",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "workplace": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "employer_city": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "dispute_date": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "start_date": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "wage_statement": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "wages": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "evidence": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "evidence.劳动合同": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "evidence.工资流水": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "evidence.工作沟通记录": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "evidence.考勤": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": false,
+            "case_version": 1,
+            "evidence_verified": false
+          }
+        },
+        "claims": [
+          {
+            "id": "arrears",
+            "title": "拖欠工资",
+            "status": "conditional",
+            "conditions": "劳动关系、工资约定、已履行劳动及支付情况须证据支持",
+            "laws": [
+              "contract-law-2012:a30",
+              "labor-law-2018:a50",
+              "arbitration-law-2008:a6"
+            ],
+            "alternative_group": null,
+            "mutually_exclusive": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "contract-law-2012:a30",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 30,
+            "original_text": "第三十条　用人单位应当按照劳动合同约定和国家规定，向劳动者及时足额支付劳动报酬。\n用人单位拖欠或者未足额支付劳动报酬的，劳动者可以依法向当地人民法院申请支付令，人民法院应当依法发出支付令。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a36",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 36,
+            "original_text": "第三十六条　用人单位与劳动者协商一致，可以解除劳动合同。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a38",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 38,
+            "original_text": "第三十八条　用人单位有下列情形之一的，劳动者可以解除劳动合同:\n（一）未按照劳动合同约定提供劳动保护或者劳动条件的；\n（二）未及时足额支付劳动报酬的；\n（三）未依法为劳动者缴纳社会保险费的；\n（四）用人单位的规章制度违反法律、法规的规定，损害劳动者权益的；\n（五）因本法第二十六条第一款规定的情形致使劳动合同无效的；\n（六）法律、行政法规规定劳动者可以解除劳动合同的其他情形。\n用人单位以暴力、威胁或者非法限制人身自由的手段强迫劳动者劳动的，或者用人单位违章指挥、强令冒险作业危及劳动者人身安全的，劳动者可以立即解除劳动合同，不需事先告知用人单位。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a39",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 39,
+            "original_text": "第三十九条　劳动者有下列情形之一的，用人单位可以解除劳动合同:\n（一）在试用期间被证明不符合录用条件的；\n（二）严重违反用人单位的规章制度的；\n（三）严重失职，营私舞弊，给用人单位造成重大损害的；\n（四）劳动者同时与其他用人单位建立劳动关系，对完成本单位的工作任务造成严重影响，或者经用人单位提出，拒不改正的；\n（五）因本法第二十六条第一款第一项规定的情形致使劳动合同无效的；\n（六）被依法追究刑事责任的。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a40",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 40,
+            "original_text": "第四十条　有下列情形之一的，用人单位提前三十日以书面形式通知劳动者本人或者额外支付劳动者一个月工资后，可以解除劳动合同:\n（一）劳动者患病或者非因工负伤，在规定的医疗期满后不能从事原工作，也不能从事由用人单位另行安排的工作的；\n（二）劳动者不能胜任工作，经过培训或者调整工作岗位，仍不能胜任工作的；\n（三）劳动合同订立时所依据的客观情况发生重大变化，致使劳动合同无法履行，经用人单位与劳动者协商，未能就变更劳动合同内容达成协议的。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a41",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 41,
+            "original_text": "第四十一条　有下列情形之一，需要裁减人员二十人以上或者裁减不足二十人但占企业职工总数百分之十以上的，用人单位提前三十日向工会或者全体职工说明情况，听取工会或者职工的意见后，裁减人员方案经向劳动行政部门报告，可以裁减人员:\n（一）依照企业破产法规定进行重整的；\n（二）生产经营发生严重困难的；\n（三）企业转产、重大技术革新或者经营方式调整，经变更劳动合同后，仍需裁减人员的；\n（四）其他因劳动合同订立时所依据的客观经济情况发生重大变化，致使劳动合同无法履行的。\n裁减人员时，应当优先留用下列人员:\n（一）与本单位订立较长期限的固定期限劳动合同的；\n（二）与本单位订立无固定期限劳动合同的；\n（三）家庭无其他就业人员，有需要扶养的老人或者未成年人的。\n用人单位依照本条第一款规定裁减人员，在六个月内重新招用人员的，应当通知被裁减的人员，并在同等条件下优先招用被裁减的人员。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a42",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 42,
+            "original_text": "第四十二条　劳动者有下列情形之一的，用人单位不得依照本法第四十条、第四十一条的规定解除劳动合同:\n（一）从事接触职业病危害作业的劳动者未进行离岗前职业健康检查，或者疑似职业病病人在诊断或者医学观察期间的；\n（二）在本单位患职业病或者因工负伤并被确认丧失或者部分丧失劳动能力的；\n（三）患病或者非因工负伤，在规定的医疗期内的；\n（四）女职工在孕期、产期、哺乳期的；\n（五）在本单位连续工作满十五年，且距法定退休年龄不足五年的；\n（六）法律、行政法规规定的其他情形。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a43",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 43,
+            "original_text": "第四十三条　用人单位单方解除劳动合同，应当事先将理由通知工会。用人单位违反法律、行政法规规定或者劳动合同约定的，工会有权要求用人单位纠正。用人单位应当研究工会的意见，并将处理结果书面通知工会。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a46",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 46,
+            "original_text": "第四十六条　有下列情形之一的，用人单位应当向劳动者支付经济补偿:\n（一）劳动者依照本法第三十八条规定解除劳动合同的；\n（二）用人单位依照本法第三十六条规定向劳动者提出解除劳动合同并与劳动者协商一致解除劳动合同的；\n（三）用人单位依照本法第四十条规定解除劳动合同的；\n（四）用人单位依照本法第四十一条第一款规定解除劳动合同的；\n（五）除用人单位维持或者提高劳动合同约定条件续订劳动合同，劳动者不同意续订的情形外，依照本法第四十四条第一项规定终止固定期限劳动合同的；\n（六）依照本法第四十四条第四项、第五项规定终止劳动合同的；\n（七）法律、行政法规规定的其他情形。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a47",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 47,
+            "original_text": "第四十七条　经济补偿按劳动者在本单位工作的年限，每满一年支付一个月工资的标准向劳动者支付。六个月以上不满一年的，按一年计算；不满六个月的，向劳动者支付半个月工资的经济补偿。\n劳动者月工资高于用人单位所在直辖市、设区的市级人民政府公布的本地区上年度职工月平均工资三倍的，向其支付经济补偿的标准按职工月平均工资三倍的数额支付，向其支付经济补偿的年限最高不超过十二年。\n本条所称月工资是指劳动者在劳动合同解除或者终止前十二个月的平均工资。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a48",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 48,
+            "original_text": "第四十八条　用人单位违反本法规定解除或者终止劳动合同，劳动者要求继续履行劳动合同的，用人单位应当继续履行；劳动者不要求继续履行劳动合同或者劳动合同已经不能继续履行的，用人单位应当依照本法第八十七条规定支付赔偿金。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a87",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 87,
+            "original_text": "第八十七条　用人单位违反本法规定解除或者终止劳动合同的，应当依照本法第四十七条规定的经济补偿标准的二倍向劳动者支付赔偿金。",
+            "summary": ""
+          },
+          {
+            "id": "contract-regulation-2008:a20",
+            "title": "中华人民共和国劳动合同法实施条例",
+            "issuer": "国务院",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-09-18",
+            "effective_to": null,
+            "expected_articles": 38,
+            "kind": "law",
+            "version": "contract-regulation-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.beijing.gov.cn/zhengce/gwywj/201105/t20110506_780976.html",
+            "snapshot": "snapshots/contract-regulation-2008.txt",
+            "sha256": "7cf498971390aaddf24ba2416c33ccecf061c146203de3a638ac2e569f8c428d",
+            "body_start": "第一条",
+            "body_end": "\n放弃",
+            "source_id": "contract-regulation-2008",
+            "article": 20,
+            "original_text": "第二十条　用人单位依照劳动合同法第四十条的规定，选择额外支付劳动者一个月工资解除劳动合同的，其额外支付的工资应当按照该劳动者上一个月的工资标准确定。",
+            "summary": ""
+          },
+          {
+            "id": "contract-regulation-2008:a25",
+            "title": "中华人民共和国劳动合同法实施条例",
+            "issuer": "国务院",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-09-18",
+            "effective_to": null,
+            "expected_articles": 38,
+            "kind": "law",
+            "version": "contract-regulation-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.beijing.gov.cn/zhengce/gwywj/201105/t20110506_780976.html",
+            "snapshot": "snapshots/contract-regulation-2008.txt",
+            "sha256": "7cf498971390aaddf24ba2416c33ccecf061c146203de3a638ac2e569f8c428d",
+            "body_start": "第一条",
+            "body_end": "\n放弃",
+            "source_id": "contract-regulation-2008",
+            "article": 25,
+            "original_text": "第二十五条　用人单位违反劳动合同法的规定解除或者终止劳动合同，依照劳动合同法第八十七条的规定支付了赔偿金的，不再支付经济补偿。赔偿金的计算年限自用工之日起计算。",
+            "summary": ""
+          },
+          {
+            "id": "contract-regulation-2008:a27",
+            "title": "中华人民共和国劳动合同法实施条例",
+            "issuer": "国务院",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-09-18",
+            "effective_to": null,
+            "expected_articles": 38,
+            "kind": "law",
+            "version": "contract-regulation-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.beijing.gov.cn/zhengce/gwywj/201105/t20110506_780976.html",
+            "snapshot": "snapshots/contract-regulation-2008.txt",
+            "sha256": "7cf498971390aaddf24ba2416c33ccecf061c146203de3a638ac2e569f8c428d",
+            "body_start": "第一条",
+            "body_end": "\n放弃",
+            "source_id": "contract-regulation-2008",
+            "article": 27,
+            "original_text": "第二十七条　劳动合同法第四十七条规定的经济补偿的月工资按照劳动者应得工资计算，包括计时工资或者计件工资以及奖金、津贴和补贴等货币性收入。劳动者在劳动合同解除或者终止前12个月的平均工资低于当地最低工资标准的，按照当地最低工资标准计算。劳动者工作不满12个月的，按照实际工作的月数计算平均工资。\n第四章　劳务派遣特别规定",
+            "summary": ""
+          },
+          {
+            "id": "arbitration-law-2008:a6",
+            "title": "中华人民共和国劳动争议调解仲裁法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-05-01",
+            "effective_to": null,
+            "expected_articles": 54,
+            "kind": "law",
+            "version": "arbitration-law-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml",
+            "snapshot": "snapshots/arbitration-law-2008.txt",
+            "sha256": "e93cbe1de395df22f74e6a05532ade928408cbdcc05229c7b8e190bdc45d503e",
+            "body_start": "第一条",
+            "body_end": "\n劳动\n争议",
+            "source_id": "arbitration-law-2008",
+            "article": 6,
+            "original_text": "第六条 发生劳动争议，当事人对自己提出的主张，有责任提供证据。与争议事项有关的证据属于用人单位掌握管理的，用人单位应当提供；用人单位不提供的，应当承担不利后果。",
+            "summary": ""
+          },
+          {
+            "id": "arbitration-law-2008:a21",
+            "title": "中华人民共和国劳动争议调解仲裁法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-05-01",
+            "effective_to": null,
+            "expected_articles": 54,
+            "kind": "law",
+            "version": "arbitration-law-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml",
+            "snapshot": "snapshots/arbitration-law-2008.txt",
+            "sha256": "e93cbe1de395df22f74e6a05532ade928408cbdcc05229c7b8e190bdc45d503e",
+            "body_start": "第一条",
+            "body_end": "\n劳动\n争议",
+            "source_id": "arbitration-law-2008",
+            "article": 21,
+            "original_text": "第二十一条 劳动争议仲裁委员会负责管辖本区域内发生的劳动争议。\n劳动争议由劳动合同履行地或者用人单位所在地的劳动争议仲裁委员会管辖。双方当事人分别向劳动合同履行地和用人单位所在地的劳动争议仲裁委员会申请仲裁的，由劳动合同履行地的劳动争议仲裁委员会管辖。",
+            "summary": ""
+          },
+          {
+            "id": "arbitration-law-2008:a27",
+            "title": "中华人民共和国劳动争议调解仲裁法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-05-01",
+            "effective_to": null,
+            "expected_articles": 54,
+            "kind": "law",
+            "version": "arbitration-law-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml",
+            "snapshot": "snapshots/arbitration-law-2008.txt",
+            "sha256": "e93cbe1de395df22f74e6a05532ade928408cbdcc05229c7b8e190bdc45d503e",
+            "body_start": "第一条",
+            "body_end": "\n劳动\n争议",
+            "source_id": "arbitration-law-2008",
+            "article": 27,
+            "original_text": "第二十七条 劳动争议申请仲裁的时效期间为一年。仲裁时效期间从当事人知道或者应当知道其权利被侵害之日起计算。\n前款规定的仲裁时效，因当事人一方向对方当事人主张权利，或者向有关部门请求权利救济，或者对方当事人同意履行义务而中断。从中断时起，仲裁时效期间重新计算。\n因不可抗力或者有其他正当理由，当事人不能在本条第一款规定的仲裁时效期间申请仲裁的，仲裁时效中止。从中止时效的原因消除之日起，仲裁时效期间继续计算。\n劳动关系存续期间因拖欠劳动报酬发生争议的，劳动者申请仲裁不受本条第一款规定的仲裁时效期间的限制；但是，劳动关系终止的，应当自劳动关系终止之日起一年内提出。",
+            "summary": ""
+          },
+          {
+            "id": "arbitration-law-2008:a28",
+            "title": "中华人民共和国劳动争议调解仲裁法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-05-01",
+            "effective_to": null,
+            "expected_articles": 54,
+            "kind": "law",
+            "version": "arbitration-law-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml",
+            "snapshot": "snapshots/arbitration-law-2008.txt",
+            "sha256": "e93cbe1de395df22f74e6a05532ade928408cbdcc05229c7b8e190bdc45d503e",
+            "body_start": "第一条",
+            "body_end": "\n劳动\n争议",
+            "source_id": "arbitration-law-2008",
+            "article": 28,
+            "original_text": "第二十八条 申请人申请仲裁应当提交书面仲裁申请，并按照被申请人人数提交副本。\n仲裁申请书应当载明下列事项：\n（一）劳动者的姓名、性别、年龄、职业、工作单位和住所，用人单位的名称、住所和法定代表人或者主要负责人的姓名、职务；\n（二）仲裁请求和所根据的事实、理由；\n（三）证据和证据来源、证人姓名和住所。\n书写仲裁申请确有困难的，可以口头申请，由劳动争议仲裁委员会记入笔录，并告知对方当事人。",
+            "summary": ""
+          },
+          {
+            "id": "labor-law-2018:a50",
+            "title": "中华人民共和国劳动法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2018-12-29",
+            "effective_to": null,
+            "expected_articles": 107,
+            "kind": "law",
+            "version": "labor-law-2018",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_d9aa750028b14b99a776cb93726a360d.html",
+            "snapshot": "snapshots/labor-law-2018.txt",
+            "sha256": "3f3b9003219ed008a460a4fa7de7be358c552a289d275050194427cc1938979d",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "labor-law-2018",
+            "article": 50,
+            "original_text": "第五十条　工资应当以货币形式按月支付给劳动者本人。不得克扣或者无故拖欠劳动者的工资。",
+            "summary": ""
+          },
+          {
+            "id": "spc-labor-I-2021:a44",
+            "title": "最高人民法院关于审理劳动争议案件适用法律问题的解释（一）",
+            "issuer": "最高人民法院",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2021-01-01",
+            "effective_to": null,
+            "expected_articles": 54,
+            "kind": "law",
+            "version": "spc-labor-I-2021",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.sdcourt.gov.cn/jnanzqfy/xfkd/xfkd84/6793708/index.html",
+            "snapshot": "snapshots/spc-labor-I-2021.txt",
+            "sha256": "8cd44c20b4e92160c07e3a3efc09873a2945d4f8e582035306032c61a45cb698",
+            "body_start": "第一条",
+            "body_end": "\n【关闭】",
+            "partial_repeals": [
+              {
+                "article": 32,
+                "effective_from": "2025-09-01",
+                "surviving_text_start": "企业停薪留职人员",
+                "authority": "spc-labor-II-2025:a21"
+              }
+            ],
+            "source_id": "spc-labor-I-2021",
+            "article": 44,
+            "original_text": "第四十四条因用人单位作出的开除、除名、辞退、解除劳动合同、减少劳动报酬、计算劳动者工作年限等决定而发生的劳动争议，用人单位负举证责任。",
+            "summary": ""
+          },
+          {
+            "id": "contract-regulation-2008:a14",
+            "title": "中华人民共和国劳动合同法实施条例",
+            "issuer": "国务院",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-09-18",
+            "effective_to": null,
+            "expected_articles": 38,
+            "kind": "law",
+            "version": "contract-regulation-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.beijing.gov.cn/zhengce/gwywj/201105/t20110506_780976.html",
+            "snapshot": "snapshots/contract-regulation-2008.txt",
+            "sha256": "7cf498971390aaddf24ba2416c33ccecf061c146203de3a638ac2e569f8c428d",
+            "body_start": "第一条",
+            "body_end": "\n放弃",
+            "source_id": "contract-regulation-2008",
+            "article": 14,
+            "original_text": "第十四条　劳动合同履行地与用人单位注册地不一致的，有关劳动者的最低工资标准、劳动保护、劳动条件、职业危害防护和本地区上年度职工月平均工资标准等事项，按照劳动合同履行地的有关规定执行；用人单位注册地的有关标准高于劳动合同履行地的有关标准，且用人单位与劳动者约定按照用人单位注册地的有关规定执行的，从其约定。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a7",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 7,
+            "original_text": "第七条　用人单位自用工之日起即与劳动者建立劳动关系。用人单位应当建立职工名册备查。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a10",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 10,
+            "original_text": "第十条 用人单位应当以货币形式按照确定的工资支付周期足额支付工资，不得拖欠或者克扣。\n实行月、周、日、小时工资制的，工资支付周期可以按月、周、日、小时确定。\n实行计件工资制或者以完成一定任务计发工资的，工资支付周期可以按计件或者完成工作任务情况约定，但支付周期超过一个月的，用人单位应当按照约定每月支付工资。\n实行年薪制或者按考核周期支付工资的，用人单位应当按照约定每月支付工资，年终或者考核周期届满时应当结算并付清工资。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a11",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 11,
+            "original_text": "第十一条 用人单位应当将工资直接支付给劳动者本人。劳动者本人因故不能领取工资时，可以委托他人代领，但应当出具委托书。\n用人单位委托银行代发工资的，应当在约定的工资支付日将劳动者的工资足额存入其本人账户。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a12",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 12,
+            "original_text": "第十二条 用人单位与劳动者应当在劳动合同中明确约定工资支付周期和支付日期。\n用人单位应当按照约定的日期支付劳动者工资；遇法定休假日或者休息日，应当提前在最近的工作日支付。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a49",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 49,
+            "original_text": "第四十九条 在用人单位与劳动者约定的工资支付日期前，有证据证明用人单位法定代表人、实际经营者或者主要负责人采取逃匿、转移财产等方式逃避支付工资义务的，由人力资源社会保障部门责令其限期支付。",
+            "summary": ""
+          },
+          {
+            "id": "wage-interim-1995:a9",
+            "title": "工资支付暂行规定",
+            "issuer": "劳动部",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "1995-01-01",
+            "effective_to": null,
+            "expected_articles": 20,
+            "kind": "law",
+            "version": "wage-interim-1995",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://rsj.sh.gov.cn/trlzyhshbzbgz_17256/20200617/t0035_1388318.html",
+            "snapshot": "snapshots/wage-interim-1995.txt",
+            "sha256": "c7c11b1eb73cb42ea9f78de68421127f1e340b3410a7d6c2fd36cb26e87652af",
+            "body_start": "第一条",
+            "body_end": "\n劳动部",
+            "source_id": "wage-interim-1995",
+            "article": 9,
+            "original_text": "第九条　劳动关系双方依法解除或终止劳动合同时，用人单位应在解除或终止劳动合同时一次付清劳动者工资。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a13",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 13,
+            "original_text": "第十三条 用人单位与劳动者依法终止或者解除劳动关系的，应当在终止或者解除劳动关系当日结清并一次性支付劳动者工资。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a50",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 50,
+            "original_text": "第五十条 人力资源社会保障部门在办理拒不支付劳动报酬案件过程中，发现涉案人员有拒绝调查、逃匿或者转移、隐藏、销毁证据等行为，依法可以要求公安机关提前介入调查，公安机关应当予以配合。有关行为涉嫌犯罪的，人力资源社会保障部门应当依法向公安机关移送案件。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a57",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 57,
+            "original_text": "第五十七条 用人单位有下列行为之一的，由人力资源社会保障部门视情节轻重，处以二千元以上二万元以下的罚款：\n(一) 拒绝、阻碍劳动保障行政执法人员依法执行公务的；\n(二) 不按照人力资源社会保障部门的要求报送书面材料、隐瞒事实真相、出具伪证或者隐匿、毁灭证据的；\n(三) 经人力资源社会保障部门责令改正拒不改正，或者拒不履行人力资源社会保障部门的行政处理决定的。",
+            "summary": ""
+          }
+        ],
+        "calculations": [
+          {
+            "claim_id": "arrears",
+            "case_version": 1,
+            "rule_version": "labor-scope-20261025-v3",
+            "status": "conditional",
+            "amount": "4700.00",
+            "formula": "Σ max(逐期应付工资－实付工资, 0)",
+            "periods": [
+              {
+                "start": "2026-09-01",
+                "end": "2026-09-30",
+                "due": "5200",
+                "paid": "500",
+                "unpaid": "4700.00"
+              }
+            ],
+            "assumptions": [
+              "仅核算所填期间本金，不自动附加处罚性金额。"
+            ],
+            "laws": [
+              "contract-law-2012:a30",
+              "labor-law-2018:a50"
+            ],
+            "parameter_ids": [],
+            "missing_parameters": []
+          }
+        ],
+        "review_issues": [
+          {
+            "code": "SUBJ_01",
+            "severity": "warning",
+            "category": "subject_placeholder",
+            "message": "申请人及用人单位主体信息（姓名、地址、电话等）均为空，正式提交前需补充。",
+            "source_ids": [],
+            "fact_fields": [
+              "applicant",
+              "employer_name"
+            ],
+            "law_excerpts": [],
+            "fact_excerpts": [],
+            "missing_fact_fields": []
+          },
+          {
+            "code": "EVID_01",
+            "severity": "warning",
+            "category": "evidence_gap",
+            "message": "考勤记录标记为missing，如用人单位掌握考勤，可依据仲裁法第六条要求其提供；建议补充或说明。",
+            "source_ids": [
+              "arbitration-law-2008:a6"
+            ],
+            "fact_fields": [
+              "evidence.考勤"
+            ],
+            "law_excerpts": [
+              {
+                "source_id": "arbitration-law-2008:a6",
+                "quote": "与争议事项有关的证据属于用人单位掌握管理的，用人单位应当提供；用人单位不提供的，应当承担不利后果。"
+              }
+            ],
+            "fact_excerpts": [
+              {
+                "field": "evidence.考勤",
+                "quote": "missing"
+              }
+            ],
+            "missing_fact_fields": []
+          }
+        ],
+        "missing_info": [],
+        "confirmation": null,
+        "document": null,
+        "document_status": "invalidated",
+        "status": "awaiting_confirmation",
+        "revisions": [
+          {
+            "case_version": 1,
+            "changes": {
+              "workplace": {
+                "old": null,
+                "new": "东莞"
+              },
+              "employer_city": {
+                "old": null,
+                "new": "东莞"
+              },
+              "dispute_date": {
+                "old": null,
+                "new": "2026-10-15"
+              },
+              "start_date": {
+                "old": null,
+                "new": "2026-01-01"
+              },
+              "employment_status": {
+                "old": "unknown",
+                "new": "active"
+              },
+              "wages": {
+                "old": [],
+                "new": [
+                  {
+                    "start": "2026-09-01",
+                    "end": "2026-09-30",
+                    "due": "5200",
+                    "paid": "500"
+                  }
+                ]
+              },
+              "wage_statement": {
+                "old": null,
+                "new": "我目前仍在职。2026年9月正常提供整月劳动，无缺勤。劳动合同约定当月应得工资5200元，不含争议绩效，无扣除抵扣，双方约定9月30日支付，仅收到500元，欠薪至争议日仍未支付。材料未经核验。"
+              },
+              "evidence": {
+                "old": {},
+                "new": {
+                  "劳动合同": "claimed_present",
+                  "工资流水": "claimed_present",
+                  "工作沟通记录": "claimed_present",
+                  "考勤": "missing"
+                }
+              }
+            },
+            "dependencies_changed": false,
+            "time": "2026-10-25T14:48:58.959926+00:00",
+            "invalidated": [
+              "analysis",
+              "calculations",
+              "confirmation",
+              "document"
+            ]
+          }
+        ],
+        "artifacts_version": 1,
+        "stages": [
+          {
+            "task": "intake",
+            "status": "completed",
+            "seconds": 0.0,
+            "case_version": 1
+          },
+          {
+            "task": "retrieval",
+            "status": "completed",
+            "seconds": 0.062,
+            "case_version": 1
+          },
+          {
+            "task": "analysis",
+            "status": "completed",
+            "seconds": 10.75,
+            "case_version": 1
+          },
+          {
+            "task": "calculation",
+            "status": "completed",
+            "seconds": 0.0,
+            "case_version": 1
+          },
+          {
+            "task": "analysis_review",
+            "status": "completed",
+            "seconds": 86.0,
+            "case_version": 1
+          },
+          {
+            "task": "confirmation",
+            "status": "completed",
+            "seconds": 0.0,
+            "case_version": 1
+          }
+        ],
+        "failures": [],
+        "model_calls": [
+          {
+            "role": "Judge",
+            "requested_model": "qwen-plus",
+            "temperature": 0.1,
+            "timeout": 60,
+            "max_retries": 0,
+            "max_tokens": 2400,
+            "response_format": {
+              "type": "json_object"
+            },
+            "enable_thinking": false,
+            "reasoning_effort": null,
+            "attempt": 1,
+            "context_sha256": "c379c116811120380b56862aee71d116098ce8fd211441b7eb7736a8cf3e7420",
+            "input_characters": 7451,
+            "output": "{\n  \"arguments\": [\n    {\n      \"claim_id\": \"arrears\",\n      \"supporting_evidence\": [\n        \"劳动合同（主张存在，约定月工资5200元）\",\n        \"工资流水（主张存在，显示2026年9月仅实付500元）\",\n        \"工作沟通记录（主张存在，可佐证当月正常提供劳动及催付事实）\"\n      ],\n      \"adverse_factors\": [\n        \"考勤记录缺失，无法独立印证2026年9月全勤履行劳动义务\",\n        \"所有证据均标注‘claimed_present’，未提交核验，真实性与关联性待确认\",\n        \"未提供用人单位拒付或无故拖欠的直接证据（如拒付通知、协商记录等）\"\n      ],\n      \"source_ids\": [\n        \"contract-law-2012:a30\",\n        \"labor-law-2018:a50\",\n        \"arbitration-law-2008:a6\",\n        \"gd-wage-2016:a10\",\n        \"gd-wage-2016:a12\"\n      ],\n      \"questions\": [\n        \"劳动合同是否载明工资标准、支付周期及日期？是否经双方签字盖章？\",\n        \"工资流水能否清晰显示2026年9月应付总额5200元、实付500元及交易对手为用人单位？\",\n        \"工作沟通记录中是否有用人单位确认欠薪、承诺支付或否认劳动的事实？\"\n      ]\n    }\n  ]\n}",
+            "actual_model": "qwen-plus",
+            "usage": {
+              "input_tokens": 3450,
+              "output_tokens": 338,
+              "total_tokens": 3788,
+              "input_token_details": {
+                "cache_read": 0
+              },
+              "output_token_details": {}
+            },
+            "status": "ok",
+            "seconds": 9.484
+          },
+          {
+            "role": "Review",
+            "requested_model": "qwen3.8-max",
+            "temperature": 0.1,
+            "timeout": 90,
+            "max_retries": 0,
+            "max_tokens": 4096,
+            "response_format": {
+              "type": "json_object"
+            },
+            "enable_thinking": true,
+            "reasoning_effort": "low",
+            "attempt": 1,
+            "context_sha256": "a994e7a4f687b8ba97c666c9a46be6f19977a5656904b9454a104f926d90b082",
+            "input_characters": 13361,
+            "actual_model": "qwen3.8-max",
+            "usage": {
+              "input_tokens": 5547,
+              "output_tokens": 1897,
+              "total_tokens": 7444,
+              "input_token_details": {
+                "cache_read": 1024
+              },
+              "output_token_details": {
+                "reasoning": 1673
+              }
+            },
+            "output": "{\"issues\":[{\"code\":\"SUBJ-01\",\"severity\":\"warning\",\"category\":\"subject_placeholder\",\"message\":\"申请人及被申请人主体信息（姓名、证件号、地址、联系方式、单位名称等）均为空，正式提交前需补充。\",\"source_ids\":[],\"fact_fields\":[\"applicant\",\"applicant_id\",\"applicant_address\",\"applicant_phone\",\"employer_name\",\"employer_address\",\"employer_representative\",\"employer_phone\"],\"missing_fact_fields\":[\"applicant\",\"employer_name\"]},{\"code\":\"EVID-01\",\"severity\":\"warning\",\"category\":\"evidence_gap\",\"message\":\"考勤记录标记为missing；劳动合同、工资流水、工作沟通记录标记为claimed_present但尚未经核验，仲裁时需提供原件或经核实的副本。\",\"source_ids\":[\"arbitration-law-2008:a6\"],\"fact_fields\":[\"evidence\"],\"law_excerpts\":[{\"source_id\":\"arbitration-law-2008:a6\",\"quote\":\"发生劳动争议，当事人对自己提出的主张，有责任提供证据。\"}],\"fact_excerpts\":[{\"field\":\"evidence\",\"quote\":\"考勤: missing\"}]}]}",
+            "status": "failed",
+            "error": "ValueError: 事实或工具片段不匹配本轮原值：evidence",
+            "seconds": 43.219
+          },
+          {
+            "role": "Review",
+            "requested_model": "qwen3.8-max",
+            "temperature": 0.1,
+            "timeout": 90,
+            "max_retries": 0,
+            "max_tokens": 4096,
+            "response_format": {
+              "type": "json_object"
+            },
+            "enable_thinking": true,
+            "reasoning_effort": "low",
+            "attempt": 2,
+            "context_sha256": "13d15c9c5785f25bf20b9199a76189f989bc1ae5f2d5a60778209d14a97be856",
+            "input_characters": 13413,
+            "actual_model": "qwen3.8-max",
+            "usage": {
+              "input_tokens": 5574,
+              "output_tokens": 1923,
+              "total_tokens": 7497,
+              "input_token_details": {
+                "cache_read": 5120
+              },
+              "output_token_details": {
+                "reasoning": 1730
+              }
+            },
+            "output": "{\"issues\":[{\"code\":\"SUBJ_01\",\"severity\":\"warning\",\"category\":\"subject_placeholder\",\"message\":\"申请人及用人单位主体信息（姓名、地址、电话等）均为空，正式提交前需补充。\",\"source_ids\":[],\"fact_fields\":[\"applicant\",\"employer_name\"]},{\"code\":\"EVID_01\",\"severity\":\"warning\",\"category\":\"evidence_gap\",\"message\":\"考勤记录标记为missing，如用人单位掌握考勤，可依据仲裁法第六条要求其提供；建议补充或说明。\",\"source_ids\":[\"arbitration-law-2008:a6\"],\"fact_fields\":[\"evidence.考勤\"],\"law_excerpts\":[{\"source_id\":\"arbitration-law-2008:a6\",\"quote\":\"与争议事项有关的证据属于用人单位掌握管理的，用人单位应当提供；用人单位不提供的，应当承担不利后果。\"}],\"fact_excerpts\":[{\"field\":\"evidence.考勤\",\"quote\":\"missing\"}]}]}",
+            "status": "ok",
+            "seconds": 42.312
+          }
+        ],
+        "historical_information": {},
+        "analysis": {
+          "status": "model_augmented",
+          "arguments": [
+            {
+              "claim_id": "arrears",
+              "supporting_evidence": [
+                "劳动合同（主张存在，约定月工资5200元）",
+                "工资流水（主张存在，显示2026年9月仅实付500元）",
+                "工作沟通记录（主张存在，可佐证当月正常提供劳动及催付事实）"
+              ],
+              "adverse_factors": [
+                "考勤记录缺失，无法独立印证2026年9月全勤履行劳动义务",
+                "所有证据均标注‘claimed_present’，未提交核验，真实性与关联性待确认",
+                "未提供用人单位拒付或无故拖欠的直接证据（如拒付通知、协商记录等）"
+              ],
+              "source_ids": [
+                "contract-law-2012:a30",
+                "labor-law-2018:a50",
+                "arbitration-law-2008:a6",
+                "gd-wage-2016:a10",
+                "gd-wage-2016:a12"
+              ],
+              "questions": [
+                "劳动合同是否载明工资标准、支付周期及日期？是否经双方签字盖章？",
+                "工资流水能否清晰显示2026年9月应付总额5200元、实付500元及交易对手为用人单位？",
+                "工作沟通记录中是否有用人单位确认欠薪、承诺支付或否认劳动的事实？"
+              ]
+            }
+          ]
+        },
+        "dependencies": {
+          "knowledge_digest": "b9b3767d4c14",
+          "rule_version": "labor-scope-20261025-v3",
+          "workflow_version": "casework-20261025-v11",
+          "model_profile_sha256": "c3cf21aabc72f1e56bb1e3ada5f65354c2ca97c16dfa0c827e528da7dfdddee6"
+        },
+        "fact_conflicts": [],
+        "date_checks": [
+          {
+            "left_field": "start_date",
+            "left": "2026-01-01",
+            "operator": "<=",
+            "right_field": "dispute_date",
+            "right": "2026-10-15",
+            "passed": true,
+            "label": "入职日期不晚于争议日期",
+            "scope": "仅比较输入日期，不判断时效、到期日或请求是否成立"
+          },
+          {
+            "left_field": "start_date",
+            "left": "2026-01-01",
+            "operator": "<=",
+            "right_field": "wages.0.start",
+            "right": "2026-09-01",
+            "passed": true,
+            "label": "入职日期不晚于所填工资期间起日",
+            "scope": "仅比较输入日期，不判断时效、到期日或请求是否成立"
+          },
+          {
+            "left_field": "wages.0.start",
+            "left": "2026-09-01",
+            "operator": "<=",
+            "right_field": "wages.0.end",
+            "right": "2026-09-30",
+            "passed": true,
+            "label": "工资期间起日不晚于止日",
+            "scope": "仅比较输入日期，不判断时效、到期日或请求是否成立"
+          },
+          {
+            "left_field": "wages.0.end",
+            "left": "2026-09-30",
+            "operator": "<=",
+            "right_field": "dispute_date",
+            "right": "2026-10-15",
+            "passed": true,
+            "label": "工资期间止日不晚于争议日期",
+            "scope": "仅比较输入日期，不判断时效、到期日或请求是否成立"
+          }
+        ],
+        "knowledge_version": "gba-2026-10-25-v1",
+        "knowledge_digest": "b9b3767d4c14",
+        "model_review": {
+          "issues": [
+            {
+              "code": "SUBJ_01",
+              "severity": "warning",
+              "category": "subject_placeholder",
+              "message": "申请人及用人单位主体信息（姓名、地址、电话等）均为空，正式提交前需补充。",
+              "source_ids": [],
+              "fact_fields": [
+                "applicant",
+                "employer_name"
+              ],
+              "law_excerpts": [],
+              "fact_excerpts": [],
+              "missing_fact_fields": []
+            },
+            {
+              "code": "EVID_01",
+              "severity": "warning",
+              "category": "evidence_gap",
+              "message": "考勤记录标记为missing，如用人单位掌握考勤，可依据仲裁法第六条要求其提供；建议补充或说明。",
+              "source_ids": [
+                "arbitration-law-2008:a6"
+              ],
+              "fact_fields": [
+                "evidence.考勤"
+              ],
+              "law_excerpts": [
+                {
+                  "source_id": "arbitration-law-2008:a6",
+                  "quote": "与争议事项有关的证据属于用人单位掌握管理的，用人单位应当提供；用人单位不提供的，应当承担不利后果。"
+                }
+              ],
+              "fact_excerpts": [
+                {
+                  "field": "evidence.考勤",
+                  "quote": "missing"
+                }
+              ],
+              "missing_fact_fields": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "confirm",
+      "case": {
+        "schema_version": 1,
+        "case_version": 1,
+        "facts": {
+          "workplace": "东莞",
+          "employer_city": "东莞",
+          "dispute_date": "2026-10-15",
+          "start_date": "2026-01-01",
+          "end_date": null,
+          "employment_status": "active",
+          "initiator": "unknown",
+          "termination_reason": null,
+          "termination_basis": "unknown",
+          "article40_conditions": null,
+          "article40_category": "unknown",
+          "agreement_reached": null,
+          "worker38_ground": "unknown",
+          "worker38_conditions": null,
+          "worker38_notice_delivered": null,
+          "layoff_conditions": null,
+          "layoff_procedure": null,
+          "continued_performance": "unknown",
+          "protected_status": null,
+          "written_notice_30": null,
+          "monthly_average": null,
+          "previous_month_wage": null,
+          "employment_type": "ordinary",
+          "actual_cross_border_work": null,
+          "cross_city_resolved": false,
+          "applicant": null,
+          "applicant_id": null,
+          "applicant_address": null,
+          "applicant_phone": null,
+          "employer_name": null,
+          "employer_address": null,
+          "employer_representative": null,
+          "employer_phone": null,
+          "wages": [
+            {
+              "start": "2026-09-01",
+              "end": "2026-09-30",
+              "due": "5200",
+              "paid": "500"
+            }
+          ],
+          "wage_statement": "我目前仍在职。2026年9月正常提供整月劳动，无缺勤。劳动合同约定当月应得工资5200元，不含争议绩效，无扣除抵扣，双方约定9月30日支付，仅收到500元，欠薪至争议日仍未支付。材料未经核验。",
+          "evidence": {
+            "劳动合同": "claimed_present",
+            "工资流水": "claimed_present",
+            "工作沟通记录": "claimed_present",
+            "考勤": "missing"
+          }
+        },
+        "fact_sources": {
+          "employment_status": {
+            "source": "user_statement_extraction",
+            "input_field": "wage_statement",
+            "statement": "我目前仍在职",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "workplace": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "employer_city": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "dispute_date": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "start_date": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "wage_statement": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "wages": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "evidence": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "evidence.劳动合同": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "evidence.工资流水": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "evidence.工作沟通记录": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          },
+          "evidence.考勤": {
+            "source": "user_structured",
+            "statement": "",
+            "confirmed": true,
+            "case_version": 1,
+            "evidence_verified": false
+          }
+        },
+        "claims": [
+          {
+            "id": "arrears",
+            "title": "拖欠工资",
+            "status": "conditional",
+            "conditions": "劳动关系、工资约定、已履行劳动及支付情况须证据支持",
+            "laws": [
+              "contract-law-2012:a30",
+              "labor-law-2018:a50",
+              "arbitration-law-2008:a6"
+            ],
+            "alternative_group": null,
+            "mutually_exclusive": []
+          }
+        ],
+        "sources": [
+          {
+            "id": "contract-law-2012:a30",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 30,
+            "original_text": "第三十条　用人单位应当按照劳动合同约定和国家规定，向劳动者及时足额支付劳动报酬。\n用人单位拖欠或者未足额支付劳动报酬的，劳动者可以依法向当地人民法院申请支付令，人民法院应当依法发出支付令。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a36",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 36,
+            "original_text": "第三十六条　用人单位与劳动者协商一致，可以解除劳动合同。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a38",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 38,
+            "original_text": "第三十八条　用人单位有下列情形之一的，劳动者可以解除劳动合同:\n（一）未按照劳动合同约定提供劳动保护或者劳动条件的；\n（二）未及时足额支付劳动报酬的；\n（三）未依法为劳动者缴纳社会保险费的；\n（四）用人单位的规章制度违反法律、法规的规定，损害劳动者权益的；\n（五）因本法第二十六条第一款规定的情形致使劳动合同无效的；\n（六）法律、行政法规规定劳动者可以解除劳动合同的其他情形。\n用人单位以暴力、威胁或者非法限制人身自由的手段强迫劳动者劳动的，或者用人单位违章指挥、强令冒险作业危及劳动者人身安全的，劳动者可以立即解除劳动合同，不需事先告知用人单位。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a39",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 39,
+            "original_text": "第三十九条　劳动者有下列情形之一的，用人单位可以解除劳动合同:\n（一）在试用期间被证明不符合录用条件的；\n（二）严重违反用人单位的规章制度的；\n（三）严重失职，营私舞弊，给用人单位造成重大损害的；\n（四）劳动者同时与其他用人单位建立劳动关系，对完成本单位的工作任务造成严重影响，或者经用人单位提出，拒不改正的；\n（五）因本法第二十六条第一款第一项规定的情形致使劳动合同无效的；\n（六）被依法追究刑事责任的。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a40",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 40,
+            "original_text": "第四十条　有下列情形之一的，用人单位提前三十日以书面形式通知劳动者本人或者额外支付劳动者一个月工资后，可以解除劳动合同:\n（一）劳动者患病或者非因工负伤，在规定的医疗期满后不能从事原工作，也不能从事由用人单位另行安排的工作的；\n（二）劳动者不能胜任工作，经过培训或者调整工作岗位，仍不能胜任工作的；\n（三）劳动合同订立时所依据的客观情况发生重大变化，致使劳动合同无法履行，经用人单位与劳动者协商，未能就变更劳动合同内容达成协议的。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a41",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 41,
+            "original_text": "第四十一条　有下列情形之一，需要裁减人员二十人以上或者裁减不足二十人但占企业职工总数百分之十以上的，用人单位提前三十日向工会或者全体职工说明情况，听取工会或者职工的意见后，裁减人员方案经向劳动行政部门报告，可以裁减人员:\n（一）依照企业破产法规定进行重整的；\n（二）生产经营发生严重困难的；\n（三）企业转产、重大技术革新或者经营方式调整，经变更劳动合同后，仍需裁减人员的；\n（四）其他因劳动合同订立时所依据的客观经济情况发生重大变化，致使劳动合同无法履行的。\n裁减人员时，应当优先留用下列人员:\n（一）与本单位订立较长期限的固定期限劳动合同的；\n（二）与本单位订立无固定期限劳动合同的；\n（三）家庭无其他就业人员，有需要扶养的老人或者未成年人的。\n用人单位依照本条第一款规定裁减人员，在六个月内重新招用人员的，应当通知被裁减的人员，并在同等条件下优先招用被裁减的人员。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a42",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 42,
+            "original_text": "第四十二条　劳动者有下列情形之一的，用人单位不得依照本法第四十条、第四十一条的规定解除劳动合同:\n（一）从事接触职业病危害作业的劳动者未进行离岗前职业健康检查，或者疑似职业病病人在诊断或者医学观察期间的；\n（二）在本单位患职业病或者因工负伤并被确认丧失或者部分丧失劳动能力的；\n（三）患病或者非因工负伤，在规定的医疗期内的；\n（四）女职工在孕期、产期、哺乳期的；\n（五）在本单位连续工作满十五年，且距法定退休年龄不足五年的；\n（六）法律、行政法规规定的其他情形。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a43",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 43,
+            "original_text": "第四十三条　用人单位单方解除劳动合同，应当事先将理由通知工会。用人单位违反法律、行政法规规定或者劳动合同约定的，工会有权要求用人单位纠正。用人单位应当研究工会的意见，并将处理结果书面通知工会。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a46",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 46,
+            "original_text": "第四十六条　有下列情形之一的，用人单位应当向劳动者支付经济补偿:\n（一）劳动者依照本法第三十八条规定解除劳动合同的；\n（二）用人单位依照本法第三十六条规定向劳动者提出解除劳动合同并与劳动者协商一致解除劳动合同的；\n（三）用人单位依照本法第四十条规定解除劳动合同的；\n（四）用人单位依照本法第四十一条第一款规定解除劳动合同的；\n（五）除用人单位维持或者提高劳动合同约定条件续订劳动合同，劳动者不同意续订的情形外，依照本法第四十四条第一项规定终止固定期限劳动合同的；\n（六）依照本法第四十四条第四项、第五项规定终止劳动合同的；\n（七）法律、行政法规规定的其他情形。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a47",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 47,
+            "original_text": "第四十七条　经济补偿按劳动者在本单位工作的年限，每满一年支付一个月工资的标准向劳动者支付。六个月以上不满一年的，按一年计算；不满六个月的，向劳动者支付半个月工资的经济补偿。\n劳动者月工资高于用人单位所在直辖市、设区的市级人民政府公布的本地区上年度职工月平均工资三倍的，向其支付经济补偿的标准按职工月平均工资三倍的数额支付，向其支付经济补偿的年限最高不超过十二年。\n本条所称月工资是指劳动者在劳动合同解除或者终止前十二个月的平均工资。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a48",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 48,
+            "original_text": "第四十八条　用人单位违反本法规定解除或者终止劳动合同，劳动者要求继续履行劳动合同的，用人单位应当继续履行；劳动者不要求继续履行劳动合同或者劳动合同已经不能继续履行的，用人单位应当依照本法第八十七条规定支付赔偿金。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a87",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 87,
+            "original_text": "第八十七条　用人单位违反本法规定解除或者终止劳动合同的，应当依照本法第四十七条规定的经济补偿标准的二倍向劳动者支付赔偿金。",
+            "summary": ""
+          },
+          {
+            "id": "contract-regulation-2008:a20",
+            "title": "中华人民共和国劳动合同法实施条例",
+            "issuer": "国务院",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-09-18",
+            "effective_to": null,
+            "expected_articles": 38,
+            "kind": "law",
+            "version": "contract-regulation-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.beijing.gov.cn/zhengce/gwywj/201105/t20110506_780976.html",
+            "snapshot": "snapshots/contract-regulation-2008.txt",
+            "sha256": "7cf498971390aaddf24ba2416c33ccecf061c146203de3a638ac2e569f8c428d",
+            "body_start": "第一条",
+            "body_end": "\n放弃",
+            "source_id": "contract-regulation-2008",
+            "article": 20,
+            "original_text": "第二十条　用人单位依照劳动合同法第四十条的规定，选择额外支付劳动者一个月工资解除劳动合同的，其额外支付的工资应当按照该劳动者上一个月的工资标准确定。",
+            "summary": ""
+          },
+          {
+            "id": "contract-regulation-2008:a25",
+            "title": "中华人民共和国劳动合同法实施条例",
+            "issuer": "国务院",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-09-18",
+            "effective_to": null,
+            "expected_articles": 38,
+            "kind": "law",
+            "version": "contract-regulation-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.beijing.gov.cn/zhengce/gwywj/201105/t20110506_780976.html",
+            "snapshot": "snapshots/contract-regulation-2008.txt",
+            "sha256": "7cf498971390aaddf24ba2416c33ccecf061c146203de3a638ac2e569f8c428d",
+            "body_start": "第一条",
+            "body_end": "\n放弃",
+            "source_id": "contract-regulation-2008",
+            "article": 25,
+            "original_text": "第二十五条　用人单位违反劳动合同法的规定解除或者终止劳动合同，依照劳动合同法第八十七条的规定支付了赔偿金的，不再支付经济补偿。赔偿金的计算年限自用工之日起计算。",
+            "summary": ""
+          },
+          {
+            "id": "contract-regulation-2008:a27",
+            "title": "中华人民共和国劳动合同法实施条例",
+            "issuer": "国务院",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-09-18",
+            "effective_to": null,
+            "expected_articles": 38,
+            "kind": "law",
+            "version": "contract-regulation-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.beijing.gov.cn/zhengce/gwywj/201105/t20110506_780976.html",
+            "snapshot": "snapshots/contract-regulation-2008.txt",
+            "sha256": "7cf498971390aaddf24ba2416c33ccecf061c146203de3a638ac2e569f8c428d",
+            "body_start": "第一条",
+            "body_end": "\n放弃",
+            "source_id": "contract-regulation-2008",
+            "article": 27,
+            "original_text": "第二十七条　劳动合同法第四十七条规定的经济补偿的月工资按照劳动者应得工资计算，包括计时工资或者计件工资以及奖金、津贴和补贴等货币性收入。劳动者在劳动合同解除或者终止前12个月的平均工资低于当地最低工资标准的，按照当地最低工资标准计算。劳动者工作不满12个月的，按照实际工作的月数计算平均工资。\n第四章　劳务派遣特别规定",
+            "summary": ""
+          },
+          {
+            "id": "arbitration-law-2008:a6",
+            "title": "中华人民共和国劳动争议调解仲裁法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-05-01",
+            "effective_to": null,
+            "expected_articles": 54,
+            "kind": "law",
+            "version": "arbitration-law-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml",
+            "snapshot": "snapshots/arbitration-law-2008.txt",
+            "sha256": "e93cbe1de395df22f74e6a05532ade928408cbdcc05229c7b8e190bdc45d503e",
+            "body_start": "第一条",
+            "body_end": "\n劳动\n争议",
+            "source_id": "arbitration-law-2008",
+            "article": 6,
+            "original_text": "第六条 发生劳动争议，当事人对自己提出的主张，有责任提供证据。与争议事项有关的证据属于用人单位掌握管理的，用人单位应当提供；用人单位不提供的，应当承担不利后果。",
+            "summary": ""
+          },
+          {
+            "id": "arbitration-law-2008:a21",
+            "title": "中华人民共和国劳动争议调解仲裁法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-05-01",
+            "effective_to": null,
+            "expected_articles": 54,
+            "kind": "law",
+            "version": "arbitration-law-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml",
+            "snapshot": "snapshots/arbitration-law-2008.txt",
+            "sha256": "e93cbe1de395df22f74e6a05532ade928408cbdcc05229c7b8e190bdc45d503e",
+            "body_start": "第一条",
+            "body_end": "\n劳动\n争议",
+            "source_id": "arbitration-law-2008",
+            "article": 21,
+            "original_text": "第二十一条 劳动争议仲裁委员会负责管辖本区域内发生的劳动争议。\n劳动争议由劳动合同履行地或者用人单位所在地的劳动争议仲裁委员会管辖。双方当事人分别向劳动合同履行地和用人单位所在地的劳动争议仲裁委员会申请仲裁的，由劳动合同履行地的劳动争议仲裁委员会管辖。",
+            "summary": ""
+          },
+          {
+            "id": "arbitration-law-2008:a27",
+            "title": "中华人民共和国劳动争议调解仲裁法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-05-01",
+            "effective_to": null,
+            "expected_articles": 54,
+            "kind": "law",
+            "version": "arbitration-law-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml",
+            "snapshot": "snapshots/arbitration-law-2008.txt",
+            "sha256": "e93cbe1de395df22f74e6a05532ade928408cbdcc05229c7b8e190bdc45d503e",
+            "body_start": "第一条",
+            "body_end": "\n劳动\n争议",
+            "source_id": "arbitration-law-2008",
+            "article": 27,
+            "original_text": "第二十七条 劳动争议申请仲裁的时效期间为一年。仲裁时效期间从当事人知道或者应当知道其权利被侵害之日起计算。\n前款规定的仲裁时效，因当事人一方向对方当事人主张权利，或者向有关部门请求权利救济，或者对方当事人同意履行义务而中断。从中断时起，仲裁时效期间重新计算。\n因不可抗力或者有其他正当理由，当事人不能在本条第一款规定的仲裁时效期间申请仲裁的，仲裁时效中止。从中止时效的原因消除之日起，仲裁时效期间继续计算。\n劳动关系存续期间因拖欠劳动报酬发生争议的，劳动者申请仲裁不受本条第一款规定的仲裁时效期间的限制；但是，劳动关系终止的，应当自劳动关系终止之日起一年内提出。",
+            "summary": ""
+          },
+          {
+            "id": "arbitration-law-2008:a28",
+            "title": "中华人民共和国劳动争议调解仲裁法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-05-01",
+            "effective_to": null,
+            "expected_articles": 54,
+            "kind": "law",
+            "version": "arbitration-law-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml",
+            "snapshot": "snapshots/arbitration-law-2008.txt",
+            "sha256": "e93cbe1de395df22f74e6a05532ade928408cbdcc05229c7b8e190bdc45d503e",
+            "body_start": "第一条",
+            "body_end": "\n劳动\n争议",
+            "source_id": "arbitration-law-2008",
+            "article": 28,
+            "original_text": "第二十八条 申请人申请仲裁应当提交书面仲裁申请，并按照被申请人人数提交副本。\n仲裁申请书应当载明下列事项：\n（一）劳动者的姓名、性别、年龄、职业、工作单位和住所，用人单位的名称、住所和法定代表人或者主要负责人的姓名、职务；\n（二）仲裁请求和所根据的事实、理由；\n（三）证据和证据来源、证人姓名和住所。\n书写仲裁申请确有困难的，可以口头申请，由劳动争议仲裁委员会记入笔录，并告知对方当事人。",
+            "summary": ""
+          },
+          {
+            "id": "labor-law-2018:a50",
+            "title": "中华人民共和国劳动法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2018-12-29",
+            "effective_to": null,
+            "expected_articles": 107,
+            "kind": "law",
+            "version": "labor-law-2018",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_d9aa750028b14b99a776cb93726a360d.html",
+            "snapshot": "snapshots/labor-law-2018.txt",
+            "sha256": "3f3b9003219ed008a460a4fa7de7be358c552a289d275050194427cc1938979d",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "labor-law-2018",
+            "article": 50,
+            "original_text": "第五十条　工资应当以货币形式按月支付给劳动者本人。不得克扣或者无故拖欠劳动者的工资。",
+            "summary": ""
+          },
+          {
+            "id": "spc-labor-I-2021:a44",
+            "title": "最高人民法院关于审理劳动争议案件适用法律问题的解释（一）",
+            "issuer": "最高人民法院",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2021-01-01",
+            "effective_to": null,
+            "expected_articles": 54,
+            "kind": "law",
+            "version": "spc-labor-I-2021",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.sdcourt.gov.cn/jnanzqfy/xfkd/xfkd84/6793708/index.html",
+            "snapshot": "snapshots/spc-labor-I-2021.txt",
+            "sha256": "8cd44c20b4e92160c07e3a3efc09873a2945d4f8e582035306032c61a45cb698",
+            "body_start": "第一条",
+            "body_end": "\n【关闭】",
+            "partial_repeals": [
+              {
+                "article": 32,
+                "effective_from": "2025-09-01",
+                "surviving_text_start": "企业停薪留职人员",
+                "authority": "spc-labor-II-2025:a21"
+              }
+            ],
+            "source_id": "spc-labor-I-2021",
+            "article": 44,
+            "original_text": "第四十四条因用人单位作出的开除、除名、辞退、解除劳动合同、减少劳动报酬、计算劳动者工作年限等决定而发生的劳动争议，用人单位负举证责任。",
+            "summary": ""
+          },
+          {
+            "id": "contract-regulation-2008:a14",
+            "title": "中华人民共和国劳动合同法实施条例",
+            "issuer": "国务院",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2008-09-18",
+            "effective_to": null,
+            "expected_articles": 38,
+            "kind": "law",
+            "version": "contract-regulation-2008",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.beijing.gov.cn/zhengce/gwywj/201105/t20110506_780976.html",
+            "snapshot": "snapshots/contract-regulation-2008.txt",
+            "sha256": "7cf498971390aaddf24ba2416c33ccecf061c146203de3a638ac2e569f8c428d",
+            "body_start": "第一条",
+            "body_end": "\n放弃",
+            "source_id": "contract-regulation-2008",
+            "article": 14,
+            "original_text": "第十四条　劳动合同履行地与用人单位注册地不一致的，有关劳动者的最低工资标准、劳动保护、劳动条件、职业危害防护和本地区上年度职工月平均工资标准等事项，按照劳动合同履行地的有关规定执行；用人单位注册地的有关标准高于劳动合同履行地的有关标准，且用人单位与劳动者约定按照用人单位注册地的有关规定执行的，从其约定。",
+            "summary": ""
+          },
+          {
+            "id": "contract-law-2012:a7",
+            "title": "中华人民共和国劳动合同法",
+            "issuer": "全国人民代表大会常务委员会",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "2013-07-01",
+            "effective_to": null,
+            "expected_articles": 98,
+            "kind": "law",
+            "version": "contract-law-2012",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+            "snapshot": "snapshots/contract-law-2012.txt",
+            "sha256": "3d493b9e9d605c99eda6457682de0b19bed3d313dc53a3e49072efe3e0971969",
+            "body_start": "第一条",
+            "body_end": null,
+            "source_id": "contract-law-2012",
+            "article": 7,
+            "original_text": "第七条　用人单位自用工之日起即与劳动者建立劳动关系。用人单位应当建立职工名册备查。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a10",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 10,
+            "original_text": "第十条 用人单位应当以货币形式按照确定的工资支付周期足额支付工资，不得拖欠或者克扣。\n实行月、周、日、小时工资制的，工资支付周期可以按月、周、日、小时确定。\n实行计件工资制或者以完成一定任务计发工资的，工资支付周期可以按计件或者完成工作任务情况约定，但支付周期超过一个月的，用人单位应当按照约定每月支付工资。\n实行年薪制或者按考核周期支付工资的，用人单位应当按照约定每月支付工资，年终或者考核周期届满时应当结算并付清工资。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a11",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 11,
+            "original_text": "第十一条 用人单位应当将工资直接支付给劳动者本人。劳动者本人因故不能领取工资时，可以委托他人代领，但应当出具委托书。\n用人单位委托银行代发工资的，应当在约定的工资支付日将劳动者的工资足额存入其本人账户。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a12",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 12,
+            "original_text": "第十二条 用人单位与劳动者应当在劳动合同中明确约定工资支付周期和支付日期。\n用人单位应当按照约定的日期支付劳动者工资；遇法定休假日或者休息日，应当提前在最近的工作日支付。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a49",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 49,
+            "original_text": "第四十九条 在用人单位与劳动者约定的工资支付日期前，有证据证明用人单位法定代表人、实际经营者或者主要负责人采取逃匿、转移财产等方式逃避支付工资义务的，由人力资源社会保障部门责令其限期支付。",
+            "summary": ""
+          },
+          {
+            "id": "wage-interim-1995:a9",
+            "title": "工资支付暂行规定",
+            "issuer": "劳动部",
+            "jurisdictions": [
+              "全国"
+            ],
+            "effective_from": "1995-01-01",
+            "effective_to": null,
+            "expected_articles": 20,
+            "kind": "law",
+            "version": "wage-interim-1995",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://rsj.sh.gov.cn/trlzyhshbzbgz_17256/20200617/t0035_1388318.html",
+            "snapshot": "snapshots/wage-interim-1995.txt",
+            "sha256": "c7c11b1eb73cb42ea9f78de68421127f1e340b3410a7d6c2fd36cb26e87652af",
+            "body_start": "第一条",
+            "body_end": "\n劳动部",
+            "source_id": "wage-interim-1995",
+            "article": 9,
+            "original_text": "第九条　劳动关系双方依法解除或终止劳动合同时，用人单位应在解除或终止劳动合同时一次付清劳动者工资。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a13",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 13,
+            "original_text": "第十三条 用人单位与劳动者依法终止或者解除劳动关系的，应当在终止或者解除劳动关系当日结清并一次性支付劳动者工资。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a50",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 50,
+            "original_text": "第五十条 人力资源社会保障部门在办理拒不支付劳动报酬案件过程中，发现涉案人员有拒绝调查、逃匿或者转移、隐藏、销毁证据等行为，依法可以要求公安机关提前介入调查，公安机关应当予以配合。有关行为涉嫌犯罪的，人力资源社会保障部门应当依法向公安机关移送案件。",
+            "summary": ""
+          },
+          {
+            "id": "gd-wage-2016:a57",
+            "title": "广东省工资支付条例",
+            "issuer": "广东省人民代表大会常务委员会",
+            "jurisdictions": [
+              "广东"
+            ],
+            "effective_from": "2016-09-29",
+            "effective_to": null,
+            "expected_articles": 64,
+            "kind": "law",
+            "version": "gd-wage-2016",
+            "verified_on": "2026-10-25",
+            "verification": "official_text_internal_check",
+            "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+            "snapshot": "snapshots/gd-wage-2016.txt",
+            "sha256": "065018ebc6cce07a9e323190e414b11c1fd11bd1fd074812dff7605aa561e474",
+            "body_start": "第一条",
+            "body_end": "\n相关附件",
+            "source_id": "gd-wage-2016",
+            "article": 57,
+            "original_text": "第五十七条 用人单位有下列行为之一的，由人力资源社会保障部门视情节轻重，处以二千元以上二万元以下的罚款：\n(一) 拒绝、阻碍劳动保障行政执法人员依法执行公务的；\n(二) 不按照人力资源社会保障部门的要求报送书面材料、隐瞒事实真相、出具伪证或者隐匿、毁灭证据的；\n(三) 经人力资源社会保障部门责令改正拒不改正，或者拒不履行人力资源社会保障部门的行政处理决定的。",
+            "summary": ""
+          }
+        ],
+        "calculations": [
+          {
+            "claim_id": "arrears",
+            "case_version": 1,
+            "rule_version": "labor-scope-20261025-v3",
+            "status": "conditional",
+            "amount": "4700.00",
+            "formula": "Σ max(逐期应付工资－实付工资, 0)",
+            "periods": [
+              {
+                "start": "2026-09-01",
+                "end": "2026-09-30",
+                "due": "5200",
+                "paid": "500",
+                "unpaid": "4700.00"
+              }
+            ],
+            "assumptions": [
+              "仅核算所填期间本金，不自动附加处罚性金额。"
+            ],
+            "laws": [
+              "contract-law-2012:a30",
+              "labor-law-2018:a50"
+            ],
+            "parameter_ids": [],
+            "missing_parameters": []
+          }
+        ],
+        "review_issues": [
+          {
+            "code": "SP-001",
+            "severity": "warning",
+            "category": "subject_placeholder",
+            "message": "申请人及被申请人身份信息（姓名、地址、联系方式等）均为空，正式提交前需补充。",
+            "source_ids": [],
+            "fact_fields": [
+              "applicant",
+              "applicant_id",
+              "applicant_address",
+              "applicant_phone",
+              "employer_name",
+              "employer_address",
+              "employer_representative",
+              "employer_phone"
+            ],
+            "law_excerpts": [],
+            "fact_excerpts": [],
+            "missing_fact_fields": [
+              "applicant",
+              "employer_name"
+            ]
+          },
+          {
+            "code": "EG-001",
+            "severity": "warning",
+            "category": "evidence_gap",
+            "message": "用户陈述整月正常出勤无缺勤，但考勤记录标记为missing，建议补充以佐证已履行劳动。",
+            "source_ids": [],
+            "fact_fields": [
+              "evidence.考勤",
+              "wage_statement"
+            ],
+            "law_excerpts": [],
+            "fact_excerpts": [
+              {
+                "field": "wage_statement",
+                "quote": "2026年9月正常提供整月劳动，无缺勤"
+              }
+            ],
+            "missing_fact_fields": []
+          }
+        ],
+        "missing_info": [],
+        "confirmation": {
+          "case_version": 1,
+          "selected_claims": [
+            "arrears"
+          ],
+          "snapshot_hash": "4a7bc3ab374c3116f7ed17d7e0adf858b35a06590adfc5c7476b4c03da23df4b",
+          "time": "2026-10-25T14:51:19.057079+00:00",
+          "evidence_verified": false
+        },
+        "document": {
+          "markdown": "# 劳动人事争议仲裁申请书（草稿）\n案件版本：1；仅依据用户确认输入整理，证据真实性未经核验。\n\n申请人：【待补充】；身份证号：【待补充】；住址：【待补充】；电话：【待补充】\n被申请人：【待补充】；住所：【待补充】；法定代表人/负责人：【待补充】；电话：【待补充】\n\n## 仲裁请求\n1. 请求被申请人支付拖欠工资人民币 4700.00 元（Σ max(逐期应付工资－实付工资, 0)）。\n\n## 事实与理由\n申请人陈述：劳动合同履行地为东莞，单位所在地为东莞。入职日期2026-01-01，解除/离职日期【待补充】。\n解除提出方：【待补充】；具体理由：【待补充】。上述为申请人主张，是否成立须结合证据及审理认定。\n\n工资约定与劳动履行（申请人陈述，待举证）：\n我目前仍在职。2026年9月正常提供整月劳动，无缺勤。劳动合同约定当月应得工资5200元，不含争议绩效，无扣除抵扣，双方约定9月30日支付，仅收到500元，欠薪至争议日仍未支付。材料未经核验。\n在职状态（申请人陈述，待举证）：仍在职\n\n工资期间 | 应付（元） | 实付（元）\n---|---:|---:\n2026-09-01 至 2026-09-30 | 5200 | 500\n\n## 法律依据\n- 《中华人民共和国劳动合同法》第30条 [contract-law-2012:a30](https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html)\n- 《中华人民共和国劳动法》第50条 [labor-law-2018:a50](https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_d9aa750028b14b99a776cb93726a360d.html)\n- 《中华人民共和国劳动争议调解仲裁法》第6条 [arbitration-law-2008:a6](https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml)\n\n## 证据目录（仅列用户称持有的材料）\n- 劳动合同：证明劳动关系、入职日期、岗位及工资约定；对应请求 拖欠工资。\n- 工资流水：核对工资基数、实付金额与欠付期间；对应请求 拖欠工资。\n- 工作沟通记录：材料内容及具体证明目的待核对；对应请求 拖欠工资。\n\n此致\n【有管辖权的劳动人事争议仲裁委员会，具体市/区待核验】\n\n申请人签名：【待补充】\n日期：【待补充】",
+          "case_version": 1,
+          "requests": [
+            {
+              "claim_id": "arrears",
+              "amount": "4700.00",
+              "case_version": 1
+            }
+          ],
+          "evidence": [
+            {
+              "name": "劳动合同",
+              "claim_ids": [
+                "arrears"
+              ],
+              "purpose": "证明劳动关系、入职日期、岗位及工资约定"
+            },
+            {
+              "name": "工资流水",
+              "claim_ids": [
+                "arrears"
+              ],
+              "purpose": "核对工资基数、实付金额与欠付期间"
+            },
+            {
+              "name": "工作沟通记录",
+              "claim_ids": [
+                "arrears"
+              ],
+              "purpose": "材料内容及具体证明目的待核对"
+            }
+          ],
+          "law_ids": [
+            "contract-law-2012:a30",
+            "labor-law-2018:a50",
+            "arbitration-law-2008:a6"
+          ],
+          "fact_snapshot": {
+            "workplace": "东莞",
+            "employer_city": "东莞",
+            "dispute_date": "2026-10-15",
+            "start_date": "2026-01-01",
+            "end_date": null,
+            "employment_status": "active",
+            "initiator": "unknown",
+            "termination_reason": null,
+            "termination_basis": "unknown",
+            "article40_conditions": null,
+            "article40_category": "unknown",
+            "agreement_reached": null,
+            "worker38_ground": "unknown",
+            "worker38_conditions": null,
+            "worker38_notice_delivered": null,
+            "layoff_conditions": null,
+            "layoff_procedure": null,
+            "continued_performance": "unknown",
+            "protected_status": null,
+            "written_notice_30": null,
+            "monthly_average": null,
+            "previous_month_wage": null,
+            "employment_type": "ordinary",
+            "actual_cross_border_work": null,
+            "cross_city_resolved": false,
+            "applicant": null,
+            "applicant_id": null,
+            "applicant_address": null,
+            "applicant_phone": null,
+            "employer_name": null,
+            "employer_address": null,
+            "employer_representative": null,
+            "employer_phone": null,
+            "wages": [
+              {
+                "start": "2026-09-01",
+                "end": "2026-09-30",
+                "due": "5200",
+                "paid": "500"
+              }
+            ],
+            "wage_statement": "我目前仍在职。2026年9月正常提供整月劳动，无缺勤。劳动合同约定当月应得工资5200元，不含争议绩效，无扣除抵扣，双方约定9月30日支付，仅收到500元，欠薪至争议日仍未支付。材料未经核验。",
+            "evidence": {
+              "劳动合同": "claimed_present",
+              "工资流水": "claimed_present",
+              "工作沟通记录": "claimed_present",
+              "考勤": "missing"
+            }
+          },
+          "revision_count": 0,
+          "status": "draft",
+          "model_plan": {
+            "requests": [
+              {
+                "claim_id": "arrears",
+                "amount": "4700.00",
+                "source_ids": [
+                  "contract-law-2012:a30",
+                  "labor-law-2018:a50",
+                  "arbitration-law-2008:a6"
+                ]
+              }
+            ],
+            "evidence_names": [
+              "劳动合同",
+              "工资流水",
+              "工作沟通记录"
+            ]
+          },
+          "rendering": "canonical_structured_markdown"
+        },
+        "document_status": "reviewed_draft",
+        "status": "draft_ready",
+        "revisions": [
+          {
+            "case_version": 1,
+            "changes": {
+              "workplace": {
+                "old": null,
+                "new": "东莞"
+              },
+              "employer_city": {
+                "old": null,
+                "new": "东莞"
+              },
+              "dispute_date": {
+                "old": null,
+                "new": "2026-10-15"
+              },
+              "start_date": {
+                "old": null,
+                "new": "2026-01-01"
+              },
+              "employment_status": {
+                "old": "unknown",
+                "new": "active"
+              },
+              "wages": {
+                "old": [],
+                "new": [
+                  {
+                    "start": "2026-09-01",
+                    "end": "2026-09-30",
+                    "due": "5200",
+                    "paid": "500"
+                  }
+                ]
+              },
+              "wage_statement": {
+                "old": null,
+                "new": "我目前仍在职。2026年9月正常提供整月劳动，无缺勤。劳动合同约定当月应得工资5200元，不含争议绩效，无扣除抵扣，双方约定9月30日支付，仅收到500元，欠薪至争议日仍未支付。材料未经核验。"
+              },
+              "evidence": {
+                "old": {},
+                "new": {
+                  "劳动合同": "claimed_present",
+                  "工资流水": "claimed_present",
+                  "工作沟通记录": "claimed_present",
+                  "考勤": "missing"
+                }
+              }
+            },
+            "dependencies_changed": false,
+            "time": "2026-10-25T14:48:58.959926+00:00",
+            "invalidated": [
+              "analysis",
+              "calculations",
+              "confirmation",
+              "document"
+            ]
+          }
+        ],
+        "artifacts_version": 1,
+        "stages": [
+          {
+            "task": "intake",
+            "status": "completed",
+            "seconds": 0.0,
+            "case_version": 1
+          },
+          {
+            "task": "retrieval",
+            "status": "completed",
+            "seconds": 0.031,
+            "case_version": 1
+          },
+          {
+            "task": "analysis",
+            "status": "completed",
+            "seconds": 7.953,
+            "case_version": 1
+          },
+          {
+            "task": "calculation",
+            "status": "completed",
+            "seconds": 0.0,
+            "case_version": 1
+          },
+          {
+            "task": "analysis_review",
+            "status": "completed",
+            "seconds": 35.281,
+            "case_version": 1
+          },
+          {
+            "task": "confirmation",
+            "status": "completed",
+            "seconds": 0.0,
+            "case_version": 1
+          },
+          {
+            "task": "document",
+            "status": "completed",
+            "seconds": 2.844,
+            "case_version": 1
+          },
+          {
+            "task": "document_review",
+            "status": "completed",
+            "seconds": 0.0,
+            "case_version": 1
+          }
+        ],
+        "failures": [],
+        "model_calls": [
+          {
+            "role": "Judge",
+            "requested_model": "qwen-plus",
+            "temperature": 0.1,
+            "timeout": 60,
+            "max_retries": 0,
+            "max_tokens": 2400,
+            "response_format": {
+              "type": "json_object"
+            },
+            "enable_thinking": false,
+            "reasoning_effort": null,
+            "attempt": 1,
+            "context_sha256": "c379c116811120380b56862aee71d116098ce8fd211441b7eb7736a8cf3e7420",
+            "input_characters": 7451,
+            "output": "{\n  \"arguments\": [\n    {\n      \"claim_id\": \"arrears\",\n      \"supporting_evidence\": [\n        \"劳动合同（主张存在，约定月工资5200元）\",\n        \"工资流水（主张存在，显示仅支付500元）\",\n        \"工作沟通记录（主张存在，可佐证2026年9月正常提供劳动）\"\n      ],\n      \"adverse_factors\": [\n        \"考勤记录缺失，无法独立印证2026年9月全勤及实际出勤事实\",\n        \"所有证据均标注‘claimed_present’，尚未核验真实性、完整性与关联性\",\n        \"未提供工资支付周期和支付日期的书面约定依据（如劳动合同条款原文或补充协议）\"\n      ],\n      \"source_ids\": [\n        \"contract-law-2012:a30\",\n        \"labor-law-2018:a50\",\n        \"gd-wage-2016:a10\",\n        \"gd-wage-2016:a12\",\n        \"arbitration-law-2008:a6\"\n      ],\n      \"questions\": [\n        \"劳动合同中关于工资标准、支付周期及支付日期的具体约定条款是否明确？\",\n        \"工资流水能否清晰显示2026年9月应付总额5200元及实付500元的对应交易？\",\n        \"工作沟通记录中是否有用人单位确认9月工资未足额支付或承诺补发的内容？\"\n      ]\n    }\n  ]\n}",
+            "actual_model": "qwen-plus",
+            "usage": {
+              "input_tokens": 3450,
+              "output_tokens": 329,
+              "total_tokens": 3779,
+              "input_token_details": {
+                "cache_read": 512
+              },
+              "output_token_details": {}
+            },
+            "status": "ok",
+            "seconds": 7.953
+          },
+          {
+            "role": "Review",
+            "requested_model": "qwen3.8-max",
+            "temperature": 0.1,
+            "timeout": 90,
+            "max_retries": 0,
+            "max_tokens": 4096,
+            "response_format": {
+              "type": "json_object"
+            },
+            "enable_thinking": true,
+            "reasoning_effort": "low",
+            "attempt": 1,
+            "context_sha256": "36a39c8659d3119b6091930c7f0612c71d94c3d3555c46c50506766603a96592",
+            "input_characters": 13361,
+            "actual_model": "qwen3.8-max",
+            "usage": {
+              "input_tokens": 5547,
+              "output_tokens": 1566,
+              "total_tokens": 7113,
+              "input_token_details": {
+                "cache_read": 3072
+              },
+              "output_token_details": {
+                "reasoning": 1360
+              }
+            },
+            "output": "{\"issues\":[{\"code\":\"SP-001\",\"severity\":\"warning\",\"category\":\"subject_placeholder\",\"message\":\"申请人及被申请人身份信息（姓名、地址、联系方式等）均为空，正式提交前需补充。\",\"source_ids\":[],\"fact_fields\":[\"applicant\",\"applicant_id\",\"applicant_address\",\"applicant_phone\",\"employer_name\",\"employer_address\",\"employer_representative\",\"employer_phone\"],\"law_excerpts\":[],\"fact_excerpts\":[],\"missing_fact_fields\":[\"applicant\",\"employer_name\"]},{\"code\":\"EG-001\",\"severity\":\"warning\",\"category\":\"evidence_gap\",\"message\":\"用户陈述整月正常出勤无缺勤，但考勤记录标记为missing，建议补充以佐证已履行劳动。\",\"source_ids\":[],\"fact_fields\":[\"evidence.考勤\",\"wage_statement\"],\"law_excerpts\":[],\"fact_excerpts\":[{\"field\":\"wage_statement\",\"quote\":\"2026年9月正常提供整月劳动，无缺勤\"}],\"missing_fact_fields\":[]}]}",
+            "status": "ok",
+            "seconds": 35.265
+          },
+          {
+            "role": "Doc",
+            "requested_model": "qwen-plus",
+            "temperature": 0.1,
+            "timeout": 60,
+            "max_retries": 0,
+            "max_tokens": 2400,
+            "response_format": {
+              "type": "json_object"
+            },
+            "enable_thinking": false,
+            "reasoning_effort": null,
+            "attempt": 1,
+            "context_sha256": "d93fb185a495d3df6e7bf3a0cdc39db52b9fdc27d4c3fdac33f866af4590bd03",
+            "input_characters": 2559,
+            "actual_model": "qwen-plus",
+            "usage": {
+              "input_tokens": 1055,
+              "output_tokens": 97,
+              "total_tokens": 1152,
+              "input_token_details": {
+                "cache_read": 0
+              },
+              "output_token_details": {}
+            },
+            "output": "{\n  \"requests\": [\n    {\n      \"claim_id\": \"arrears\",\n      \"amount\": \"4700.00\",\n      \"source_ids\": [\"contract-law-2012:a30\", \"labor-law-2018:a50\", \"arbitration-law-2008:a6\"]\n    }\n  ],\n  \"evidence_names\": [\"劳动合同\", \"工资流水\", \"工作沟通记录\"]\n}",
+            "status": "ok",
+            "seconds": 2.844
+          }
+        ],
+        "historical_information": {},
+        "analysis": {
+          "status": "model_augmented",
+          "arguments": [
+            {
+              "claim_id": "arrears",
+              "supporting_evidence": [
+                "劳动合同（主张存在，约定月工资5200元）",
+                "工资流水（主张存在，显示仅支付500元）",
+                "工作沟通记录（主张存在，可佐证2026年9月正常提供劳动）"
+              ],
+              "adverse_factors": [
+                "考勤记录缺失，无法独立印证2026年9月全勤及实际出勤事实",
+                "所有证据均标注‘claimed_present’，尚未核验真实性、完整性与关联性",
+                "未提供工资支付周期和支付日期的书面约定依据（如劳动合同条款原文或补充协议）"
+              ],
+              "source_ids": [
+                "contract-law-2012:a30",
+                "labor-law-2018:a50",
+                "gd-wage-2016:a10",
+                "gd-wage-2016:a12",
+                "arbitration-law-2008:a6"
+              ],
+              "questions": [
+                "劳动合同中关于工资标准、支付周期及支付日期的具体约定条款是否明确？",
+                "工资流水能否清晰显示2026年9月应付总额5200元及实付500元的对应交易？",
+                "工作沟通记录中是否有用人单位确认9月工资未足额支付或承诺补发的内容？"
+              ]
+            }
+          ]
+        },
+        "dependencies": {
+          "knowledge_digest": "b9b3767d4c14",
+          "rule_version": "labor-scope-20261025-v3",
+          "workflow_version": "casework-20261025-v11",
+          "model_profile_sha256": "c3cf21aabc72f1e56bb1e3ada5f65354c2ca97c16dfa0c827e528da7dfdddee6"
+        },
+        "fact_conflicts": [],
+        "date_checks": [
+          {
+            "left_field": "start_date",
+            "left": "2026-01-01",
+            "operator": "<=",
+            "right_field": "dispute_date",
+            "right": "2026-10-15",
+            "passed": true,
+            "label": "入职日期不晚于争议日期",
+            "scope": "仅比较输入日期，不判断时效、到期日或请求是否成立"
+          },
+          {
+            "left_field": "start_date",
+            "left": "2026-01-01",
+            "operator": "<=",
+            "right_field": "wages.0.start",
+            "right": "2026-09-01",
+            "passed": true,
+            "label": "入职日期不晚于所填工资期间起日",
+            "scope": "仅比较输入日期，不判断时效、到期日或请求是否成立"
+          },
+          {
+            "left_field": "wages.0.start",
+            "left": "2026-09-01",
+            "operator": "<=",
+            "right_field": "wages.0.end",
+            "right": "2026-09-30",
+            "passed": true,
+            "label": "工资期间起日不晚于止日",
+            "scope": "仅比较输入日期，不判断时效、到期日或请求是否成立"
+          },
+          {
+            "left_field": "wages.0.end",
+            "left": "2026-09-30",
+            "operator": "<=",
+            "right_field": "dispute_date",
+            "right": "2026-10-15",
+            "passed": true,
+            "label": "工资期间止日不晚于争议日期",
+            "scope": "仅比较输入日期，不判断时效、到期日或请求是否成立"
+          }
+        ],
+        "knowledge_version": "gba-2026-10-25-v1",
+        "knowledge_digest": "b9b3767d4c14",
+        "model_review": {
+          "issues": [
+            {
+              "code": "SP-001",
+              "severity": "warning",
+              "category": "subject_placeholder",
+              "message": "申请人及被申请人身份信息（姓名、地址、联系方式等）均为空，正式提交前需补充。",
+              "source_ids": [],
+              "fact_fields": [
+                "applicant",
+                "applicant_id",
+                "applicant_address",
+                "applicant_phone",
+                "employer_name",
+                "employer_address",
+                "employer_representative",
+                "employer_phone"
+              ],
+              "law_excerpts": [],
+              "fact_excerpts": [],
+              "missing_fact_fields": [
+                "applicant",
+                "employer_name"
+              ]
+            },
+            {
+              "code": "EG-001",
+              "severity": "warning",
+              "category": "evidence_gap",
+              "message": "用户陈述整月正常出勤无缺勤，但考勤记录标记为missing，建议补充以佐证已履行劳动。",
+              "source_ids": [],
+              "fact_fields": [
+                "evidence.考勤",
+                "wage_statement"
+              ],
+              "law_excerpts": [],
+              "fact_excerpts": [
+                {
+                  "field": "wage_statement",
+                  "quote": "2026年9月正常提供整月劳动，无缺勤"
+                }
+              ],
+              "missing_fact_fields": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "seconds": 143.047
+}

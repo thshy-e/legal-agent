@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-28T11:04:14.081054+08:00",
+  "frontend_version": "frontend-20261028-v18-dev",
+  "workflow_version": "casework-20261026-v16",
+  "conversation_version": "conversation-20261026-v16",
+  "scope": "Local development and engineering validation; no new handoff package",
+  "backend_files": 40,
+  "backend_sha256_before": "3fbe856114f1f3e6815b6f21eccb4ed9b132dbbd88f381b569f27c9166cb72cc",
+  "backend_sha256_after": "3fbe856114f1f3e6815b6f21eccb4ed9b132dbbd88f381b569f27c9166cb72cc",
+  "backend_unchanged": true,
+  "python_tests": {
+    "total": 146,
+    "passed": 146,
+    "seconds": 10.523
+  },
+  "frontend_tests": {
+    "total": 13,
+    "passed": 13
+  },
+  "engineering": {
+    "total": 60,
+    "passed": 60,
+    "legal_accuracy_claim": false
+  },
+  "browser": {
+    "flow_checks": 32,
+    "failure_and_boundary_checks": 19,
+    "citation_sanitization_and_page_scroll": {
+      "real_buttons": 1,
+      "unlinked_unknown": true,
+      "code_unchanged": true,
+      "scripts": 0,
+      "root_overflow": false
+    },
+    "local_edit_and_discard": {
+      "stale_amounts_labeled": true,
+      "dirty_copy_blocked": true,
+      "discard_restores_valid_summary": true,
+      "discard_does_not_submit": true
+    },
+    "viewports": [
+      1440,
+      1024,
+      390
+    ],
+    "expected_resource_errors": [
+      "actual HTTP409",
+      "injected ERR_FAILED"
+    ],
+    "unexpected_javascript_errors_observed": 0,
+    "progress_source": "real SSE, artificial delivery delay only",
+    "fresh_install_verified": false
+  },
+  "frontend_sha256": {
+    "frontend/index.html": "471f265303b6144410882c81567b2c760eb699de03e57e5c378a28cb98988990",
+    "frontend/workspace.css": "aec63b7932053e4ee67c6943ad56e688ba429b01988af87591493c900ea2035a",
+    "frontend/workspace.js": "855e2cbf5e5f44c2edb400aee84861d8b7e338a14504fe5fcf73222aa06416ca",
+    "frontend/casework.js": "5643540f0e339b6139ddd817bd88e72fa996d817a9a3c88d646e6881deca0414"
+  },
+  "screenshots": {
+    "output/playwright/frontend-v18-blocked-desktop.png": "ebaeb17225308cdd022f31a5b50146b6434e85f955bd7c0667c8b65620e75dc5",
+    "output/playwright/frontend-v18-draft-desktop.png": "5f11a77330a29c8370ccbd13d91ac38a8b51f3a353abf4bc155e05d2c092bcae",
+    "output/playwright/frontend-v18-final-desktop.png": "6911da99fdc1a72b3dc5c573a52d856c4dc1a08735fdcf4317428c84c8d4813f",
+    "output/playwright/frontend-v18-guide-desktop.png": "5bc35b6b85b917b46d7016b1f1af13c381709b8df5180e44fee95866aad09337",
+    "output/playwright/frontend-v18-home-desktop.png": "098c3eb94374f67cee681ef381d0c6c3a56205b15cf88c8728e857455b3bd08d",
+    "output/playwright/frontend-v18-mobile-draft.png": "4cae540a7e870d7ada1c4eee8e9b271a341ecaad0181a27850dfda344c42f344",
+    "output/playwright/frontend-v18-mobile-home.png": "c5c5c0dbfe9f78fe48831ebe416f2fe8ee44f8d774bdf6b8d5f6beec1b307d46",
+    "output/playwright/frontend-v18-progress-desktop.png": "3eebce1f9990d7603acf90b3e6bf3ee3ec99d88ce5d5e34815436caad8b7f5de",
+    "output/playwright/frontend-v18-revised-desktop.png": "c6e81a0b1f5bf634825d33b2c08c177efbaf61f7ffccccf5a0ef93cf9049228f",
+    "output/playwright/frontend-v18-source-desktop.png": "787a24523df51945d39254dbcc28fc5011011605b1c54f84cb1aea3f705805c9",
+    "output/playwright/frontend-v18-tablet.png": "00df53a536b768b32bd858a78ce14cfc8ecbde7cc6c4306d49447c000760b350"
+  },
+  "live_explanation": "live-explanation.json; browser-delivered observation, no expert score or token/cost estimate",
+  "human_usability_test": "not_started",
+  "physical_mobile_keyboard_and_zoom": "pending",
+  "new_package_created": false,
+  "v17_archive_unchanged": true,
+  "all_automated_checks_passed": true
+}

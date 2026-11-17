@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "mode": "rules_only",
+  "workflow_version": "casework-20261025-v13",
+  "checks": [
+    {
+      "phase": "analyze",
+      "http": 200,
+      "status": "awaiting_confirmation"
+    },
+    {
+      "phase": "confirm",
+      "http": 200,
+      "status": "draft_ready"
+    },
+    {
+      "phase": "amend",
+      "http": 200,
+      "status": "awaiting_confirmation"
+    },
+    {
+      "phase": "stale_confirm",
+      "http": 409
+    },
+    {
+      "phase": "reconfirm",
+      "http": 200,
+      "status": "draft_ready"
+    },
+    {
+      "phase": "fully_paid",
+      "http": 200,
+      "status": "no_supported_claim",
+      "model_calls": 0
+    }
+  ],
+  "expert_reviewed": false
+}

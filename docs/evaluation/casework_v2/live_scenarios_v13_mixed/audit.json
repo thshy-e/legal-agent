@@ -1,0 +1,133 @@
+{
+  "cases": [
+    {
+      "id": "S01",
+      "status": "completed",
+      "calls": 5,
+      "phase_states": [
+        [
+          "analyze",
+          "awaiting_confirmation"
+        ],
+        [
+          "confirm",
+          "draft_ready"
+        ]
+      ]
+    },
+    {
+      "id": "S02",
+      "status": "completed",
+      "calls": 5,
+      "phase_states": [
+        [
+          "analyze",
+          "awaiting_confirmation"
+        ],
+        [
+          "confirm",
+          "draft_ready"
+        ]
+      ]
+    },
+    {
+      "id": "S03",
+      "status": "completed",
+      "calls": 5,
+      "phase_states": [
+        [
+          "analyze",
+          "awaiting_confirmation"
+        ],
+        [
+          "confirm",
+          "draft_ready"
+        ]
+      ]
+    },
+    {
+      "id": "S04",
+      "status": "failed",
+      "calls": 2,
+      "phase_states": [
+        [
+          "analyze",
+          "review_blocked"
+        ]
+      ]
+    },
+    {
+      "id": "S05",
+      "status": "completed",
+      "calls": 0,
+      "phase_states": [
+        [
+          "analyze",
+          "no_supported_claim"
+        ]
+      ]
+    },
+    {
+      "id": "S06",
+      "status": "completed",
+      "calls": 2,
+      "phase_states": [
+        [
+          "analyze",
+          "review_blocked"
+        ]
+      ]
+    },
+    {
+      "id": "S07",
+      "status": "completed",
+      "calls": 2,
+      "phase_states": [
+        [
+          "analyze",
+          "review_blocked"
+        ]
+      ]
+    },
+    {
+      "id": "S08",
+      "status": "completed",
+      "calls": 3,
+      "phase_states": [
+        [
+          "analyze",
+          "review_blocked"
+        ]
+      ]
+    },
+    {
+      "id": "S09",
+      "status": "completed",
+      "calls": 2,
+      "phase_states": [
+        [
+          "analyze",
+          "needs_information"
+        ]
+      ]
+    },
+    {
+      "id": "S10",
+      "status": "completed",
+      "calls": 2,
+      "phase_states": [
+        [
+          "analyze",
+          "needs_information"
+        ]
+      ]
+    }
+  ],
+  "calls": 28,
+  "input_tokens": 143789,
+  "output_tokens": 28640,
+  "unknown_models": 0,
+  "expert_reviewed": false,
+  "legal_accuracy": null,
+  "note": "Case completion is an engineering expectation check. S04 retained an independent citation issue and blocked; its legal merit remains unscored."
+}

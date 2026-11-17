@@ -1,0 +1,123 @@
+{
+  "tasks_per_variant": 60,
+  "rows": 180,
+  "groups": {
+    "single_agent": {
+      "tasks": 60,
+      "status_counts": {
+        "completed": 60
+      },
+      "completed_outputs": 60,
+      "outputs_without_automatic_flags": 45,
+      "outputs_with_automatic_flags": 15,
+      "automatic_flags": {
+        "confirmation_gate_bypass": 13,
+        "claim_set_mismatch": 2
+      },
+      "call_attempts": 60,
+      "call_status_counts": {
+        "completed": 60
+      },
+      "actual_models": {
+        "qwen-plus": 60
+      },
+      "calls_with_reported_usage": 60,
+      "calls_without_reported_usage": 0,
+      "reported_tokens": {
+        "input_tokens": 780055,
+        "output_tokens": 11809,
+        "total_tokens": 791864
+      },
+      "role_call_seconds_sum": 367.453,
+      "role_call_seconds_median": 4.828,
+      "human_legal_reviews": 0
+    },
+    "collaboration_no_review": {
+      "tasks": 60,
+      "status_counts": {
+        "completed": 60
+      },
+      "completed_outputs": 60,
+      "outputs_without_automatic_flags": 58,
+      "outputs_with_automatic_flags": 2,
+      "automatic_flags": {
+        "nonexistent_or_inapplicable_citation": 1,
+        "claim_set_mismatch": 1
+      },
+      "call_attempts": 120,
+      "call_status_counts": {
+        "completed": 120
+      },
+      "actual_models": {
+        "qwen-plus": 120
+      },
+      "calls_with_reported_usage": 120,
+      "calls_without_reported_usage": 0,
+      "reported_tokens": {
+        "input_tokens": 1558081,
+        "output_tokens": 29921,
+        "total_tokens": 1588002
+      },
+      "role_call_seconds_sum": 854.18,
+      "role_call_seconds_median": 7.125,
+      "human_legal_reviews": 0
+    },
+    "collaboration_review": {
+      "tasks": 60,
+      "status_counts": {
+        "completed": 60
+      },
+      "completed_outputs": 60,
+      "outputs_without_automatic_flags": 52,
+      "outputs_with_automatic_flags": 8,
+      "automatic_flags": {
+        "claim_set_mismatch": 4,
+        "nonexistent_or_inapplicable_citation": 4
+      },
+      "call_attempts": 180,
+      "call_status_counts": {
+        "completed": 180
+      },
+      "actual_models": {
+        "qwen-plus": 180
+      },
+      "calls_with_reported_usage": 180,
+      "calls_without_reported_usage": 0,
+      "reported_tokens": {
+        "input_tokens": 2355494,
+        "output_tokens": 46577,
+        "total_tokens": 2402071
+      },
+      "role_call_seconds_sum": 1310.809,
+      "role_call_seconds_median": 7.312,
+      "human_legal_reviews": 0
+    }
+  },
+  "dataset_sha256": "18553e8d07d29927600589709092b0392fff195d7c7f43b8a7b8faa27b5c7af2",
+  "knowledge_digest": "b9b3767d4c14",
+  "protocol_sha256": "86e7bdce61502035c25bae6c5fc512add7288911a94f881503f0f427ce698084",
+  "model_config": {
+    "model": "qwen-plus",
+    "temperature": 0.1,
+    "timeout": 90,
+    "max_retries": 0,
+    "max_tokens": 2400,
+    "base_url": "https://ws-lpgjttlkq1zkm8wi.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+  },
+  "scheduling": {
+    "workers": 6,
+    "unit": "independent_task_variant",
+    "latency_scope": "role_call_seconds_not_end_to_end_throughput"
+  },
+  "blind_test": false,
+  "expert_reviewed": false,
+  "limitations": [
+    "Automatic flags assess schema, tool amount consistency, citation eligibility, claim-set alignment and confirmation gates only.",
+    "No automatic flag does not prove legal correctness. Claim-set mismatches require human interpretation.",
+    "Shared production tools supply facts, calculations and eligible source records to all variants.",
+    "Public engineering cases are not an independent blind test.",
+    "Parallel role-call durations are not end-to-end latency or deployment throughput.",
+    "Unavailable usage is unknown; reported token sums exclude such calls."
+  ],
+  "report_sha256": "e5e8f4bda77f6d9a80b5b5fffe3cc571617833d885a7356a2d83cbd412babdb8"
+}

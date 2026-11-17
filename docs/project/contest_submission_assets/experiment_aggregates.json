@@ -1,0 +1,37 @@
+{
+  "source": "docs/evaluation/casework_v2/model_ablation.json",
+  "source_sha256": "e5e8f4bda77f6d9a80b5b5fffe3cc571617833d885a7356a2d83cbd412babdb8",
+  "statistic": "successful role calls; ECDF uses each observed seconds value",
+  "groups": [
+    {
+      "variant": "single_agent",
+      "label": "单Agent",
+      "outputs": 60,
+      "automatic_flags": 15,
+      "calls": 60,
+      "total_tokens": 791864,
+      "median_seconds": 4.827999999999999,
+      "max_seconds": 16.157
+    },
+    {
+      "variant": "collaboration_no_review",
+      "label": "协同无审查",
+      "outputs": 60,
+      "automatic_flags": 2,
+      "calls": 120,
+      "total_tokens": 1588002,
+      "median_seconds": 7.125,
+      "max_seconds": 16.281
+    },
+    {
+      "variant": "collaboration_review",
+      "label": "协同有审查",
+      "outputs": 60,
+      "automatic_flags": 8,
+      "calls": 180,
+      "total_tokens": 2402071,
+      "median_seconds": 7.3125,
+      "max_seconds": 18.516
+    }
+  ]
+}

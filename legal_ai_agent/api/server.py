@@ -3,11 +3,14 @@ import json
 import logging
 import re
 import time
+from queue import Queue
+from threading import Thread
 from contextlib import asynccontextmanager
 from typing import Any
 
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
+from pydantic import ValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from fastapi.staticfiles import StaticFiles
@@ -34,16 +37,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(level
 logger = logging.getLogger(__name__)
 
 async def load_knowledge_base():
-    logger.info("正在加载法条向量库 ...")
-    law_db = load_vector_store("labor_law")
-    logger.info("正在加载案例向量库 ...")
-    case_db = load_vector_store("labor_cases")
-
-    if law_db is None or case_db is None:
-        logger.warning("知识库未完整初始化；检索工具会返回暂无数据提示")
-
-    init_tools_db(law_db, case_db)
-    logger.info("知识库初始化完成")
+    from legal_ai_agent.casework.knowledge import KnowledgeRegistry
+    registry=KnowledgeRegistry()
+    logger.info('法源版本 %s，文档 %s；旧Chroma库保留供回退，不混入现行检索',registry.data['version'],len(registry.documents))
 
 
 @asynccontextmanager
@@ -67,6 +63,32 @@ qa = QAAgent()
 doc = DocAgent()
 risk = RiskAgent()
 judge = JudgeAgent()
+
+
+def _case_payload(req, emit=None):
+    from legal_ai_agent.casework.workflow import CaseWorkflow, CaseInputError
+    if not req.get('session_id') or not str(req['session_id']).strip():
+        raise CaseInputError('案件协同必须提供独立session_id。')
+    expected=req.get('expected_case_version')
+    if expected is not None and (not isinstance(expected,int) or isinstance(expected,bool)):
+        raise CaseInputError('expected_case_version必须为整数。')
+    with conversation_store.case_transaction(str(req['session_id']),expected) as case:
+        workflow=CaseWorkflow(qa=qa,judge=judge,doc=doc)
+        payload = workflow.run(req,case,emit)
+    payload['structured']['presentation'] = {'kind':'case'}
+    conversation_store.record_turn(str(req['session_id']),query=str(req.get('query','')),
+        route='case',answer_preview=strip_for_preview(payload['answer'],240),answer=payload['answer'],
+        metadata={'kind':'case','case_version':payload['structured']['case_version']})
+    return payload
+
+
+def _uses_case_workflow(req):
+    from legal_ai_agent.conversation import wants_case, ambiguous_wage_revision
+    sid = str(req.get('session_id') or '').strip()
+    prior = (conversation_store.get(sid).get('case') or {}) if sid else {}
+    if 'facts' not in req and not req.get('action') and ambiguous_wage_revision(str(req.get('query','')),prior):
+        return False
+    return wants_case(req, prior)
 
 
 def _count_cjk(text: str) -> int:
@@ -363,26 +385,11 @@ def _calculation_context_from_facts(facts: dict[str, Any], query: str) -> dict[s
         if key in facts:
             context[key] = facts[key]
 
-    reason = facts.get("termination_reason")
-    if reason:
-        context["reason"] = "非法辞退" if reason == "待判断辞退" else reason
-    if any(keyword in query for keyword in ["n+1", "N+1", "代通知金", "未提前通知"]):
-        context["reason"] = "n_plus_1"
-    elif any(keyword in query for keyword in ["2N", "2n", "违法", "无理由", "无故", "非法"]):
-        context["reason"] = "非法辞退"
-    elif any(keyword in query for keyword in ["N", "n", "合法解除", "经济补偿"]):
-        context["reason"] = "合法解除"
-
     current_context = build_calculation_context_from_query(query)
     if current_context:
-        if (
-            current_context.get("reason") == "合法解除"
-            and context.get("reason")
-            and not any(keyword in query for keyword in ["合法解除", "经济补偿", "协商解除", "协商离职"])
-        ):
-            current_context = dict(current_context)
-            current_context.pop("reason", None)
         context.update(_truthy_facts(current_context))
+    if context.get('calc_type') in (None,'severance','notice','notice_pay'):
+        context.update(reason='历史解除信息和当前法律条件均待核验',conditional_only=True)
 
     if context.get("salary") and (context.get("years") or context.get("calc_type") == "notice_pay"):
         return context
@@ -515,16 +522,7 @@ def _extract_calculation_payload(query: str) -> tuple[dict[str, Any], str]:
 
 
 def _infer_risk(query: str, route: str, calculation: dict[str, Any]) -> dict[str, Any]:
-    text = str(query or "")
-    if route == "error":
-        return {"level": "high", "label": "服务异常", "score": 18, "caption": "当前请求未能完成，请稍后重试。"}
-    if any(keyword in text for keyword in ["工伤", "孕期", "医疗期", "无理由辞退", "违法解除", "违法辞退", "降薪逼离"]):
-        return {"level": "high", "label": "高风险", "score": 82, "caption": "用人单位行为或证据争议较强，建议优先固定原始证据。"}
-    if calculation.get("status") == "missing_info":
-        return {"level": "medium", "label": "信息不足", "score": 56, "caption": "关键数字或解除原因未补齐，结果需要二次校准。"}
-    if route == "risk":
-        return {"level": "medium", "label": "待评估", "score": 64, "caption": "需结合制度文本、民主程序和实际执行方式判断。"}
-    return {"level": "medium", "label": "中风险", "score": 62, "caption": "结论取决于解除理由、工资基数和证据完整度。"}
+    return {"level":"unknown","label":"待核验","caption":"按具体请求的成立条件与证据核查，不提供未经验证的固定风险分数。"}
 
 
 def _build_evidence_items(query: str) -> list[dict[str, Any]]:
@@ -538,13 +536,13 @@ def _build_evidence_items(query: str) -> list[dict[str, Any]]:
     ]
     evidence = []
     for label, keywords in items:
-        mentioned = any(keyword in text for keyword in keywords)
+        denied = any(re.search(r'(?:没有|没|缺少|未持有|无)\s*'+re.escape(keyword), text) for keyword in keywords)
+        mentioned = not denied and any(re.search(r'(?:有|持有|保存了|提供了)\s*'+re.escape(keyword), text) for keyword in keywords)
         evidence.append(
             {
                 "label": label,
-                "status": "已提及" if mentioned else "待补充",
-                "strength": 78 if mentioned else 38,
-                "note": "可作为事实链条的一部分" if mentioned else "建议补齐后再提交",
+                "status": "用户称持有" if mentioned else "用户称缺失" if denied else "持有情况未知",
+                "note": "未核验真实性" if mentioned else "需向用户确认或补齐",
             }
         )
     return evidence
@@ -622,7 +620,7 @@ def _build_structured_payload(query: str, route: str, answer: str, calculation: 
             "caption": "由本地公式引擎提取，需结合证据复核。",
         }
     elif route == "judge":
-        primary_metric = {"label": "胜诉概率", "value": "待评估", "unit": "", "kind": "probability", "caption": "结合事实和证据动态判断。"}
+        primary_metric = {"label": "请求条件", "value": "待核验", "unit": "", "kind": "status", "caption": "逐请求核查法律条件和证据。"}
     else:
         primary_metric = {"label": "分析状态", "value": "已生成", "unit": "", "kind": "status", "caption": "AI 正文负责解释和策略。"}
 
@@ -632,7 +630,7 @@ def _build_structured_payload(query: str, route: str, answer: str, calculation: 
         "metrics": [
             primary_metric,
             {"label": "风险等级", "value": risk["label"], "unit": "", "kind": "risk", "caption": risk["caption"]},
-            {"label": "证据完整度", "value": f"{evidence_count}/5", "unit": "", "kind": "evidence", "caption": "按已提及证据类型估算。"},
+            {"label": "材料状态", "value": "待核验", "unit": "", "kind": "evidence", "caption": "用户称持有不表示真实性已经核验。"},
         ],
         "risk": risk,
         "evidence": evidence,
@@ -674,100 +672,43 @@ def _build_calculation_strategy_answer(query: str, structured: dict[str, Any]) -
 
 
 def _build_chat_payload(req: dict) -> dict[str, Any]:
-    start_time = time.time()
-    query = _repair_mojibake(str(req.get("query", "")).strip())
-    session_id = str(req.get("session_id") or "user_web")
-    if not query:
-        return {
-            "reply": "请输入需要分析的问题。",
-            "answer": "请输入需要分析的问题。",
-            "route": "error",
-            "structured": _build_structured_payload("", "error", "请输入需要分析的问题。", {"show": False})
-            | {"conversation": conversation_store.build_summary(session_id)},
-        }
-
-    mode = req.get("mode")
-    preferred_mode = req.get("preferred_mode") or req.get("ui_mode") or mode
-    force_mode = bool(req.get("force_mode"))
-    previous_state = conversation_store.get(session_id)
-    previous_summary = conversation_store.build_summary(session_id, previous_state)
-    current_facts = extract_case_facts(query)
-    facts = _merge_facts(previous_state.get("facts"), current_facts)
-    state_summary = conversation_store.build_summary(session_id, previous_state)
-    state_summary["known_facts"] = facts
-
-    calculation, calculation_text, used_previous_calculation = _extract_calculation_payload_with_state(query, facts)
-    route, route_reason = _resolve_effective_route(
-        query,
-        preferred_mode,
-        state_summary=state_summary,
-        calculation=calculation,
-        force_mode=force_mode,
-        mode=mode,
-    )
-    used_previous_calculation = used_previous_calculation or bool(
-        state_summary.get("is_continuation")
-        and (state_summary.get("last_calculation") or {}).get("show")
-        and route in ["doc", "risk", "judge"]
-    )
-
-    logger.info(
-        "收到请求：%s... ui_mode/preferred_mode=%s, mode=%s, force_mode=%s, effective_route=%s, route_reason=%s",
-        query[:30],
-        preferred_mode,
-        mode,
-        force_mode,
-        route,
-        route_reason,
-    )
-    agent_query = _build_agent_query(query, route, route_reason, state_summary, facts)
-    structured_query = _build_structured_query(query, route, route_reason, state_summary, facts)
-    if route == "qa" and (calculation.get("show") or is_calculation_query(query)):
-        structured = _build_structured_payload(structured_query, route, calculation_text, calculation)
-        answer = _build_calculation_strategy_answer(agent_query, structured)
+    from legal_ai_agent.casework.workflow import CaseInputError
+    from legal_ai_agent.conversation import VERSION
+    if req.get('workflow','consultation') not in ('consultation','case'):
+        raise CaseInputError('未知workflow。')
+    if _uses_case_workflow(req):
+        return _case_payload(req)
+    query = _repair_mojibake(str(req.get('query','')).strip())
+    sid = str(req.get('session_id') or '').strip()
+    state = conversation_store.get(sid) if sid else {}
+    history = conversation_store.recent_dialogue(sid) if sid else []
+    case = state.get('case') or {}
+    # Only tool-owned, current state is available to read-only explanations.
+    snapshot = {k:case[k] for k in ('case_version','status','facts','fact_sources','claims',
+                'calculations','missing_info','review_issues','confirmation','document_status') if k in case} or None
+    from legal_ai_agent.conversation import ambiguous_wage_revision
+    if ambiguous_wage_revision(query,case):
+        result = {'answer':'你要修改的是哪一期间的应付工资、实付工资，还是解除补偿的平均工资基数？请明确一下，我再重新核对；目前还没有改动案件。',
+                  'sources':[],'status':'clarification','used_history':False,'read_case':True,'retrieval_query':''}
+    elif query:
+        result = qa.respond(query,history=history,case=snapshot)
     else:
-        result = _run_agent(route, agent_query, session_id=session_id)
-        answer = _repair_mojibake(result)
-        structured = _build_structured_payload(structured_query, route, answer, calculation)
-
-    conversation = conversation_store.build_summary(session_id, previous_state)
-    conversation.update(
-        {
-            "is_continuation": bool(previous_summary.get("is_continuation")),
-            "turn_count": int(previous_summary.get("turn_count") or 0) + 1,
-            "last_route": previous_summary.get("last_route") or "",
-            "known_facts": facts,
-            "used_previous_calculation": used_previous_calculation,
-            "route_reason": route_reason,
-        }
-    )
-    structured["conversation"] = conversation
-
-    saved_state = conversation_store.record_turn(
-        session_id,
-        query=query,
-        route=route,
-        answer_preview=strip_for_preview(answer, 240),
-        facts=facts,
-        calculation=calculation,
-        structured_summary={
-            "route": route,
-            "route_reason": route_reason,
-            "used_previous_calculation": used_previous_calculation,
-            "calculation_status": calculation.get("status", ""),
-        },
-    )
-    structured["conversation"].update(
-        {
-            "turn_count": len(saved_state.get("turns") or []),
-            "last_route": route,
-            "known_facts": saved_state.get("facts") or facts,
-        }
-    )
-
-    elapsed = time.time() - start_time
-    logger.info("路由: %s, 耗时: %.2fs", route, elapsed)
-    return {"reply": answer, "answer": answer, "route": route, "structured": structured}
+        result = {'answer':'你想了解哪方面的劳动法律问题？','sources':[],
+                  'status':'clarification','used_history':False,'read_case':False,'retrieval_query':''}
+    answer = result['answer']
+    sources = [{k:d.get(k) for k in ('id','title','article','version','url','original_text',
+                'jurisdictions','effective_from','effective_to','verified_on','limits')} for d in result['sources']]
+    structured = {'workflow':'consultation','presentation':{'kind':'conversation'},
+                  'status':result['status'],'sources':sources,'conversation_version':VERSION,
+                  'conversation':{'session_id':sid or None,'is_continuation':bool(result['used_history']),
+                      'read_case':result['read_case'],'case_version':case.get('case_version') if result['read_case'] else None,
+                      'used_previous_calculation':False,'turn_count':len(state.get('turns',[])) + bool(query)}}
+    if sid and query:
+        saved = conversation_store.record_turn(sid,query=query,route='qa',answer_preview=strip_for_preview(answer,240),
+            answer=answer,metadata={'kind':'conversation','status':result['status'],
+                'retrieval_query':result['retrieval_query'],'source_ids':[d['id'] for d in sources]})
+        structured['conversation']['turn_count'] = len(saved['turns'])
+    return {'reply':answer,'answer':answer,'route':'qa','structured':structured}
 
 
 def _sse(event: str, data: dict[str, Any]) -> str:
@@ -787,25 +728,62 @@ async def chat(req: dict):
         return _build_chat_payload(req)
 
     except Exception as e:
+        from legal_ai_agent.memory.memory_manager import StateStorageError
+        from legal_ai_agent.casework.workflow import CaseConflict, CaseInputError
+        if isinstance(e,StateStorageError): raise HTTPException(503,detail=str(e))
+        if isinstance(e,CaseConflict): raise HTTPException(409,detail={'message':str(e),'case_version':e.current_version})
+        if isinstance(e,(CaseInputError,ValidationError)): raise HTTPException(422,detail=str(e))
         logger.error("处理异常: %s", e, exc_info=True)
         return {"reply": "系统繁忙，请稍后再试。", "route": "error"}
 
 
 @app.post("/api/chat/stream")
 async def chat_stream(req: dict):
+    from legal_ai_agent.casework.workflow import CaseConflict, CaseInputError
+    if req.get('workflow','consultation') not in ('consultation','case'): raise HTTPException(422,detail='未知workflow')
+    from legal_ai_agent.memory.memory_manager import StateStorageError
+    try: uses_case=_uses_case_workflow(req)
+    except StateStorageError as exc: raise HTTPException(503,detail=str(exc))
+    # Reject stale confirmations before returning the event-stream's 200 status.
+    if uses_case:
+        if not req.get('session_id'): raise HTTPException(422,detail='案件协同必须提供session_id')
+        from legal_ai_agent.memory.memory_manager import StateStorageError
+        try: current=(conversation_store.get(req['session_id']).get('case') or {}).get('case_version',0)
+        except StateStorageError as exc: raise HTTPException(503,detail=str(exc))
+        if req.get('action') in ('confirm','generate_document') and not isinstance(req.get('expected_case_version'),int): raise HTTPException(422,detail='确认必须提供expected_case_version')
+        if req.get('expected_case_version') is not None and req['expected_case_version']!=current:
+            raise HTTPException(409,detail={'message':'案件版本已变化，请重新确认。','case_version':current})
     async def event_generator():
         try:
-            payload = _build_chat_payload(req)
+            if uses_case:
+                queue=Queue()
+                def worker():
+                    try:
+                        result=_case_payload(req,lambda event,data:queue.put((event,data)))
+                        queue.put(('result',result))
+                    except Exception as exc:
+                        queue.put(('error',{'message':str(exc),'code':409 if isinstance(exc,CaseConflict) else 422 if isinstance(exc,(CaseInputError,ValidationError)) else 500}))
+                    finally: queue.put(('end',None))
+                Thread(target=worker,daemon=True).start()
+                payload=None
+                while True:
+                    event,data=await asyncio.to_thread(queue.get)
+                    if event=='end': break
+                    if event=='result': payload=data
+                    else: yield _sse(event,data)
+                if payload is None: return
+            else:
+                yield _sse("thinking", {"status":"thinking","message":"正在查看本轮问题。"})
+                payload = await asyncio.to_thread(_build_chat_payload,req)
             route = payload.get("route", "qa")
             structured = payload.get("structured") or {}
             answer = payload.get("answer") or payload.get("reply") or ""
 
             yield _sse("route", {"route": route})
-            yield _sse("thinking", {"status": "thinking", "message": "正在识别问题类型、提取结构化要点。"})
             yield _sse("structured", {"structured": structured})
 
             token_count = 0
-            for chunk in _chunk_answer(answer):
+            for chunk in _chunk_answer(answer, size=max(len(answer),1) if uses_case else 12):
                 token_count += 1
                 yield _sse("token", {"delta": chunk})
                 await asyncio.sleep(0)

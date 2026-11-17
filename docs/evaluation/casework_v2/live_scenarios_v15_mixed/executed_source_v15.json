@@ -1,0 +1,26 @@
+{
+  "archive": "executed_source_v15.zip",
+  "sha256": "bdb78a133e9e2c07a69eb7f2373de4ce8611da4756aa3e5e6b850be043c8ba65",
+  "files": {
+    "scripts/run_live_casework_scenarios.py": "982941bb0893cda4e5cc6877e2c8803190e106232da6fb79bd05862cf1fa34ac",
+    "legal_ai_agent/casework/__init__.py": "afcfffabd4b2079f0690afa1836d3b1c3003bba517decab1c5d3c911ef6c69be",
+    "legal_ai_agent/casework/calculation.py": "0cc139a57f21f55d35655459a0e0e3dfef57b33283ba8c6c3573bf54c905f488",
+    "legal_ai_agent/casework/conditions.py": "be77d027b536a369dc89255e608b95092fd231d905b32b1301364652587a3753",
+    "legal_ai_agent/casework/evidence.py": "8d21544f2c7a0a88d8d85aae73d1dae2dbbed1f8dd219a7e466e4093fb7ee22d",
+    "legal_ai_agent/casework/fact_checks.py": "70cb435ef5773c58bcf4f0bc2aaba0aef8eb284baff25257e09015c798d05ee3",
+    "legal_ai_agent/casework/facts.py": "7805da0e82a7ffe01a96c1eae321b5f68ada577d0b1b2af9657d984121564156",
+    "legal_ai_agent/casework/knowledge.py": "8afce9f66d0fbfe998f2c4071290e237c0ba678a02375c1b33922c72adabc44b",
+    "legal_ai_agent/casework/model_observation.py": "7f3386328c9475b905dfd5b15f436274fd4709774e186784c91ec1cf1e53474d",
+    "legal_ai_agent/casework/model_policy.py": "78293426778bfaf99c0dece926e8b1e94d3cd12c32e245d2a74d3c22f446924d",
+    "legal_ai_agent/casework/models.py": "087595761ebafdbb1353162c3394dc96581707883c307ba6f737e4671db71f21",
+    "legal_ai_agent/casework/review_grounding.py": "a06888eba834a8b3f453f8f36a29d7f4a40170f0eb50dd19310b1bbb88b038ee",
+    "legal_ai_agent/casework/review_revision.py": "99b0bec9ba8289762b25a61b76e0fb66e20c28a9552eaf8a18decba70aac7553",
+    "legal_ai_agent/casework/roles.py": "aeea5e4286141b04b85e6ceb946566436228ca80c05471ba5c6394ad94b0e535",
+    "legal_ai_agent/casework/workflow.py": "336b03c68bec757599b3cb4ff5677d5d8c346f16a248b7a7904317ea6e239448",
+    "data/evaluation/live_scenarios_v1.json": "b9cac1ebd40dbe87e9ec87c3800cc07ef2dcd66b82661d3cdf37c60a49319680",
+    "data/evaluation/live_scenarios_v1.sha256": "a396ed78879fa55bda55f734165a1d3466fc686f0ea6af5b9d381b9efbbd328e",
+    "scripts/run_live_casework_smoke.py": "b514cff7b2db1967604a91d6e710ca717284a5484c63d1f3d20bfcac555f8224",
+    "scripts/probe_truncated_completion.py": "3eea09cb376080c084bca817fed6747bd232697a3e9aa8cc42ccac5279709cb6"
+  },
+  "scope": "Partial executed casework sources and runners/fixture; supporting repository, legal knowledge and environment required; not a release package."
+}

@@ -1,0 +1,160 @@
+{
+  "date": "2026-11-02",
+  "documents": [
+    {
+      "path": "docs/project/劳法智枢研究与开发报告（参赛版）.docx",
+      "sha256": "73b391babd87d443d7d5541c7d79bd4b6a40f3e3c5bb4cc9db8d3d8820b854dc",
+      "bytes": 1863472,
+      "pages": 23,
+      "tables": 4,
+      "figures": 7,
+      "native_equations": 3,
+      "render_directory": "output/contest-submission-qa/report1-verified"
+    },
+    {
+      "path": "docs/project/劳法智枢软件运行操作与测试说明.docx",
+      "sha256": "2875467f4fce11d4f34b7a00d890852955beea133af03fe7be5c54936255c685",
+      "bytes": 868649,
+      "pages": 10,
+      "tables": 0,
+      "figures": 2,
+      "native_equations": 0,
+      "render_directory": "output/contest-submission-qa/report2-verified"
+    },
+    {
+      "path": "docs/project/劳法智枢大挑作品申报书（B3及C完善版）.docx",
+      "sha256": "5ad78634bc69acbc0513a7c141a8ce38fe57426d3df6172f3a21b8d97c4b0a29",
+      "bytes": 578019,
+      "pages": 20,
+      "tables": 6,
+      "figures": 2,
+      "native_equations": 0,
+      "render_directory": "output/contest-submission-qa/application-r2"
+    }
+  ],
+  "original_sha256": {
+    "docs\\project\\劳法智枢大挑申报说明书第一版.docx": "869c0774c42df30004e7428fe47288ac81a01535212956d45b760a50e0786857",
+    "docs\\project\\劳法智枢大挑作品申报书.docx": "5b2194c87e03d208ce6d4ea1e6ea3e7179a383f7689434f5b47329932a82ff8e",
+    "docs\\project\\劳法智枢技术架构与核心创新说明.docx": "746387ef28a0ace188633a23263990dbc94173e9627cdfb84a415259ce4fb4be"
+  },
+  "original_files_unchanged": true,
+  "application_only_C_cell_content_changed": true,
+  "application_other_zip_parts_byte_identical": true,
+  "application_existing_pages_pixel_identical": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "application_C_pages": [
+    19,
+    20
+  ],
+  "C_main_prose_characters": 1352,
+  "figure_count": 7,
+  "figure_palette": [
+    "#17324D",
+    "#087F8C",
+    "#647383"
+  ],
+  "figure_font": "SimSun / 宋体",
+  "chart_source_sha256_verified": true,
+  "chart_groups": [
+    {
+      "variant": "single_agent",
+      "label": "单Agent",
+      "outputs": 60,
+      "automatic_flags": 15,
+      "calls": 60,
+      "total_tokens": 791864,
+      "median_seconds": 4.827999999999999,
+      "max_seconds": 16.157
+    },
+    {
+      "variant": "collaboration_no_review",
+      "label": "协同无审查",
+      "outputs": 60,
+      "automatic_flags": 2,
+      "calls": 120,
+      "total_tokens": 1588002,
+      "median_seconds": 7.125,
+      "max_seconds": 16.281
+    },
+    {
+      "variant": "collaboration_review",
+      "label": "协同有审查",
+      "outputs": 60,
+      "automatic_flags": 8,
+      "calls": 180,
+      "total_tokens": 2402071,
+      "median_seconds": 7.3125,
+      "max_seconds": 18.516
+    }
+  ],
+  "existing_v18_screenshot_hashes_verified": true,
+  "indexed_files_verified": 62,
+  "credential_pattern_scan": "passed",
+  "render_engine": "installed Microsoft Word, EMF pages rasterized at 1240x1754",
+  "bundled_renderer_diagnostic": "LibreOffice soffice.exe unavailable; used native installed Word",
+  "fields_updated": [
+    "new report TOC and page fields",
+    "new manual page fields"
+  ],
+  "application_opened_read_only": true,
+  "model_calls_this_task": 0,
+  "application_tests_rerun": false,
+  "existing_engineering_results_date": "2026-10-28",
+  "new_archive_created": false,
+  "new_video_created": false,
+  "professional_legal_assessment": "planned; separately defined from engineering checks",
+  "human_and_physical_phone_tests": "planned",
+  "visual_review": {
+    "report_pages_reviewed": 23,
+    "manual_pages_reviewed": 10,
+    "application_C_pages_reviewed": [
+      19,
+      20
+    ],
+    "application_preserved_pages_overview_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "resolution": [
+      1240,
+      1754
+    ],
+    "final_new_content_issues_observed": [],
+    "legacy_form_pages_preserved": true,
+    "findings": "docs/evaluation/contest_submission/FINDINGS.md"
+  }
+}

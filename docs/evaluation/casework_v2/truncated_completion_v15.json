@@ -1,0 +1,44 @@
+{
+  "scope": "One intentionally truncated non-legal diagnostic; not a case test or success-rate observation.",
+  "expert_reviewed": false,
+  "diagnostic_only": true,
+  "implementation_sha256": {
+    "scripts/probe_truncated_completion.py": "3eea09cb376080c084bca817fed6747bd232697a3e9aa8cc42ccac5279709cb6",
+    "legal_ai_agent/casework/model_observation.py": "7f3386328c9475b905dfd5b15f436274fd4709774e186784c91ec1cf1e53474d"
+  },
+  "status": "observed_expected_rejection",
+  "call": {
+    "requested_model": "qwen-plus",
+    "max_tokens": 16,
+    "max_retries": 0,
+    "timeout": 30,
+    "actual_model": "qwen-plus",
+    "usage": {
+      "input_tokens": 46,
+      "output_tokens": 16,
+      "total_tokens": 62,
+      "input_token_details": {
+        "cache_read": 0
+      },
+      "output_token_details": {}
+    },
+    "finish_reason": "length",
+    "context_sha256": "a3e217eb2c64a352d074a7e6660caa42fc271a11bd76449edad7f99e4beacef7",
+    "raw_usage": {
+      "completion_tokens": 16,
+      "prompt_tokens": 46,
+      "total_tokens": 62,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      }
+    },
+    "metadata_source": "sdk_exception_completion",
+    "output": "{\n  \"numbers\": [1, 2, 3, 4",
+    "output_log_truncated": false,
+    "status": "failed",
+    "error": "output_truncated: 上次输出达到长度上限。请缩短问题说明，只保留必需字段和直接相关的短片段，不省略source_ids或关键事实锚点。",
+    "seconds": 2.312
+  }
+}

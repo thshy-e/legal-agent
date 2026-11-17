@@ -1,0 +1,517 @@
+{
+  "python": "3.12.6",
+  "platform": "Windows",
+  "packages": {
+    "fastapi": "0.135.2",
+    "pydantic": "2.12.5",
+    "langgraph": "1.1.3",
+    "langchain": "1.2.13",
+    "langchain-openai": "1.1.12",
+    "dashscope": "1.25.15",
+    "python-dotenv": "1.2.2",
+    "httpx": "0.28.1"
+  },
+  "verified_on": "2026-10-26",
+  "unittest": {
+    "command": ".\\venv\\Scripts\\python.exe -m unittest discover -s tests",
+    "tests": 146,
+    "passed": 146,
+    "seconds": 12.888
+  },
+  "engineering": {
+    "tasks": 60,
+    "passed": 60,
+    "dataset_version": "case-tasks-v2",
+    "dataset_sha256": "18553e8d07d29927600589709092b0392fff195d7c7f43b8a7b8faa27b5c7af2",
+    "dataset_type": "public_engineering_not_blind",
+    "v1_original_expectation_passed": 57,
+    "v1_mismatches": [
+      "W05",
+      "W06",
+      "W07"
+    ],
+    "changes_from_previous": [
+      {
+        "after": {
+          "amounts": {
+            "arrears": "0.00"
+          },
+          "no_conditional_claims": true,
+          "status": "no_supported_claim"
+        },
+        "before": {
+          "amounts": {
+            "arrears": "0.00"
+          },
+          "status": "awaiting_confirmation"
+        },
+        "id": "W05",
+        "reason": "所填工资没有欠付余额，应保留零余额核算结果，但不允许确认追讨零元的草稿。原输入和金额预期未改变。"
+      },
+      {
+        "after": {
+          "amounts": {
+            "arrears": "0.00"
+          },
+          "no_conditional_claims": true,
+          "status": "no_supported_claim"
+        },
+        "before": {
+          "amounts": {
+            "arrears": "0.00"
+          },
+          "status": "awaiting_confirmation"
+        },
+        "id": "W06",
+        "reason": "所填工资没有欠付余额，应保留零余额核算结果，但不允许确认追讨零元的草稿。原输入和金额预期未改变。"
+      },
+      {
+        "after": {
+          "amounts": {
+            "arrears": "0.00"
+          },
+          "no_conditional_claims": true,
+          "status": "no_supported_claim"
+        },
+        "before": {
+          "amounts": {
+            "arrears": "0.00"
+          },
+          "status": "awaiting_confirmation"
+        },
+        "id": "W07",
+        "reason": "所填工资没有欠付余额，应保留零余额核算结果，但不允许确认追讨零元的草稿。原输入和金额预期未改变。"
+      }
+    ],
+    "current_report": "docs/evaluation/frontend_v17/engineering/engineering_results.json"
+  },
+  "javascript": {
+    "casework": "node --check passed",
+    "inline": "node --check passed",
+    "git_diff_check": "passed"
+  },
+  "browser": {
+    "tool": "Playwright CLI Chromium",
+    "url": "http://127.0.0.1:18080/",
+    "checks": [
+      "legal condition fields switch with termination type",
+      "Shenzhen arrears 7000.10 confirmed draft",
+      "amended due wage produces 8000.10 and invalidates old draft",
+      "explicit confirmation produces revised 8000.10 draft",
+      "paid wage changed to 9000.10 yields 0.00 unpaid balance and no confirmation or copy action",
+      "reload restores case mode"
+    ],
+    "console_errors_on_final_flow": 0,
+    "screenshot": "output/playwright/casework-zero-balance.png",
+    "employment_status_checks": {
+      "backend_workflow": "casework-20261025-v10",
+      "assertion_extracted": "active from current direct statement",
+      "opposed_form_value": "terminated produces blocking warning",
+      "correction": "active correction advances case to version 3 and removes the warning in latest card",
+      "console_errors": 0,
+      "snapshots": [
+        ".playwright-cli/page-2026-10-25T14-19-16-451Z.yml",
+        ".playwright-cli/page-2026-10-25T14-24-35-175Z.yml"
+      ],
+      "note": "Historical message cards retain their prior issues; latest card is the current state. v11 backend was separately restarted and HTTP-tested."
+    },
+    "citation_history": {
+      "screenshot": "output/playwright/citation-revision-v14-history.png",
+      "console_errors": 0,
+      "scope": "Actual saved controlled-probe output rendered in frontend; no new calls or backend execution in this browser check."
+    }
+  },
+  "knowledge_digest": "b9b3767d4c14",
+  "knowledge": {
+    "law_versions": 12,
+    "guides": 2,
+    "case_records": 18,
+    "documents": 748,
+    "new_shenzhen_civil_award_records": 6,
+    "verified_minimum_wage_versions": 4,
+    "pending_severance_caps": 2
+  },
+  "model_ablation": {
+    "status": "completed_with_results_requiring_human_review",
+    "rows": 180,
+    "configured_key_present": true,
+    "protocol_sha256": "86e7bdce61502035c25bae6c5fc512add7288911a94f881503f0f427ce698084",
+    "scoring_labels_shared": false,
+    "production_review_shared": false,
+    "row_status_counts": {
+      "completed": 180
+    },
+    "request_attempts": 360,
+    "successful_outputs": 180,
+    "base_url": "https://ws-lpgjttlkq1zkm8wi.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+    "sampling": {
+      "model": "qwen-plus",
+      "temperature": 0.1,
+      "timeout": 90,
+      "max_retries": 0,
+      "max_tokens": 2400,
+      "base_url": "https://ws-lpgjttlkq1zkm8wi.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+    },
+    "automatic_flagged_rows_by_variant": {
+      "single_agent": 15,
+      "collaboration_no_review": 2,
+      "collaboration_review": 8
+    },
+    "legal_human_scores": 0,
+    "summary_report": "docs/evaluation/casework_v2/MEASURED_MODEL_RESULTS.md",
+    "additional_review_improved_automatic_flags": false
+  },
+  "expert_reviewed": false,
+  "remaining": [
+    "severance cap statistical applicability and rounding verification",
+    "Review timeout on S10 and broader stability/complex-language validation",
+    "independent blind test and legal expert review",
+    "deferred by user: school application materials and new narrated demo",
+    "six-person first-use evaluation and physical mobile keyboard/zoom checks"
+  ],
+  "workflow_version": "casework-20261026-v16",
+  "evidence_checks": [
+    "mention/question/hypothetical/employer possession does not assert user possession",
+    "text and structured evidence merge per material with per-item provenance",
+    "fact conflicts persist across retries and JSON reload and block confirmation",
+    "explicit correction requires reanalysis and current-version confirmation"
+  ],
+  "demo_recording": {
+    "path": "output/playwright/contest-casework-demo.webm",
+    "sha256": "eab2c0a47db69fd7304dad5f701178382bc7a1bd63b7b78bd24b224cbe38d71b",
+    "size_bytes": 12713064,
+    "duration_seconds": 137.4,
+    "resolution": "1440x1000",
+    "codec": "VP8",
+    "fps": 15,
+    "mode": "rules_only",
+    "inputs": "synthetic",
+    "backend": "real_local_server",
+    "voiceover": false,
+    "final_submission_video": false,
+    "browser_console_errors": 0,
+    "browser_console_warnings": 0,
+    "decoded_and_visually_checked_seconds": [
+      12,
+      65,
+      120
+    ],
+    "full_frame_quality_reviewed": false
+  },
+  "human_review_tool": {
+    "command": "python scripts/legal_review.py export/summarize",
+    "engineering_outputs_exported": 60,
+    "engineering_reviews_completed": 0,
+    "model_outputs_exported": 180,
+    "model_unavailable_outputs": 0,
+    "expert_reviewed": false,
+    "blind_test": false,
+    "checks": [
+      "packet and dataset hash binding",
+      "missing or duplicate rows rejected",
+      "NA excluded from applicable score denominator",
+      "severe errors counted separately",
+      "not_run is not a gradeable output",
+      "pending scores remain null"
+    ],
+    "model_reviews_completed": 0,
+    "model_bundle": "docs/evaluation/casework_v2/legal_review_model_live_v1"
+  },
+  "live_services": {
+    "check_report": "docs/evaluation/casework_v2/live_service_check.json",
+    "authentication_succeeded": true,
+    "api_host_or_valid_key_required": false,
+    "embedding_verified": true,
+    "embedding_report": "docs/evaluation/casework_v2/embedding_service_check.json",
+    "vector_records": 748,
+    "vector_dimension": 1024,
+    "vector_boundary_checks_passed": 8,
+    "vector_index_activated": true,
+    "vector_default_enabled": false,
+    "semantic_accuracy_measured": false
+  },
+  "live_workflow": {
+    "report": "docs/evaluation/casework_v2/live_workflow_v15_mixed.json",
+    "status": "completed_limited_single_scenario_retest",
+    "phase_statuses": [
+      {
+        "name": "analyze",
+        "status": "awaiting_confirmation"
+      },
+      {
+        "name": "confirm",
+        "status": "draft_ready"
+      },
+      {
+        "name": "amend",
+        "status": "awaiting_confirmation"
+      },
+      {
+        "name": "reconfirm",
+        "status": "draft_ready"
+      }
+    ],
+    "end_to_end_passed": true,
+    "latest_failure": "Historical all-Plus v10: 0/3; retained separately from v11 mixed profile.",
+    "default_case_model_enabled": false,
+    "failed_attempt_reports_preserved": 22,
+    "findings": "docs/evaluation/casework_v2/LIVE_WORKFLOW_FINDINGS.md",
+    "workflow_version": "casework-20261025-v15",
+    "frozen_fixture": "data/evaluation/live_workflow_fixture_v1.json",
+    "frozen_fixture_sha256": "ce76629253a182315fa628c4d26757fee95b7f53f61089370e0eeaa15377dcf8",
+    "repeated_trials": [
+      {
+        "version": "v5",
+        "report": "docs\\evaluation\\casework_v2\\live_workflow_v5\\summary.json",
+        "repetitions": 3,
+        "completed": 0
+      },
+      {
+        "version": "v6",
+        "report": "docs\\evaluation\\casework_v2\\live_workflow_v6\\summary.json",
+        "repetitions": 3,
+        "completed": 0
+      },
+      {
+        "version": "v7",
+        "report": "docs\\evaluation\\casework_v2\\live_workflow_v7\\summary.json",
+        "repetitions": 3,
+        "completed": 0
+      },
+      {
+        "version": "v8",
+        "report": "docs\\evaluation\\casework_v2\\live_workflow_v8\\summary.json",
+        "repetitions": 3,
+        "completed": 0
+      },
+      {
+        "version": "v10_all_plus",
+        "report": "docs/evaluation/casework_v2/live_workflow_v10/summary.json",
+        "repetitions": 3,
+        "completed": 0
+      },
+      {
+        "version": "v11_mixed",
+        "report": "docs/evaluation/casework_v2/live_workflow_v11_mixed/summary.json",
+        "repetitions": 3,
+        "completed": 3
+      },
+      {
+        "version": "v13_mixed",
+        "report": "docs/evaluation/casework_v2/live_workflow_v13_mixed.json",
+        "repetitions": 1,
+        "completed": 1
+      },
+      {
+        "version": "v14_mixed",
+        "report": "docs/evaluation/casework_v2/live_workflow_v14_mixed.json",
+        "repetitions": 1,
+        "completed": 1
+      },
+      {
+        "version": "v15_mixed",
+        "report": "docs/evaluation/casework_v2/live_workflow_v15_mixed.json",
+        "repetitions": 1,
+        "completed": 1
+      }
+    ],
+    "current_production_workflow_version": "casework-20261025-v15",
+    "production_v9_live_retested": false,
+    "grounding_scope": "Literal quote and field existence checks do not verify legal implication or date reasoning.",
+    "review_triage": "docs\\evaluation\\casework_v2\\review_triage_v8\\packet.json",
+    "review_triage_calls": 6,
+    "review_triage_findings": 36,
+    "human_labels": 0,
+    "passed": 1,
+    "repetitions": 1,
+    "scope": "One four-phase synthetic smoke in v15; older repetitions preserved separately; not legal accuracy or general stability.",
+    "model_profiles": {
+      "Judge": "qwen-plus",
+      "Review": "qwen3.8-max",
+      "Doc": "qwen-plus"
+    },
+    "guard_report": "docs/evaluation/casework_v2/live_guards_v11_mixed_rechecked.json",
+    "guard_cases": 2,
+    "guard_passed": 2,
+    "seconds": 189.203
+  },
+  "candidate_snapshot": {
+    "final_release": false,
+    "workflow_version": "casework-20261025-v15",
+    "archive": "output/releases/labor-casework-handoff-20261026-v15.zip",
+    "recorded_tests": 125,
+    "environment_freeze": "requirements-win-py312.snapshot.txt",
+    "fresh_install_verified": false,
+    "archive_reproduction": "See external verification.json for actual extraction, build and regression results.",
+    "attestation": "output/releases/labor-casework-handoff-20261026-v15.verification.json",
+    "scope": "Engineering handoff requested 2026-10-26; external attestation binds archive hash. Legal validation remains incomplete."
+  },
+  "http_workflow": {
+    "report": "docs/evaluation/casework_v2/http_workflow_v15.json",
+    "status": "passed",
+    "mode": "rules_only",
+    "workflow_version": "casework-20261025-v15",
+    "stale_confirmation_http": 409
+  },
+  "historical_candidate_snapshot": {
+    "final_release": false,
+    "environment_freeze": "requirements-win-py312.snapshot.txt",
+    "fresh_install_verified": false,
+    "pip_check": "passed",
+    "archive": "output/releases/labor-casework-candidate-20261025.zip",
+    "extracted_reproduction": "passed_85_tests_and_748_document_rebuild",
+    "attestation": "output\\releases\\labor-casework-candidate-20261025.verification.json",
+    "archive_sha256": "9621f09cce84cfb938842fb5cb6e8bf3b26e5f3f4f0e101628dec62257ba7dc9",
+    "scope": "Historical v4 candidate with 85 tests; does not contain current v6 source changes."
+  },
+  "rule_version": "labor-scope-20261025-v3",
+  "historical_candidate_v6": {
+    "final_release": false,
+    "workflow_version": "casework-20261025-v6",
+    "archive": "output/releases/labor-casework-candidate-20261025-v6.zip",
+    "environment_freeze": "requirements-win-py312.snapshot.txt",
+    "fresh_install_verified": false,
+    "recorded_tests": 90,
+    "archive_reproduction": "See external verification.json; archive hash cannot be embedded in its own source inventory."
+  },
+  "fact_checks": {
+    "employment_status": "user statement, not verified evidence",
+    "date_checks": "deterministic calendar comparison, not legal applicability",
+    "model_profile_change": "invalidates old confirmation and document"
+  },
+  "live_scenarios": {
+    "workflow_version": "casework-20261025-v15",
+    "fixture_sha256": "b9cac1ebd40dbe87e9ec87c3800cc07ef2dcd66b82661d3cdf37c60a49319680",
+    "report": "docs/evaluation/casework_v2/live_scenarios_v15_mixed/summary.json",
+    "audit": "docs/evaluation/casework_v2/live_scenarios_v15_mixed/audit.json",
+    "total": 10,
+    "passed": 9,
+    "failed": [
+      "S10"
+    ],
+    "model_called_scenarios": 9,
+    "rules_terminated_scenarios": [
+      "S05"
+    ],
+    "expert_reviewed": false,
+    "blind_test": false,
+    "legal_accuracy": null,
+    "historical_runs": [
+      {
+        "version": "v11",
+        "raw_completed": 9,
+        "final_roles_success_and_expected_status": 8,
+        "total": 10
+      },
+      {
+        "version": "v12",
+        "completed": 7,
+        "total": 10
+      },
+      {
+        "version": "v13",
+        "completed": 9,
+        "total": 10,
+        "report": "docs\\evaluation\\casework_v2\\live_scenarios_v13_mixed\\summary.json"
+      },
+      {
+        "version": "v14",
+        "completed": 8,
+        "total": 10,
+        "report": "docs/evaluation/casework_v2/live_scenarios_v14_mixed/summary.json"
+      }
+    ],
+    "comparison_limit": "Public engineering expectations. Protocols and production workflow changed; counts are not causal model/collaboration comparisons. Missing usage is not counted as zero-cost.",
+    "model_calls": 30,
+    "failed_model_calls": 1,
+    "missing_usage_calls": 1,
+    "recorded_input_tokens": 141735,
+    "recorded_output_tokens": 25715,
+    "remaining_failure": "S10 Review APITimeoutError after 90 seconds; no response, model and usage unknown; drafting blocked."
+  },
+  "citation_revision": {
+    "report": "docs/evaluation/casework_v2/citation_revision_v14.json",
+    "status": "completed",
+    "workflow_version": "casework-20261025-v14",
+    "fresh_model_calls": 2,
+    "seconds": 45.859,
+    "replayed_initial_roles": [
+      "Judge",
+      "Review"
+    ],
+    "replay_counted_as_new_calls": false,
+    "protected_facts_and_calculations_unchanged": true,
+    "maximum_revision_attempts": 1,
+    "human_legal_review": false
+  },
+  "truncation_diagnostic": {
+    "report": "docs/evaluation/casework_v2/truncated_completion_v15.json",
+    "diagnostic_only": true,
+    "case_test": false,
+    "status": "observed_expected_rejection",
+    "call_status": "failed",
+    "finish_reason": "length",
+    "actual_model": "qwen-plus",
+    "input_tokens": 46,
+    "output_tokens": 16,
+    "metadata_source": "sdk_exception_completion",
+    "production_profile_changed": false
+  },
+  "historical_candidate_v14": {
+    "final_release": false,
+    "workflow_version": "casework-20261025-v14",
+    "archive": "output/releases/labor-casework-candidate-20261025-v14.zip",
+    "recorded_tests": 119,
+    "environment_freeze": "requirements-win-py312.snapshot.txt",
+    "fresh_install_verified": false,
+    "archive_reproduction": "passed_119_tests_and_748_document_rebuild",
+    "scope": "Historical v14/119-test candidate; not current v16 source.",
+    "archive_sha256": "6233eff0fc7393137e45f20d9b1b2b97d371a3fcb15cb74222154e2abb47a2d0",
+    "attestation": "output/releases/labor-casework-candidate-20261025-v14.verification.json"
+  },
+  "handoff_scope": {
+    "date": "2026-10-27",
+    "user_request": "Finish current engineering handoff; defer school application form.",
+    "document": "docs/PROJECT_HANDOFF.md",
+    "application_form": "deferred",
+    "new_narrated_video": "deferred",
+    "legal_acceptance_complete": false,
+    "current_archive": "output/releases/labor-casework-handoff-20261027-v17.zip",
+    "rollback_archive": "output/releases/labor-casework-handoff-20261026-v16.zip"
+  },
+  "historical_v15_unittest": {
+    "command": ".\\venv\\Scripts\\python.exe -m unittest discover -s tests",
+    "tests": 125,
+    "passed": 125,
+    "seconds": 8.557
+  },
+  "natural_conversation": {
+    "version": "conversation-20261026-v16",
+    "cases": 13,
+    "all_engineering_checks_passed": true,
+    "model_calls": 10,
+    "seconds": 43.891,
+    "recorded_input_tokens": 18414,
+    "recorded_output_tokens": 1384,
+    "report": "docs/evaluation/conversation_v16/live_conversation_final.json",
+    "browser_report": "docs/evaluation/conversation_v16/browser.json",
+    "legal_accuracy_evaluated": false,
+    "expert_reviewed": false
+  },
+  "historical_v16_unittest": {
+    "command": ".\\venv\\Scripts\\python.exe -m unittest discover -s tests",
+    "tests": 146,
+    "passed": 146,
+    "seconds": 11.454
+  },
+  "frontend_version": "frontend-20261027-v17",
+  "frontend_validation": {
+    "node_tests": 6,
+    "passed": 6,
+    "browser_report": "docs/evaluation/frontend_v17/browser.json",
+    "real_chat_turns": 3,
+    "legal_accuracy_evaluated": false,
+    "human_usability_test_status": "not_started",
+    "physical_keyboard_test_status": "pending"
+  }
+}

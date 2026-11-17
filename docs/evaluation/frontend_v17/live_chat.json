@@ -1,0 +1,37 @@
+{
+  "version": "frontend-20261027-v17",
+  "scope": "Three public synthetic multi-turn browser questions against the actual model backend; not legal accuracy.",
+  "configured_model": "qwen-plus",
+  "actual_model_metadata_available": false,
+  "expert_reviewed": false,
+  "turns": [
+    {
+      "question": "试用期也要签劳动合同吗？",
+      "answer": "是的，试用期也必须签劳动合同。法律规定，建立劳动关系就应当订立书面劳动合同，用工之日起一个月内必须签订[contract-law-2012:a10]。试用期是包含在劳动合同期限内的，不能单独只约定试用期；如果合同仅约定试用期，该试用期不成立，整个期限直接视为劳动合同期限[contract-law-2012:a19]。未及时签合同的，单位需从用工满一个月的次日起支付二倍工资[contract-law-2012:a82]。",
+      "status": "completed",
+      "source_ids": [
+        "contract-law-2012:a10",
+        "contract-law-2012:a19",
+        "contract-law-2012:a82"
+      ]
+    },
+    {
+      "question": "公司说转正才签，怎么办？",
+      "answer": "公司说法不合法。法律明确要求自用工之日起一个月内必须签订书面劳动合同，不能以“转正”为由拖延[contract-law-2012:a10]。试用期本就包含在劳动合同期限内，没有合同就不存在合法试用期[contract-law-2012:a19]。若入职满一个月仍未签合同，公司须从第二个月起支付二倍工资[contract-law-2012:a82]。建议保留好入职通知、考勤记录、工资支付凭证等事实劳动关系证据，及时主张权利。",
+      "status": "completed",
+      "source_ids": [
+        "contract-law-2012:a10",
+        "contract-law-2012:a19",
+        "contract-law-2012:a82"
+      ]
+    },
+    {
+      "question": "为什么要留入职记录？",
+      "answer": "入职记录是证明实际用工起始时间的关键证据。因为二倍工资责任从‘用工之日’起算（满一个月未签合同即触发），而劳动关系建立时间、试用期是否合法，都依赖入职时间来认定[contract-law-2012:a10]。公司若否认劳动关系或篡改时间，入职通知、工牌、系统登记、首日打卡记录等，就能有效反驳。没有书面合同的情况下，这些记录更是主张权利的基础。",
+      "status": "completed",
+      "source_ids": [
+        "contract-law-2012:a10"
+      ]
+    }
+  ]
+}

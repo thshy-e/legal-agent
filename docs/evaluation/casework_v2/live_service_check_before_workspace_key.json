@@ -1,0 +1,33 @@
+{
+  "status": "failed",
+  "error_type": "AuthenticationError",
+  "seconds": 1.86,
+  "regional_diagnostic": {
+    "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+    "status": "failed",
+    "error_type": "AuthenticationError",
+    "http_status": 401,
+    "provider_error": "{\"message\": \"Incorrect API key provided. For details, see: https://www.alibabacloud.com/help/en/model-studio/error-code#apikey-error\", \"type\": \"invalid_request_error\", \"param\": null, \"code\": \"invalid_api_key\"}",
+    "seconds": 1.688
+  },
+  "additional_regional_diagnostics": [
+    {
+      "endpoint": "https://cn-hongkong.dashscope.aliyuncs.com/compatible-mode/v1",
+      "status": "failed",
+      "error_type": "AuthenticationError",
+      "http_status": 401,
+      "error_code": "invalid_api_key",
+      "seconds": 1.453
+    },
+    {
+      "endpoint": "https://dashscope-us.aliyuncs.com/compatible-mode/v1",
+      "status": "failed",
+      "error_type": "AuthenticationError",
+      "http_status": 401,
+      "error_code": "invalid_api_key",
+      "seconds": 2.391
+    }
+  ],
+  "configured_key_present": true,
+  "actual_model_call_succeeded": false
+}

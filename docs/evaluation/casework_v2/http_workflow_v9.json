@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "base_url": "http://127.0.0.1:18080",
+  "inputs": "synthetic",
+  "mode": "rules_only",
+  "confirmation_actor": "automated_test",
+  "expert_reviewed": false,
+  "phases": [
+    {
+      "name": "analyze",
+      "http_status": 200,
+      "status": "awaiting_confirmation",
+      "workflow_version": "casework-20261025-v9",
+      "amounts": {
+        "arrears": "7000.10"
+      }
+    },
+    {
+      "name": "confirm",
+      "http_status": 200,
+      "status": "draft_ready",
+      "workflow_version": "casework-20261025-v9",
+      "amounts": {
+        "arrears": "7000.10"
+      }
+    },
+    {
+      "name": "amend",
+      "http_status": 200,
+      "status": "awaiting_confirmation",
+      "workflow_version": "casework-20261025-v9",
+      "amounts": {
+        "arrears": "8000.10"
+      }
+    },
+    {
+      "name": "stale",
+      "http_status": 409,
+      "status": null,
+      "workflow_version": null,
+      "amounts": {}
+    },
+    {
+      "name": "reconfirm",
+      "http_status": 200,
+      "status": "draft_ready",
+      "workflow_version": "casework-20261025-v9",
+      "amounts": {
+        "arrears": "8000.10"
+      }
+    }
+  ]
+}

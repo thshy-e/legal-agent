@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "requested_model": "text-embedding-v3",
+  "actual_model": "not_reported_by_wrapper",
+  "base_url": "https://ws-lpgjttlkq1zkm8wi.cn-beijing.maas.aliyuncs.com/api/v1",
+  "documents": 2,
+  "queries": 1,
+  "dimension": 1024,
+  "finite_values": true,
+  "seconds": 2.312
+}

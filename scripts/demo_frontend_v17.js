@@ -1,0 +1,47 @@
+// Run through playwright-cli run-code; actual local backend, synthetic input only.
+async page => {
+  const wait=()=>page.waitForFunction(()=>!pending.has(currentSessionId),{},{timeout:95000});
+  const send=async text=>{await page.locator('#messageInput').fill(text);await page.locator('#sendMsgBtn').click();await wait();};
+  await page.setViewportSize({width:1440,height:1000});
+  await page.locator('#newChatBtn').click();
+  await page.screenshot({path:'output/playwright/frontend-v17-home-desktop.png'});
+  await send('你好');
+  await send('劳动合同法第47条是什么');
+  await page.locator('.citation').first().click();
+  await page.screenshot({path:'output/playwright/frontend-v17-source-desktop.png'});
+  await page.locator('#closeDetailBtn').click();
+  await send('按我的情况算一下欠薪');
+  await page.locator('[name=workplace]').selectOption('广州');
+  await page.locator('[name=employer_city]').selectOption('广州');
+  await page.locator('[name=dispute_date]').fill('2026-10-01');
+  await page.locator('[data-section=dispute] > summary').click();
+  await page.locator('[data-case-add-wage]').click();
+  for(const [field,value] of Object.entries({start:'2026-09-01',end:'2026-09-30',due:'8000.10',paid:'1000'}))await page.locator(`[name=wage_${field}]`).fill(value);
+  await page.locator('[data-case-save]').click();await wait();
+  await page.locator('[name=selected_claim][value=arrears]').check();
+  await page.locator('[data-case-confirm]').click();await wait();
+  await page.locator('[data-panel=document]').click();
+  if(!(await page.locator('.document-paper').innerText()).includes('7000.10'))throw Error('Initial draft amount mismatch');
+  await page.screenshot({path:'output/playwright/frontend-v17-draft-desktop.png'});
+  await page.locator('[data-panel=case]').click();
+  await page.locator('[data-section=dispute] > summary').click();
+  await page.locator('[name=wage_due]').fill('9000.10');
+  await page.locator('[data-case-save]').click();await wait();
+  await page.locator('[data-panel=document]').click();
+  if(await page.locator('[data-case-copy]').count())throw Error('Invalidated draft could be copied');
+  await page.locator('[data-panel=case]').click();
+  await page.locator('[name=selected_claim][value=arrears]').check();
+  await page.locator('[data-case-confirm]').click();await wait();
+  await page.locator('[data-panel=document]').click();
+  if(!(await page.locator('.document-paper').innerText()).includes('8000.10'))throw Error('Revised draft amount mismatch');
+  await page.screenshot({path:'output/playwright/frontend-v17-revised-desktop.png'});
+  await page.setViewportSize({width:1024,height:900});
+  await page.screenshot({path:'output/playwright/frontend-v17-tablet.png'});
+  await page.setViewportSize({width:390,height:844});
+  await page.screenshot({path:'output/playwright/frontend-v17-mobile-draft.png'});
+  await page.keyboard.press('Escape');
+  await page.locator('#mobileMenuBtn').click();
+  await page.locator('#newChatBtn').click();
+  await page.screenshot({path:'output/playwright/frontend-v17-mobile-home.png'});
+  return {actual_backend:true,initial_amount:'7000.10',revised_amount:'8000.10',invalidated_copy_blocked:true,viewports:[1440,1024,390]};
+}

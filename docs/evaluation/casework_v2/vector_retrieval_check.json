@@ -1,0 +1,126 @@
+{
+  "status": "completed",
+  "knowledge_digest": "b9b3767d4c14",
+  "vector_search": true,
+  "checks": [
+    {
+      "query": "劳动法第47条",
+      "city": "广州",
+      "date": "2026-10-01",
+      "passed": true,
+      "ids": [
+        "labor-law-2018:a47"
+      ]
+    },
+    {
+      "query": "劳动合同法第47条",
+      "city": "深圳",
+      "date": "2026-10-01",
+      "passed": true,
+      "ids": [
+        "contract-law-2012:a47"
+      ]
+    },
+    {
+      "query": "深圳市员工工资支付条例第22条",
+      "city": "深圳",
+      "date": "2025-12-04",
+      "passed": true,
+      "ids": [
+        "sz-wage-2022:a22"
+      ]
+    },
+    {
+      "query": "深圳市员工工资支付条例第22条",
+      "city": "深圳",
+      "date": "2025-12-05",
+      "passed": true,
+      "ids": [
+        "sz-wage-2025:a22"
+      ]
+    },
+    {
+      "query": "semantic eligibility",
+      "city": "广州",
+      "date": "2026-10-01",
+      "passed": true,
+      "ids": [
+        "gd-wage-2016:a52",
+        "gd-wage-2016:a38",
+        "gd-wage-2016:a58",
+        "spc-labor-I-2021:a15",
+        "gd-wage-2016:a37",
+        "gd-wage-2016:a31",
+        "gd-wage-2016:a41",
+        "arbitration-law-2008:a9",
+        "contract-law-2012:a30",
+        "gd-wage-2016:a48",
+        "gd-wage-2016:a53",
+        "spc-labor-I-2021:a45"
+      ]
+    },
+    {
+      "query": "semantic eligibility",
+      "city": "深圳",
+      "date": "2025-12-04",
+      "passed": true,
+      "ids": [
+        "gd-wage-2016:a52",
+        "gd-wage-2016:a38",
+        "gd-wage-2016:a58",
+        "spc-labor-I-2021:a15",
+        "gd-wage-2016:a37",
+        "gd-wage-2016:a31",
+        "gd-wage-2016:a41",
+        "sz-wage-2022:a51",
+        "arbitration-law-2008:a9",
+        "contract-law-2012:a30",
+        "gd-wage-2016:a48",
+        "gd-wage-2016:a49"
+      ]
+    },
+    {
+      "query": "semantic eligibility",
+      "city": "深圳",
+      "date": "2026-10-01",
+      "passed": true,
+      "ids": [
+        "gd-wage-2016:a52",
+        "gd-wage-2016:a38",
+        "gd-wage-2016:a58",
+        "spc-labor-I-2021:a15",
+        "gd-wage-2016:a37",
+        "sz-wage-2025:a49",
+        "gd-wage-2016:a31",
+        "gd-wage-2016:a41",
+        "arbitration-law-2008:a9",
+        "contract-law-2012:a30",
+        "gd-wage-2016:a48",
+        "gd-wage-2016:a49"
+      ]
+    },
+    {
+      "query": "semantic eligibility",
+      "city": "佛山",
+      "date": "2026-10-01",
+      "passed": true,
+      "ids": [
+        "gd-wage-2016:a52",
+        "gd-wage-2016:a38",
+        "gd-wage-2016:a58",
+        "spc-labor-I-2021:a15",
+        "gd-wage-2016:a37",
+        "gd-wage-2016:a31",
+        "gd-wage-2016:a41",
+        "arbitration-law-2008:a9",
+        "contract-law-2012:a30",
+        "gd-wage-2016:a48",
+        "gd-wage-2016:a53",
+        "spc-labor-I-2021:a45"
+      ]
+    }
+  ],
+  "seconds": 6.188,
+  "scope": "eligibility_and_exact_lookup_not_semantic_accuracy",
+  "activated": true
+}

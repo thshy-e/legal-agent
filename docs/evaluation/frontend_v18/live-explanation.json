@@ -1,0 +1,9 @@
+{
+  "question": "为什么需要工资流水？",
+  "answer": "本轮回答未能完成依据核对，暂时不能给出可靠结论。已有案件结果已保留，你可以稍后重试。",
+  "status": "invalid_output",
+  "route": "qa",
+  "sources": [],
+  "actual_model_id": "not_exposed_by_browser_response",
+  "expert_reviewed": false
+}

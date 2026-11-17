@@ -1,0 +1,93 @@
+{
+  "kind": "single_diagnostic_not_ablation_or_workflow_pass",
+  "requested_model": "qwen3.8-max",
+  "temperature": 0.1,
+  "timeout": 90,
+  "max_retries": 0,
+  "max_tokens": 4096,
+  "response_format": "json_object",
+  "enable_thinking": true,
+  "reasoning_effort": "low",
+  "case_source": "live_workflow_v10/summary-run01.json",
+  "system_sha256": "2acda701056b9f007a37e1300db6d1e4a6021d782badafc55b97cb594216292f",
+  "context_sha256": "ba730b549482fe7a537a45a71e78bc8ea7c5ab47a73545f596fc5c11d90c0421",
+  "expert_reviewed": false,
+  "actual_model": "qwen3.8-max",
+  "usage": {
+    "input_tokens": 5568,
+    "output_tokens": 1891,
+    "total_tokens": 7459,
+    "input_token_details": {
+      "cache_read": 0
+    },
+    "output_token_details": {
+      "reasoning": 1604
+    }
+  },
+  "output": "{\"issues\":[{\"code\":\"SP-01\",\"severity\":\"warning\",\"category\":\"subject_placeholder\",\"message\":\"申请人姓名、身份证号、地址、电话均为空，提交仲裁申请前需补充。\",\"source_ids\":[],\"fact_fields\":[\"applicant\",\"applicant_id\",\"applicant_address\",\"applicant_phone\"],\"law_excerpts\":[],\"fact_excerpts\":[],\"missing_fact_fields\":[\"applicant\",\"applicant_id\",\"applicant_address\",\"applicant_phone\"]},{\"code\":\"SP-02\",\"severity\":\"warning\",\"category\":\"subject_placeholder\",\"message\":\"用人单位名称、地址、法定代表人、电话均为空，提交仲裁申请前需补充。\",\"source_ids\":[],\"fact_fields\":[\"employer_name\",\"employer_address\",\"employer_representative\",\"employer_phone\"],\"law_excerpts\":[],\"fact_excerpts\":[],\"missing_fact_fields\":[\"employer_name\",\"employer_address\",\"employer_representative\",\"employer_phone\"]},{\"code\":\"EG-01\",\"severity\":\"warning\",\"category\":\"evidence_gap\",\"message\":\"用户陈述9月整月出勤无缺勤，但考勤记录标记为missing；可考虑以工作沟通记录等替代证明出勤事实。\",\"source_ids\":[],\"fact_fields\":[\"evidence.考勤\",\"wage_statement\"],\"law_excerpts\":[],\"fact_excerpts\":[{\"field\":\"wage_statement\",\"quote\":\"2026年9月正常提供了整月劳动、无缺勤\"}],\"missing_fact_fields\":[]}]}",
+  "status": "schema_and_references_valid",
+  "issues": [
+    {
+      "code": "SP-01",
+      "severity": "warning",
+      "category": "subject_placeholder",
+      "message": "申请人姓名、身份证号、地址、电话均为空，提交仲裁申请前需补充。",
+      "source_ids": [],
+      "fact_fields": [
+        "applicant",
+        "applicant_id",
+        "applicant_address",
+        "applicant_phone"
+      ],
+      "law_excerpts": [],
+      "fact_excerpts": [],
+      "missing_fact_fields": [
+        "applicant",
+        "applicant_id",
+        "applicant_address",
+        "applicant_phone"
+      ]
+    },
+    {
+      "code": "SP-02",
+      "severity": "warning",
+      "category": "subject_placeholder",
+      "message": "用人单位名称、地址、法定代表人、电话均为空，提交仲裁申请前需补充。",
+      "source_ids": [],
+      "fact_fields": [
+        "employer_name",
+        "employer_address",
+        "employer_representative",
+        "employer_phone"
+      ],
+      "law_excerpts": [],
+      "fact_excerpts": [],
+      "missing_fact_fields": [
+        "employer_name",
+        "employer_address",
+        "employer_representative",
+        "employer_phone"
+      ]
+    },
+    {
+      "code": "EG-01",
+      "severity": "warning",
+      "category": "evidence_gap",
+      "message": "用户陈述9月整月出勤无缺勤，但考勤记录标记为missing；可考虑以工作沟通记录等替代证明出勤事实。",
+      "source_ids": [],
+      "fact_fields": [
+        "evidence.考勤",
+        "wage_statement"
+      ],
+      "law_excerpts": [],
+      "fact_excerpts": [
+        {
+          "field": "wage_statement",
+          "quote": "2026年9月正常提供了整月劳动、无缺勤"
+        }
+      ],
+      "missing_fact_fields": []
+    }
+  ],
+  "seconds": 43.782
+}

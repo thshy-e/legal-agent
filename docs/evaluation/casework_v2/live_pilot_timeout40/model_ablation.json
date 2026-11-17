@@ -1,0 +1,195 @@
+{
+  "dataset_sha256": "18553e8d07d29927600589709092b0392fff195d7c7f43b8a7b8faa27b5c7af2",
+  "knowledge_digest": "b9b3767d4c14",
+  "model": "qwen-plus",
+  "temperature": 0.1,
+  "max_tokens": 2400,
+  "status": "completed_with_results_requiring_human_review",
+  "reason": null,
+  "rows": [
+    {
+      "id": "T01",
+      "variant": "single_agent",
+      "status": "completed",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "N",
+            "status": "pending",
+            "amount": null,
+            "source_ids": [
+              "contract-law-2012:a46",
+              "contract-law-2012:a47",
+              "contract-regulation-2008:a27"
+            ]
+          },
+          {
+            "claim_id": "2N",
+            "status": "pending",
+            "amount": null,
+            "source_ids": [
+              "contract-law-2012:a46",
+              "contract-law-2012:a47",
+              "contract-regulation-2008:a27",
+              "contract-law-2012:a48",
+              "contract-law-2012:a87",
+              "contract-regulation-2008:a25"
+            ]
+          }
+        ],
+        "missing_info": [
+          "termination_basis（解除依据）未明确，无法判断是否属于《劳动合同法》第36、40、41条等法定情形",
+          "termination_reason（解除理由）仅表述为“用人单位提出解除，理由须核验”，未提供具体事实依据（如是否不胜任、医疗期满、客观情况变化、协商一致等）",
+          "无证据表明已履行法定程序（如书面通知、工会告知、培训/调岗记录、协商过程等）",
+          "未提供用人单位所在地（广州）2024年度职工月平均工资数据，影响经济补偿封顶计算（a47第二款）",
+          "未提供劳动者是否存在《劳动合同法》第42条禁止解除情形（如孕期、医疗期、工伤等）",
+          "未提供劳动合同解除或终止前十二个月工资明细，无法验证‘monthly_average=8000’是否为应得工资及是否含奖金津贴等（a47第三款、reg-2008:a27）",
+          "未提供用人单位是否已支付代通知金（若适用a40）或是否已出具解除证明（a50）"
+        ],
+        "source_ids": [
+          "contract-law-2012:a36",
+          "contract-law-2012:a38",
+          "contract-law-2012:a39",
+          "contract-law-2012:a40",
+          "contract-law-2012:a41",
+          "contract-law-2012:a42",
+          "contract-law-2012:a43",
+          "contract-law-2012:a46",
+          "contract-law-2012:a47",
+          "contract-law-2012:a48",
+          "contract-law-2012:a87",
+          "contract-regulation-2008:a20",
+          "contract-regulation-2008:a25",
+          "contract-regulation-2008:a27",
+          "spc-labor-I-2021:a44",
+          "gd-wage-2016:a13",
+          "wage-interim-1995:a9",
+          "gz-aid-2025-1",
+          "gz-2025-5",
+          "gz-2025-6"
+        ],
+        "allow_document": false
+      },
+      "automatic_errors": [],
+      "trace": [
+        {
+          "role": "single_agent",
+          "requested_model": "qwen-plus",
+          "actual_model": "qwen-plus",
+          "usage": {
+            "input_tokens": 19109,
+            "output_tokens": 719,
+            "total_tokens": 19828,
+            "input_token_details": {
+              "cache_read": 0
+            },
+            "output_token_details": {}
+          },
+          "status": "completed",
+          "output": "{\n  \"claims\": [\n    {\n      \"claim_id\": \"N\",\n      \"status\": \"pending\",\n      \"amount\": null,\n      \"source_ids\": [\"contract-law-2012:a46\", \"contract-law-2012:a47\", \"contract-regulation-2008:a27\"]\n    },\n    {\n      \"claim_id\": \"2N\",\n      \"status\": \"pending\",\n      \"amount\": null,\n      \"source_ids\": [\"contract-law-2012:a46\", \"contract-law-2012:a47\", \"contract-regulation-2008:a27\", \"contract-law-2012:a48\", \"contract-law-2012:a87\", \"contract-regulation-2008:a25\"]\n    }\n  ],\n  \"missing_info\": [\n    \"termination_basis（解除依据）未明确，无法判断是否属于《劳动合同法》第36、40、41条等法定情形\",\n    \"termination_reason（解除理由）仅表述为“用人单位提出解除，理由须核验”，未提供具体事实依据（如是否不胜任、医疗期满、客观情况变化、协商一致等）\",\n    \"无证据表明已履行法定程序（如书面通知、工会告知、培训/调岗记录、协商过程等）\",\n    \"未提供用人单位所在地（广州）2024年度职工月平均工资数据，影响经济补偿封顶计算（a47第二款）\",\n    \"未提供劳动者是否存在《劳动合同法》第42条禁止解除情形（如孕期、医疗期、工伤等）\",\n    \"未提供劳动合同解除或终止前十二个月工资明细，无法验证‘monthly_average=8000’是否为应得工资及是否含奖金津贴等（a47第三款、reg-2008:a27）\",\n    \"未提供用人单位是否已支付代通知金（若适用a40）或是否已出具解除证明（a50）\"\n  ],\n  \"source_ids\": [\n    \"contract-law-2012:a36\",\n    \"contract-law-2012:a38\",\n    \"contract-law-2012:a39\",\n    \"contract-law-2012:a40\",\n    \"contract-law-2012:a41\",\n    \"contract-law-2012:a42\",\n    \"contract-law-2012:a43\",\n    \"contract-law-2012:a46\",\n    \"contract-law-2012:a47\",\n    \"contract-law-2012:a48\",\n    \"contract-law-2012:a87\",\n    \"contract-regulation-2008:a20\",\n    \"contract-regulation-2008:a25\",\n    \"contract-regulation-2008:a27\",\n    \"spc-labor-I-2021:a44\",\n    \"gd-wage-2016:a13\",\n    \"wage-interim-1995:a9\",\n    \"gz-aid-2025-1\",\n    \"gz-2025-5\",\n    \"gz-2025-6\"\n  ],\n  \"allow_document\": false\n}",
+          "seconds": 17.922
+        }
+      ],
+      "legal_human_score": null,
+      "expert_reviewed": false
+    },
+    {
+      "id": "T01",
+      "variant": "collaboration_no_review",
+      "status": "failed",
+      "error": "APITimeoutError: Request timed out.",
+      "http_status": null,
+      "request_id": null,
+      "fatal_configuration_error": false,
+      "trace": [
+        {
+          "role": "Judge",
+          "requested_model": "qwen-plus",
+          "actual_model": "unknown",
+          "usage": null,
+          "status": "failed",
+          "error": "APITimeoutError: Request timed out.",
+          "http_status": null,
+          "request_id": null,
+          "fatal_configuration_error": false,
+          "seconds": 40.141
+        }
+      ],
+      "legal_human_score": null,
+      "expert_reviewed": false
+    },
+    {
+      "id": "T01",
+      "variant": "collaboration_review",
+      "status": "failed",
+      "error": "APITimeoutError: Request timed out.",
+      "http_status": null,
+      "request_id": null,
+      "fatal_configuration_error": false,
+      "trace": [
+        {
+          "role": "Judge",
+          "requested_model": "qwen-plus",
+          "actual_model": "qwen-plus",
+          "usage": {
+            "input_tokens": 18838,
+            "output_tokens": 1609,
+            "total_tokens": 20447,
+            "input_token_details": {
+              "cache_read": 0
+            },
+            "output_token_details": {}
+          },
+          "status": "completed",
+          "output": "根据DATA中提供的事实主张、法源依据及工具输出，现就本案仅作**成立条件分析、证据缺口识别与不利解释提示**（不输出文书、不重算金额、不补全缺失参数）：\n\n---\n\n### 一、成立条件分析（按现行法条逻辑链）\n\n#### （1）经济补偿（N）成立前提（《劳动合同法》第46条）\n需同时满足：\n- **解除行为由用人单位提出**（已确认：`initiator: \"employer\"`）；  \n- **解除事由落入第46条法定情形之一**：  \n  - 若属**协商一致解除**（第46条第2项），须有证据证明双方达成合意（如协议书、签字确认文件等）；  \n  - 若属**依第40条解除**（无过失性辞退），须满足：  \n    - 存在第40条三项法定情形之一（如不能胜任工作）；  \n    - 已履行**培训或调岗程序**（见`gz-aid-2025-1`案例强调“不可直接解除”）；  \n    - 已**提前三十日书面通知**或**额外支付一个月工资**（代通知金）；  \n  - 若属**依第41条经济性裁员**，须满足人数/比例门槛+法定程序（含向工会/职工说明、报告劳动行政部门）；  \n  - 其他情形（如第36条协商、第44条终止等）均需对应要件。\n\n> ⚠️ 当前`termination_basis: \"unknown\"`、`termination_reason: \"用人单位提出解除，理由须核验\"`，**无法锁定第46条具体适用项**，故N的成立条件处于待证状态。\n\n#### （2）违法解除赔偿金（2N）成立前提（《劳动合同法》第48、87条）\n需同时满足：\n- 用人单位解除行为**违反第39、40、41条任一法定条件或程序**（如无依据、未培训、未通知、未报备等）；  \n- 劳动者**不要求继续履行**或**劳动合同已不能继续履行**（当前无相关信息）；  \n- 用人单位未举证证明解除合法性（《调解仲裁法》第6条、《司法解释一》第44条明确**举证责任倒置**）。\n\n> ⚠️ 因`termination_basis`和`article40_conditions`均为`null`，且无证据显示已履行第40条程序（如培训记录、调岗通知、书面解除决定等），**违法解除风险显著存在**，但2N是否成立仍取决于用人单位能否补强举证。\n\n---\n\n### 二、关键证据缺口（按《调解仲裁法》第6条、第28条及广州指引）\n\n| 类别 | 缺失证据 | 不利解释风险 |\n|--------|-----------|----------------|\n| **解除依据类** | 无任何关于解除理由的书面材料（如解除通知书、制度依据、绩效考核结果、医疗期证明、客观情况变化证明等） | 用人单位无法证明解除合法性，仲裁委将依《司法解释一》第44条推定违法解除（倾向支持2N） |\n| **程序履行类** | 无证据显示已履行第40条要求的“培训/调岗”程序（`article40_conditions: null`）、无书面通知或代通知金支付凭证（`written_notice_30: null`） | 即使主张适用第40条，因程序缺失，仍构成违法解除 |\n| **协商合意类** | 无协商解除协议、会议纪要、签字确认文件等（`agreement_reached: null`） | 无法援引第46条第2项主张N，亦无法否定单方解除性质 |\n| **主体与关系类** | `employer_name`、`applicant`等主体信息全为空（`null`） | 仲裁申请可能因主体不明被不予受理（《仲裁指南》第四条） |\n| **工资与工龄类** | `wages: []`（无工资支付记录）、`employment_type: \"ordinary\"`但无合同文本佐证 | 影响N/2N计算基数（月工资）及工龄认定（起止时间需合同/社保等印证） |\n\n> 🔍 特别提示：广州地区实务中，**仅凭“用人单位提出解除”这一事实，不足以当然触发N或2N**（参见`gz-2025-5`案：用人单位调整架构后安排待岗，劳动者被迫解除未获支持）。必须结合解除时点的具体理由与程序证据综合判断。\n\n---\n\n### 三、不利解释提示（基于现有事实与法源）\n\n1. **“理由须核验”即等于“理由未提供”**  \n   `termination_reason`字段明确标注“须核验”，而`termination_basis`为`unknown`，在仲裁中将直接导致用人单位无法完成《调解仲裁法》第6条规定的举证责任，**法律效果等同于无合法依据解除**。\n\n2. **代通知金（+1）不自动成立**  \n   即使拟援引第40条，`monthly_average: \"8000\"`与`previous_month_wage: \"9500\"`存在差异，而《实施条例》第20条明确规定代通知金应按**上月工资标准**（9500元）确定。若用人单位主张支付8000元，则需证明9500元含非常规性收入（如一次性奖金），否则面临补足风险。\n\n3. **广州地方规则强化程序刚性**  \n   《广州市仲裁指南》第七条明确将“解除劳动合同”列为劳动监察投诉事项，且《广东省工资支付条例》第13条要求**当日结清工资**。若工资未结清，可能触发《劳动合同法》第85条加付赔偿金（50%-100%），此为独立于N/2N的救济路径，但当前`wages: []`导致无法核查。\n\n4. **案例参照的有限性**  \n   `gz-aid-2025-1`虽支持“未培训即淘汰属违法”，但其前提是存在《目标责任书》等书面约定；本案连基础解除文件都缺失，**违法性程度更高，但裁判尺度仍以法定要件为准，非类比推定**。\n\n---\n\n### 四、结论性提示（仅限分析维度）\n\n- **N与2N均处于“条件未成就、证据未提交”状态**，二者不互斥，但成立路径截然不同：N需证明合法解除事由+程序，2N需证明用人单位无法证明合法性；  \n- **所有金额计算（N/2N/+1）均因缺少广州2025年度社平工资封顶参数、最低工资标准及工资构成明细而无法启动**（见`calculations`中`missing_parameters`）；  \n- **当前最紧迫缺口是解除行为的书面载体（通知书/协议）及支撑理由的原始证据（考核记录、医疗证明、协商记录等）**，缺失则2N主张极可能被采纳。\n\n（分析完毕，严格遵循指令：不输出文书、不重算金额、不补全参数）",
+          "seconds": 38.187
+        },
+        {
+          "role": "Doc",
+          "requested_model": "qwen-plus",
+          "actual_model": "qwen-plus",
+          "usage": {
+            "input_tokens": 20724,
+            "output_tokens": 495,
+            "total_tokens": 21219,
+            "input_token_details": {
+              "cache_read": 0
+            },
+            "output_token_details": {}
+          },
+          "status": "completed",
+          "output": "{\n  \"claims\": [\n    {\n      \"claim_id\": \"N\",\n      \"status\": \"pending\",\n      \"amount\": null,\n      \"source_ids\": [\"contract-law-2012:a46\", \"contract-law-2012:a47\", \"contract-regulation-2008:a27\"]\n    },\n    {\n      \"claim_id\": \"2N\",\n      \"status\": \"pending\",\n      \"amount\": null,\n      \"source_ids\": [\"contract-law-2012:a46\", \"contract-law-2012:a47\", \"contract-regulation-2008:a27\", \"contract-law-2012:a48\", \"contract-law-2012:a87\", \"contract-regulation-2008:a25\"]\n    }\n  ],\n  \"missing_info\": [\n    \"termination_basis\",\n    \"termination_reason（具体法定事由，如不能胜任工作/医疗期满/客观情况变化等）\",\n    \"article40_conditions（是否履行培训或调岗程序）\",\n    \"written_notice_30（是否已书面通知或支付代通知金）\",\n    \"agreement_reached（是否存在协商一致解除合意）\",\n    \"employer_name\",\n    \"applicant\",\n    \"wages（工资支付记录）\",\n    \"广州2025年度职工月平均工资（用于N/2N封顶计算）\",\n    \"最低工资标准（用于工资基数兜底）\"\n  ],\n  \"source_ids\": [\n    \"contract-law-2012:a46\",\n    \"contract-law-2012:a47\",\n    \"contract-law-2012:a48\",\n    \"contract-law-2012:a87\",\n    \"contract-regulation-2008:a27\",\n    \"contract-regulation-2008:a25\",\n    \"contract-regulation-2008:a20\",\n    \"arbitration-law-2008:a6\",\n    \"spc-labor-I-2021:a44\",\n    \"gz-guide\",\n    \"gd-wage-2016:a13\",\n    \"wage-interim-1995:a9\"\n  ],\n  \"allow_document\": false\n}",
+          "seconds": 12.719
+        },
+        {
+          "role": "Review",
+          "requested_model": "qwen-plus",
+          "actual_model": "unknown",
+          "usage": null,
+          "status": "failed",
+          "error": "APITimeoutError: Request timed out.",
+          "http_status": null,
+          "request_id": null,
+          "fatal_configuration_error": false,
+          "seconds": 40.0
+        }
+      ],
+      "legal_human_score": null,
+      "expert_reviewed": false
+    }
+  ],
+  "expert_reviewed": false,
+  "blind_test": false,
+  "configured_key_present": true,
+  "base_url": "https://ws-lpgjttlkq1zkm8wi.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "protocol_sha256": "e51be66543e7bb22dfc7d8427ed503257b5af73828ccdf4b0cedd4f96d2d8355",
+  "model_config": {
+    "model": "qwen-plus",
+    "temperature": 0.1,
+    "timeout": 40,
+    "max_retries": 0,
+    "max_tokens": 2400,
+    "base_url": "https://ws-lpgjttlkq1zkm8wi.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+  },
+  "protocol": "shared_tools_no_scoring_labels_or_production_review_v2"
+}

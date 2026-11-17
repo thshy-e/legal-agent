@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "requested_model": "qwen-plus",
+  "actual_model": "qwen-plus",
+  "usage": {
+    "input_tokens": 13,
+    "output_tokens": 1,
+    "total_tokens": 14,
+    "input_token_details": {
+      "cache_read": 0
+    },
+    "output_token_details": {}
+  },
+  "answer": "OK",
+  "request_id": null,
+  "configured_key_present": true,
+  "base_url": "https://ws-lpgjttlkq1zkm8wi.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "seconds": 2.047
+}

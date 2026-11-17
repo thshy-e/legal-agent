@@ -1,0 +1,24 @@
+{
+  "archive": "executed_source_v14.zip",
+  "sha256": "2860d1059a00cfb15d209e3ea812a16777b9bd3df5af5f0591d80fa0c9a245f5",
+  "files": {
+    "scripts/run_live_casework_scenarios.py": "982941bb0893cda4e5cc6877e2c8803190e106232da6fb79bd05862cf1fa34ac",
+    "legal_ai_agent/casework/__init__.py": "afcfffabd4b2079f0690afa1836d3b1c3003bba517decab1c5d3c911ef6c69be",
+    "legal_ai_agent/casework/calculation.py": "0cc139a57f21f55d35655459a0e0e3dfef57b33283ba8c6c3573bf54c905f488",
+    "legal_ai_agent/casework/conditions.py": "be77d027b536a369dc89255e608b95092fd231d905b32b1301364652587a3753",
+    "legal_ai_agent/casework/evidence.py": "8d21544f2c7a0a88d8d85aae73d1dae2dbbed1f8dd219a7e466e4093fb7ee22d",
+    "legal_ai_agent/casework/fact_checks.py": "70cb435ef5773c58bcf4f0bc2aaba0aef8eb284baff25257e09015c798d05ee3",
+    "legal_ai_agent/casework/facts.py": "7805da0e82a7ffe01a96c1eae321b5f68ada577d0b1b2af9657d984121564156",
+    "legal_ai_agent/casework/knowledge.py": "8afce9f66d0fbfe998f2c4071290e237c0ba678a02375c1b33922c72adabc44b",
+    "legal_ai_agent/casework/model_policy.py": "78293426778bfaf99c0dece926e8b1e94d3cd12c32e245d2a74d3c22f446924d",
+    "legal_ai_agent/casework/models.py": "087595761ebafdbb1353162c3394dc96581707883c307ba6f737e4671db71f21",
+    "legal_ai_agent/casework/review_grounding.py": "a06888eba834a8b3f453f8f36a29d7f4a40170f0eb50dd19310b1bbb88b038ee",
+    "legal_ai_agent/casework/review_revision.py": "99b0bec9ba8289762b25a61b76e0fb66e20c28a9552eaf8a18decba70aac7553",
+    "legal_ai_agent/casework/roles.py": "f5a387f3d4fdb085fab1b0cdb2c0600695953ede6061a88fa8bbdc42ef3787c9",
+    "legal_ai_agent/casework/workflow.py": "dce4d190738b21f79bbd4736fed0b2a2f8643206b1e9261365726b12485d472b",
+    "data/evaluation/live_scenarios_v1.json": "b9cac1ebd40dbe87e9ec87c3800cc07ef2dcd66b82661d3cdf37c60a49319680",
+    "scripts/run_live_citation_revision.py": "033fa65ac36b31f7d694c61d19547c598b8a96aa1b2bc4fbfcc6c99315b70baf",
+    "scripts/run_live_casework_smoke.py": "3e06b5479e427002a7c3ec4ba1e2470fc51cbd5fff79b99c8ad15859dd0bb88c"
+  },
+  "scope": "Partial executed casework sources and runners/fixture; supporting repository, legal knowledge and environment required. No key or session database."
+}

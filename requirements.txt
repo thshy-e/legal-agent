@@ -8,5 +8,7 @@ langgraph
 fastapi
 uvicorn[standard]
 httpx
-pydantic
+pydantic>=2.7
+python-dotenv
+dashscope
 python-docx

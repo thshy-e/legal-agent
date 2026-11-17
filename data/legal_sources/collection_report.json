@@ -1,0 +1,143 @@
+[
+  {
+    "id": "labor-law-2018",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_d9aa750028b14b99a776cb93726a360d.html",
+    "sha256": "5ac3f2254070debb15d70b34bde99349eab3a1d6874267cc976e7fd66ca85e0c",
+    "characters": 8790,
+    "status": "downloaded"
+  },
+  {
+    "id": "contract-law-2012",
+    "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_0abfdd261c03417b949df19d869add8d.html",
+    "sha256": "e51ccdcc67c964e7d29700905e59309ec51e7fdac3ef941118ab48addad4b7b3",
+    "characters": 12094,
+    "status": "downloaded"
+  },
+  {
+    "id": "contract-regulation-2008",
+    "url": "https://www.beijing.gov.cn/zhengce/gwywj/201105/t20110506_780976.html",
+    "sha256": "bb935edf9cfde7361ce52106ab0311857280ce6ba07187ed91ed95baf32f943c",
+    "characters": 4760,
+    "status": "downloaded"
+  },
+  {
+    "id": "arbitration-law-2008",
+    "url": "https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml",
+    "sha256": "8f06914e8e4eef23d99f060acc7a668e49939ce554b3777bd957196be1ef489b",
+    "characters": 6303,
+    "status": "downloaded"
+  },
+  {
+    "id": "spc-labor-I-2021",
+    "url": "https://www.sdcourt.gov.cn/jnanzqfy/xfkd/xfkd84/6793708/index.html",
+    "status": "retained_snapshot_refresh_failed",
+    "error": "ConnectError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)",
+    "sha256": "8cd44c20b4e92160c07e3a3efc09873a2945d4f8e582035306032c61a45cb698",
+    "characters": 8291
+  },
+  {
+    "id": "spc-labor-II-2025",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/472691.html",
+    "sha256": "732d18d5dc518eaf6960557918001d65c494e93818cdcbfaa8f77f800e556bcf",
+    "characters": 5060,
+    "status": "downloaded"
+  },
+  {
+    "id": "wage-interim-1995",
+    "url": "https://rsj.sh.gov.cn/trlzyhshbzbgz_17256/20200617/t0035_1388318.html",
+    "sha256": "367aa9edc9bacdb1e651576de6ca4c04d9e6d9a72fe4d95048b15f988bbb4341",
+    "characters": 2305,
+    "status": "downloaded"
+  },
+  {
+    "id": "gd-wage-2016",
+    "url": "https://www.huadu.gov.cn/zwfw/jyly6/gzfl/content/mpost_10647240.html",
+    "sha256": "ddb4864e4de405309bfb9b273de8f9e86368622c59d64aec14b5a4c952e420ec",
+    "characters": 9210,
+    "status": "downloaded"
+  },
+  {
+    "id": "sz-wage-2025",
+    "url": "https://www.sz.gov.cn/zfgb/2026/gb1402/content/post_12621646.html",
+    "sha256": "98645ac6acb4fa48dc132ae4a74f2a88d9049e4a59e26a9d6543a3492a60d03f",
+    "characters": 7744,
+    "status": "downloaded"
+  },
+  {
+    "id": "sz-wage-2022",
+    "url": "https://www.szgm.gov.cn/gmrlzyj/gkmlpt/content/10/10397/mpost_10397380.html",
+    "sha256": "3e62d9f6889cc0aa00f1c5bed07c74f70ffbcd62c08bbd69be05e17e0d101778",
+    "characters": 7066,
+    "status": "downloaded"
+  },
+  {
+    "id": "gz-guide",
+    "url": "https://rsj.gz.gov.cn/ywzt/ldgx/ldrszyzc/zcgg/content/post_2407253.html",
+    "sha256": "332c7adbad3c810a7a1b53da9296abcc4825923db9b9abe67b24c98844a79e4a",
+    "characters": 5910,
+    "status": "downloaded"
+  },
+  {
+    "id": "sz-guide",
+    "url": "https://www.szgm.gov.cn/szgm/132104/132207/ldzc/content/post_9123962.html",
+    "sha256": "85309ba4ef2367c1815fc78f997c4c1ab48ef540c079898995c7eae1e5351ea3",
+    "characters": 1286,
+    "status": "downloaded"
+  },
+  {
+    "id": "gd-disputes-2017",
+    "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/zcfg/content/post_8967143.html",
+    "sha256": "52472a20dffcf18a8f88051aca584c47101ea4b931f404ddced6706974ced581",
+    "characters": 12276,
+    "status": "downloaded"
+  },
+  {
+    "id": "gd-disputes-2025",
+    "url": "https://hrss.zs.gov.cn/zcy/zczn/bmcs/content/post_2521162.html",
+    "sha256": "6d87480c62e6fec25585e11c8ff9c23c9d275835871a3d692c07f6ea24e02494",
+    "characters": 12070,
+    "status": "downloaded"
+  },
+  {
+    "id": "minimum-2025",
+    "url": "https://www.szlh.gov.cn/zmhd/wdzsk/content/post_12082310.html",
+    "sha256": "a3d4450ecde0c9625e06c5b1043ddb72e842f55214a680a21f83b90cfa5559e1",
+    "characters": 1469,
+    "status": "downloaded"
+  },
+  {
+    "id": "gz-minimum-2026",
+    "url": "https://rsj.gz.gov.cn/ywzt/ldgx/tzgg/content/post_10981828.html",
+    "sha256": "dcc11294c33bd15603f47a9a58b041e95123ecf43e69d8eb76cb6e0d29e729b6",
+    "characters": 1076,
+    "status": "downloaded"
+  },
+  {
+    "id": "sz-minimum-2026",
+    "url": "https://hrss.sz.gov.cn/xxgk/qtxx/tzgg/content/post_12954949.html",
+    "sha256": "89a88e3f3cfc5cf788494d4a4590e12b7acf3912d943bf48848375b84e5cfd5b",
+    "characters": 2085,
+    "status": "downloaded"
+  },
+  {
+    "id": "gz-cases-2025",
+    "url": "https://www.gzcourt.gov.cn/yqfkdt/ck597/2025/10/17181128593.html",
+    "sha256": "cb28fb2a09cb566668ac299c6d4b08ac1303628cfd7d1449bc0a0f4a0d70d22d",
+    "characters": 8526,
+    "status": "downloaded"
+  },
+  {
+    "id": "gz-aid-case-2025",
+    "url": "https://sfj.gz.gov.cn/gzssfj/flfw/pf/yasf/content/mpost_10127065.html",
+    "sha256": "fd1f473be0d83a92179c7e3fc301f600119d25aa44e3457ff7b5edfcc2cd52c8",
+    "characters": 1812,
+    "status": "downloaded"
+  },
+  {
+    "id": "sz-wage-cases-2025",
+    "url": "https://hrss.sz.gov.cn/gkmlpt/content/12/12334/post_12334314.html",
+    "sha256": "dc33a0a3869e3e72a4d863bde83a9b7e2d195503cf67c882ee7b81520f6e167f",
+    "characters": 2852,
+    "status": "downloaded"
+  }
+]

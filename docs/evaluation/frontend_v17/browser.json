@@ -1,0 +1,96 @@
+{
+  "frontend_version": "frontend-20261027-v17",
+  "backend_workflow": "casework-20261026-v16",
+  "conversation_version": "conversation-20261026-v16",
+  "verified_on": "2026-10-27",
+  "actual_backend": true,
+  "viewports": [
+    [
+      1440,
+      1000
+    ],
+    [
+      1024,
+      900
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "checks": {
+    "example_does_not_auto_send": true,
+    "citation_opens_selected_article": true,
+    "case_form_outside_chat": true,
+    "initial_arrears_draft": "7000.10",
+    "revised_arrears_draft": "8000.10",
+    "invalidated_draft_cannot_copy": true,
+    "unsaved_cancel_preserves_fields": true,
+    "panel_switch_preserves_unsaved_fields": true,
+    "save_before_session_switch": true,
+    "actual_server_conflict_http": 409,
+    "conflict_requires_sync_before_confirm": true,
+    "delayed_actual_response_isolated_to_origin": true,
+    "historical_labor_law_47_not_replaced_by_contract_law_47": true,
+    "ordinary_network_failure_preserves_confirmed_case": true,
+    "reload_restores_history_and_current_case": true,
+    "legacy_plain_messages_restored": true,
+    "unsafe_markdown_attributes_removed": true,
+    "narrow_page_horizontal_overflow": false,
+    "mobile_detail_fullscreen": true,
+    "escape_returns_focus_and_scroll": true,
+    "background_inert_in_drawer": true,
+    "page_zoom_not_disabled": true,
+    "local_markdown_assets_loaded": true,
+    "actual_clipboard_amount": "8000.10",
+    "historical_controls_read_only": true,
+    "historical_sources_readable": true,
+    "case_tab_sources_bound": true,
+    "keyboard_focus_trapped_in_mobile_details": true
+  },
+  "fault_injection": {
+    "network_abort": true,
+    "response_delivery_delayed_after_real_backend_result": true,
+    "fake_legal_results": false
+  },
+  "console": {
+    "expected_network_errors": 2,
+    "types": [
+      "HTTP 409 stale version",
+      "net::ERR_FAILED deliberate request abort"
+    ],
+    "unexpected_javascript_errors_observed": 0
+  },
+  "model_spot_check": {
+    "report": "docs/evaluation/frontend_v17/live_chat.json",
+    "turns": 3,
+    "all_status_completed": true,
+    "actual_model_metadata_available": false,
+    "legal_accuracy_evaluated": false
+  },
+  "screenshots": [
+    "output/playwright/frontend-v17-conversation.png",
+    "output/playwright/frontend-v17-draft-desktop.png",
+    "output/playwright/frontend-v17-home-desktop.png",
+    "output/playwright/frontend-v17-mobile-draft.png",
+    "output/playwright/frontend-v17-mobile-home.png",
+    "output/playwright/frontend-v17-revised-desktop.png",
+    "output/playwright/frontend-v17-source-desktop.png",
+    "output/playwright/frontend-v17-tablet.png"
+  ],
+  "video": "output/playwright/frontend-v17-demo.webm",
+  "human_usability_test_status": "not_started",
+  "physical_mobile_keyboard_test_status": "pending",
+  "expert_reviewed": false,
+  "source_sha256": {
+    "frontend\\index.html": "08c9c271046e6222b31f8604012d1c5181ade63f0f3f6bee123caf588fa382e5",
+    "frontend\\workspace.css": "d6481704811eeef636bbac4d7c750d9263b244bb4254bc54ffdc9cb3ebcc7090",
+    "frontend\\workspace.js": "11f6c1508234d4d93385165fa15f5659a00ac84a38974a310505545154b36c73",
+    "frontend\\casework.js": "8c0f6f84ea9db2e3fa2c0c20b973be447c5724a40d0d7cd27ecddb0cb30eb27b"
+  },
+  "node_tests": 6,
+  "backend_source_unchanged_from_v16": {
+    "files_checked": 40,
+    "differences": []
+  }
+}

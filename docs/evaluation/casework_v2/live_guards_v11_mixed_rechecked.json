@@ -1,0 +1,21 @@
+{
+  "original_report": "live_guards_v11_mixed.json",
+  "original_sha256": "e1e2d2e1086d41e60ea2a09ffc21f1b49e0a6a307a9e1cc8eb1656b9de6c173b",
+  "correction": "The one-off verifier incorrectly expected employment_status_conflict; the implemented rule code is employment_statement_conflict. Original calls and original failed assertion are preserved. Recheck uses the same outputs with no additional calls.",
+  "checks": [
+    {
+      "id": "opposed_employment_status",
+      "required_rule_code": "employment_statement_conflict",
+      "actual_status": "review_blocked",
+      "passed": true
+    },
+    {
+      "id": "actual_cross_border",
+      "required_rule_code": "cross_border",
+      "actual_status": "review_blocked",
+      "passed": true
+    }
+  ],
+  "expert_reviewed": false,
+  "scope": "Two deterministic critical guards remain blocking with actual model roles enabled; not legal accuracy."
+}

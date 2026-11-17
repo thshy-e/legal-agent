@@ -1,0 +1,312 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "b2f0eea3ae0920697fab14b12cdb4cf49eef09a2a188e8aecfcfb3b5d0c74f89",
+    "bytes": 10355
+  },
+  {
+    "path": "requirements.txt",
+    "sha256": "f232eb18f8e7e383c9dd973269f3a32edf15f4878d3f14337d6a86ae49bf5c52",
+    "bytes": 216
+  },
+  {
+    "path": "requirements-win-py312.snapshot.txt",
+    "sha256": "e3630eb582274d1da8e4cd82de79615cae7434712e301c13b247bcba1cd12733",
+    "bytes": 2639
+  },
+  {
+    "path": "start_server.py",
+    "sha256": "719593faf5c4ec8e364f970330da1db0d0724107b91a179e00960f7a8e8321d4",
+    "bytes": 95
+  },
+  {
+    "path": "build_db.py",
+    "sha256": "72ff3d0b4cfa1f9bd2f2f1154415ff804e9bc610ccba0b7d4fbcb43c6a7ee62d",
+    "bytes": 151
+  },
+  {
+    "path": "scripts/run_case_evaluation.py",
+    "sha256": "0af19d6f42659173cf629bfe4758ead183158b88f2b2685985d60fa0a4ab084e",
+    "bytes": 16638
+  },
+  {
+    "path": "scripts/README.md",
+    "sha256": "b0dd92d3bf2611fd06786502d8864d10cf2b33c298e3744be241814231709b88",
+    "bytes": 4075
+  },
+  {
+    "path": "tests/frontend_workspace.test.cjs",
+    "sha256": "fab1b3821f59465608e969f114e4389c459a14a9c7415cc8b6cd1fd08eb7495c",
+    "bytes": 11914
+  },
+  {
+    "path": "frontend/index.html",
+    "sha256": "471f265303b6144410882c81567b2c760eb699de03e57e5c378a28cb98988990",
+    "bytes": 5089
+  },
+  {
+    "path": "frontend/workspace.css",
+    "sha256": "aec63b7932053e4ee67c6943ad56e688ba429b01988af87591493c900ea2035a",
+    "bytes": 26227
+  },
+  {
+    "path": "frontend/workspace.js",
+    "sha256": "855e2cbf5e5f44c2edb400aee84861d8b7e338a14504fe5fcf73222aa06416ca",
+    "bytes": 48958
+  },
+  {
+    "path": "frontend/casework.js",
+    "sha256": "5643540f0e339b6139ddd817bd88e72fa996d817a9a3c88d646e6881deca0414",
+    "bytes": 23297
+  },
+  {
+    "path": "legal_ai_agent/api/server.py",
+    "sha256": "210ab4fd4aae2ff653ecf57d0601f29a401115ee60bd49cb2478074b8088a755",
+    "bytes": 35632
+  },
+  {
+    "path": "legal_ai_agent/rag/build_db.py",
+    "sha256": "f3079b37d365e7079b7f825382d13439050f83c7e22bdcb001d07563793bf4e9",
+    "bytes": 1598
+  },
+  {
+    "path": "data/legal_sources/manifest.json",
+    "sha256": "405ec0d78d2b3a32973e82b82e75c83b3ab1825669c20bfc7f9927a4b8d8feb7",
+    "bytes": 152473
+  },
+  {
+    "path": "docs/evaluation/frontend_v18/validation.json",
+    "sha256": "7ce5294cb2c73ae21832e210eba8815f2ef70e389898b87835dd49ed4f1b9add",
+    "bytes": 3723
+  },
+  {
+    "path": "docs/evaluation/frontend_v18/browser-flow.json",
+    "sha256": "8ef1a644eba81cbc65c769afff8b3c1d24dfbcb17a33b29ba1d33af5d4c6a862",
+    "bytes": 1888
+  },
+  {
+    "path": "docs/evaluation/frontend_v18/browser-edits.json",
+    "sha256": "c4c6c2e9b8ead9d7c6edc8f2808e8061340683ba28aa23eb8949bcf5a4d524d1",
+    "bytes": 149
+  },
+  {
+    "path": "docs/evaluation/frontend_v18/browser-failures.json",
+    "sha256": "0035d4d91785671192a721504e37194e51d6d068cb7ad7bc7a186011665b3353",
+    "bytes": 1261
+  },
+  {
+    "path": "docs/evaluation/frontend_v18/browser-citations.json",
+    "sha256": "93a5a44a319b0cec528fb80537442b64facb15365034851a8508b7c51ca72dd3",
+    "bytes": 127
+  },
+  {
+    "path": "docs/evaluation/frontend_v18/live-explanation.json",
+    "sha256": "aa5adb5266f4230bbbbcec846e5074f81bc93265f3ce68a8605156bf3fa8fefa",
+    "bytes": 350
+  },
+  {
+    "path": "docs/evaluation/frontend_v18/engineering/engineering_results.json",
+    "sha256": "72e5dc7c1b5b545816e91690ce24a2be8737bb9b6e09b8baa2551af0c50b1dcb",
+    "bytes": 3741771
+  },
+  {
+    "path": "docs/evaluation/frontend_v18/USABILITY_TEST.md",
+    "sha256": "0118c7310c3ca2f5f8089e5a3520320ec86d46587cb6b8facd6231c7c323b41d",
+    "bytes": 2237
+  },
+  {
+    "path": "docs/evaluation/casework_v2/model_ablation.json",
+    "sha256": "e5e8f4bda77f6d9a80b5b5fffe3cc571617833d885a7356a2d83cbd412babdb8",
+    "bytes": 716070
+  },
+  {
+    "path": "docs/evaluation/casework_v2/MEASURED_MODEL_RESULTS.md",
+    "sha256": "dc96e2c223660a7c571694609b37bfa10aa3d9e7f6035ba94d533db5d329d34b",
+    "bytes": 1852
+  },
+  {
+    "path": "docs/evaluation/casework_v2/live_workflow_v15_mixed.json",
+    "sha256": "b223f2be7f3dce993d7e94cdb58c589b2eb56da9062a7ca2e2d245a5594a3ca6",
+    "bytes": 502755
+  },
+  {
+    "path": "docs/evaluation/casework_v2/live_scenarios_v15_mixed/summary.json",
+    "sha256": "42ce2b11e2cfb04192f9bf56191b288ce2597352913721391a6b601a33e62b72",
+    "bytes": 5114
+  },
+  {
+    "path": "docs/evaluation/casework_v2/live_scenarios_v15_mixed/audit.json",
+    "sha256": "4acdd374f80fc7795364961caf0662810dd365233d01e73b15205f6d562b60cf",
+    "bytes": 4484
+  },
+  {
+    "path": "docs/evaluation/casework_v2/LIVE_SCENARIO_FINDINGS.md",
+    "sha256": "cc4074b607fb993dc7db8b0e4279122a8aa0d69493e627341d8340140862a698",
+    "bytes": 8645
+  },
+  {
+    "path": "docs/evaluation/casework_v2/vector_build_check.json",
+    "sha256": "e25803539de39764e9f67c432211adef5b4dab0933bfec5629e921009f58583e",
+    "bytes": 244
+  },
+  {
+    "path": "docs/evaluation/casework_v2/vector_retrieval_check.json",
+    "sha256": "96f261be0679c93891086b8572aef38cfc71e463cd3f4c588e610126bb6a6e43",
+    "bytes": 3100
+  },
+  {
+    "path": "output/playwright/README.md",
+    "sha256": "a87d20ac2ced1bd9fa7c9919b2ebcbeae5c3fcaf592ad15854ec2c36a2a30819",
+    "bytes": 2510
+  },
+  {
+    "path": "output/playwright/frontend-v17-demo.webm",
+    "sha256": "6a13cd1a4aa4dad355538d050e89151e08930bb546a5a20d6e0745469f00ab2f",
+    "bytes": 2851900
+  },
+  {
+    "path": "output/playwright/contest-casework-demo.webm",
+    "sha256": "eab2c0a47db69fd7304dad5f701178382bc7a1bd63b7b78bd24b224cbe38d71b",
+    "bytes": 12713064
+  },
+  {
+    "path": "legal_ai_agent/casework/workflow.py",
+    "sha256": "7c6349c056638e619771c0766cc85e5889c9ee68eb633ed51ccd97c645ae6434",
+    "bytes": 22122
+  },
+  {
+    "path": "legal_ai_agent/casework/roles.py",
+    "sha256": "aeea5e4286141b04b85e6ceb946566436228ca80c05471ba5c6394ad94b0e535",
+    "bytes": 28629
+  },
+  {
+    "path": "legal_ai_agent/casework/model_policy.py",
+    "sha256": "78293426778bfaf99c0dece926e8b1e94d3cd12c32e245d2a74d3c22f446924d",
+    "bytes": 1108
+  },
+  {
+    "path": "legal_ai_agent/casework/models.py",
+    "sha256": "087595761ebafdbb1353162c3394dc96581707883c307ba6f737e4671db71f21",
+    "bytes": 3926
+  },
+  {
+    "path": "legal_ai_agent/casework/facts.py",
+    "sha256": "7805da0e82a7ffe01a96c1eae321b5f68ada577d0b1b2af9657d984121564156",
+    "bytes": 5269
+  },
+  {
+    "path": "legal_ai_agent/casework/fact_checks.py",
+    "sha256": "70cb435ef5773c58bcf4f0bc2aaba0aef8eb284baff25257e09015c798d05ee3",
+    "bytes": 3649
+  },
+  {
+    "path": "legal_ai_agent/casework/evidence.py",
+    "sha256": "8d21544f2c7a0a88d8d85aae73d1dae2dbbed1f8dd219a7e466e4093fb7ee22d",
+    "bytes": 1865
+  },
+  {
+    "path": "legal_ai_agent/casework/knowledge.py",
+    "sha256": "8afce9f66d0fbfe998f2c4071290e237c0ba678a02375c1b33922c72adabc44b",
+    "bytes": 14230
+  },
+  {
+    "path": "legal_ai_agent/casework/conditions.py",
+    "sha256": "be77d027b536a369dc89255e608b95092fd231d905b32b1301364652587a3753",
+    "bytes": 2067
+  },
+  {
+    "path": "legal_ai_agent/casework/calculation.py",
+    "sha256": "0cc139a57f21f55d35655459a0e0e3dfef57b33283ba8c6c3573bf54c905f488",
+    "bytes": 9759
+  },
+  {
+    "path": "legal_ai_agent/casework/review_grounding.py",
+    "sha256": "a06888eba834a8b3f453f8f36a29d7f4a40170f0eb50dd19310b1bbb88b038ee",
+    "bytes": 3464
+  },
+  {
+    "path": "legal_ai_agent/casework/review_revision.py",
+    "sha256": "99b0bec9ba8289762b25a61b76e0fb66e20c28a9552eaf8a18decba70aac7553",
+    "bytes": 1766
+  },
+  {
+    "path": "docs/project/contest_submission_assets/experiment_aggregates.json",
+    "sha256": "d4975b7a2ed644bcd6e6fd47e00526a92a8f9456eb28b9af63fdb6287cbab55b",
+    "bytes": 1026
+  },
+  {
+    "path": "docs/project/contest_submission_assets/experiment_summary.csv",
+    "sha256": "5a1eaef0981cc1bb3c9ac29bb0674038ea4c8cf89136f521c1d626db985702b6",
+    "bytes": 292
+  },
+  {
+    "path": "docs/project/contest_submission_assets/fig1_architecture.png",
+    "sha256": "961c96ff0ebc9facea2f3abba1c656c649ed3baa24d2bedd89104f279e0d3828",
+    "bytes": 175734
+  },
+  {
+    "path": "docs/project/contest_submission_assets/fig2_versioning.png",
+    "sha256": "9a1804ca08be4ab30fdb7cf93cb8d0a32118664744325d87bc2013bda8fe3855",
+    "bytes": 130876
+  },
+  {
+    "path": "docs/project/contest_submission_assets/fig3_consult_sources.png",
+    "sha256": "66b5b4deca9865046b999196f9c0fb8ef25d4292678d9f16d5f97a72650af61c",
+    "bytes": 385268
+  },
+  {
+    "path": "docs/project/contest_submission_assets/fig4_guide_draft.png",
+    "sha256": "1208a44006697c0ed364f7e7b903c7377a237fac02aa1931a61a9795e6da84e3",
+    "bytes": 502564
+  },
+  {
+    "path": "docs/project/contest_submission_assets/fig5_revision_screens.png",
+    "sha256": "6f4eb90843bf7dd984819fb089463fa9f2d56e5a0144307302b3386ea44500de",
+    "bytes": 324034
+  },
+  {
+    "path": "docs/project/contest_submission_assets/fig6_experiment.png",
+    "sha256": "231f8612b9e62f66f8b0c051cce5801370a4d3883e4ce7bba73495a9c8f42f11",
+    "bytes": 136846
+  },
+  {
+    "path": "docs/project/contest_submission_assets/fig6_experiment.svg",
+    "sha256": "ce90bf0916b073526fa5bb6982f54effea34c1b6718e6214e5843c7c048db84e",
+    "bytes": 18433
+  },
+  {
+    "path": "docs/project/contest_submission_assets/fig7_latency_ecdf.png",
+    "sha256": "569fa13d4f77dbdfbb89856ece3126a284a0e38f90ddd5c8f77fe186c5f8dcf1",
+    "bytes": 140989
+  },
+  {
+    "path": "docs/project/contest_submission_assets/fig7_latency_ecdf.svg",
+    "sha256": "ad8dbe3f6a4e5d697ee6424e7d32863b532c980a39418ff1bda090f18b4b0877",
+    "bytes": 31368
+  },
+  {
+    "path": "docs/project/contest_submission_assets/latency_seconds.csv",
+    "sha256": "ca2b413798d1202ccfef15f1383b907c624fdf13d69374f4d19ddb26d4ba3ae3",
+    "bytes": 11154
+  },
+  {
+    "path": "docs/project/劳法智枢研究与开发报告（参赛版）.md",
+    "sha256": "43626001a4085bcf8c66337c47e098b98dd97c08f0776a5bf7cc88e652bad710",
+    "bytes": 34936
+  },
+  {
+    "path": "docs/project/劳法智枢软件运行操作与测试说明.md",
+    "sha256": "a2c8a5cf84bcc4cb329e295fddc5709338ea69db202790f98dcc1860136f731b",
+    "bytes": 13738
+  },
+  {
+    "path": "docs/project/申报书C栏国内外研究水平概述.md",
+    "sha256": "5f1e7dc0b47235791c455db380e635727f1d3cb73cf5ce74ae6447c1e27bf41e",
+    "bytes": 4934
+  },
+  {
+    "path": "docs/project/参赛作品材料索引.md",
+    "sha256": "153c292953e5d59455e66f7d0c346c96396f7c337bde9c747e3b358738c41d44",
+    "bytes": 7688
+  }
+]

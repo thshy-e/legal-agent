@@ -1,0 +1,139 @@
+{
+  "status": "failed",
+  "workflow_version": "casework-20261025-v15",
+  "fixture_sha256": "b9cac1ebd40dbe87e9ec87c3800cc07ef2dcd66b82661d3cdf37c60a49319680",
+  "model_profiles": {
+    "Judge": {
+      "requested_model": "qwen-plus",
+      "temperature": 0.1,
+      "timeout": 60,
+      "max_retries": 0,
+      "max_tokens": 2400,
+      "response_format": {
+        "type": "json_object"
+      },
+      "enable_thinking": false,
+      "reasoning_effort": null
+    },
+    "Review": {
+      "requested_model": "qwen3.8-max",
+      "temperature": 0.1,
+      "timeout": 90,
+      "max_retries": 0,
+      "max_tokens": 4096,
+      "response_format": {
+        "type": "json_object"
+      },
+      "enable_thinking": true,
+      "reasoning_effort": "low"
+    },
+    "Doc": {
+      "requested_model": "qwen-plus",
+      "temperature": 0.1,
+      "timeout": 60,
+      "max_retries": 0,
+      "max_tokens": 2400,
+      "response_format": {
+        "type": "json_object"
+      },
+      "enable_thinking": false,
+      "reasoning_effort": null
+    }
+  },
+  "scope": "Public synthetic engineering scenarios; not blind, expert-reviewed or legal accuracy.",
+  "expert_reviewed": false,
+  "blind_test": false,
+  "workers": 3,
+  "runs": [
+    {
+      "id": "S02",
+      "status": "completed",
+      "report": "S02.json",
+      "sha256": "47cbb3827267bab2b1de5a76303e306be74417a75bb87e79fbb55a3460e87d6b",
+      "seconds": 90.266
+    },
+    {
+      "id": "S03",
+      "status": "completed",
+      "report": "S03.json",
+      "sha256": "e6989e59e54df6e72241f6e444720b13484c8e415ee50e80290d6eedd02d263f",
+      "seconds": 93.719
+    },
+    {
+      "id": "S05",
+      "status": "completed",
+      "report": "S05.json",
+      "sha256": "a56d522bc832851fb4d8af24f051a4801e75bf9c20655ff04525057608c8822c",
+      "seconds": 0.046
+    },
+    {
+      "id": "S01",
+      "status": "completed",
+      "report": "S01.json",
+      "sha256": "766e916f3ad9f08b362b0f46ccc7fa1107a8bb432ad8802526de92f42f0d3695",
+      "seconds": 99.688
+    },
+    {
+      "id": "S06",
+      "status": "completed",
+      "report": "S06.json",
+      "sha256": "5bcdcf375c864cc8e53395e4b78b5a5f3ef2974c5129129e6dafcd207167c201",
+      "seconds": 45.469
+    },
+    {
+      "id": "S08",
+      "status": "completed",
+      "report": "S08.json",
+      "sha256": "f3bbab5b648efce47c959d390553b9bc57735633264c27cf204501ef8bce4a3d",
+      "seconds": 37.75
+    },
+    {
+      "id": "S07",
+      "status": "completed",
+      "report": "S07.json",
+      "sha256": "f5fab546194c5bb7097547ce7786f3cc65c759ad30521b238e34e48c3df36316",
+      "seconds": 80.547
+    },
+    {
+      "id": "S04",
+      "status": "completed",
+      "report": "S04.json",
+      "sha256": "eb5a0b2b7d799d691132b6faf2af8c6698a2d4dce4d65876c1723e1ba0466fe3",
+      "seconds": 90.297
+    },
+    {
+      "id": "S09",
+      "status": "completed",
+      "report": "S09.json",
+      "sha256": "85b94c386ebf5ed363f0c8034f9c5232b2958746131a0066fee599609dc8a1eb",
+      "seconds": 74.547
+    },
+    {
+      "id": "S10",
+      "status": "failed",
+      "report": "S10.json",
+      "sha256": "542a2e93d2fd23cd3010d44efe720ae591c618148c2a08eda06bb36867dde2d3",
+      "seconds": 118.781
+    }
+  ],
+  "implementation_sha256": {
+    "scripts/run_live_casework_scenarios.py": "982941bb0893cda4e5cc6877e2c8803190e106232da6fb79bd05862cf1fa34ac",
+    "legal_ai_agent/casework/__init__.py": "afcfffabd4b2079f0690afa1836d3b1c3003bba517decab1c5d3c911ef6c69be",
+    "legal_ai_agent/casework/calculation.py": "0cc139a57f21f55d35655459a0e0e3dfef57b33283ba8c6c3573bf54c905f488",
+    "legal_ai_agent/casework/conditions.py": "be77d027b536a369dc89255e608b95092fd231d905b32b1301364652587a3753",
+    "legal_ai_agent/casework/evidence.py": "8d21544f2c7a0a88d8d85aae73d1dae2dbbed1f8dd219a7e466e4093fb7ee22d",
+    "legal_ai_agent/casework/fact_checks.py": "70cb435ef5773c58bcf4f0bc2aaba0aef8eb284baff25257e09015c798d05ee3",
+    "legal_ai_agent/casework/facts.py": "7805da0e82a7ffe01a96c1eae321b5f68ada577d0b1b2af9657d984121564156",
+    "legal_ai_agent/casework/knowledge.py": "8afce9f66d0fbfe998f2c4071290e237c0ba678a02375c1b33922c72adabc44b",
+    "legal_ai_agent/casework/model_observation.py": "7f3386328c9475b905dfd5b15f436274fd4709774e186784c91ec1cf1e53474d",
+    "legal_ai_agent/casework/model_policy.py": "78293426778bfaf99c0dece926e8b1e94d3cd12c32e245d2a74d3c22f446924d",
+    "legal_ai_agent/casework/models.py": "087595761ebafdbb1353162c3394dc96581707883c307ba6f737e4671db71f21",
+    "legal_ai_agent/casework/review_grounding.py": "a06888eba834a8b3f453f8f36a29d7f4a40170f0eb50dd19310b1bbb88b038ee",
+    "legal_ai_agent/casework/review_revision.py": "99b0bec9ba8289762b25a61b76e0fb66e20c28a9552eaf8a18decba70aac7553",
+    "legal_ai_agent/casework/roles.py": "aeea5e4286141b04b85e6ceb946566436228ca80c05471ba5c6394ad94b0e535",
+    "legal_ai_agent/casework/workflow.py": "336b03c68bec757599b3cb4ff5677d5d8c346f16a248b7a7904317ea6e239448"
+  },
+  "completed": 9,
+  "total": 10,
+  "seconds": 301.5
+}

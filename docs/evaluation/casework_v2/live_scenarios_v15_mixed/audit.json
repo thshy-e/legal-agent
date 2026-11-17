@@ -1,0 +1,195 @@
+{
+  "workflow_version": "casework-20261025-v15",
+  "fixture_sha256": "b9cac1ebd40dbe87e9ec87c3800cc07ef2dcd66b82661d3cdf37c60a49319680",
+  "total": 10,
+  "passed": 9,
+  "rows": [
+    {
+      "id": "S01",
+      "passed": true,
+      "error": null,
+      "phases": [
+        {
+          "name": "analyze",
+          "status": "awaiting_confirmation",
+          "revision_attempts": 0
+        },
+        {
+          "name": "confirm",
+          "status": "draft_ready",
+          "revision_attempts": 0
+        }
+      ],
+      "model_call_count": 5,
+      "failures": [],
+      "seconds": 99.688
+    },
+    {
+      "id": "S02",
+      "passed": true,
+      "error": null,
+      "phases": [
+        {
+          "name": "analyze",
+          "status": "awaiting_confirmation",
+          "revision_attempts": 0
+        },
+        {
+          "name": "confirm",
+          "status": "draft_ready",
+          "revision_attempts": 0
+        }
+      ],
+      "model_call_count": 5,
+      "failures": [],
+      "seconds": 90.266
+    },
+    {
+      "id": "S03",
+      "passed": true,
+      "error": null,
+      "phases": [
+        {
+          "name": "analyze",
+          "status": "awaiting_confirmation",
+          "revision_attempts": 0
+        },
+        {
+          "name": "confirm",
+          "status": "draft_ready",
+          "revision_attempts": 0
+        }
+      ],
+      "model_call_count": 5,
+      "failures": [],
+      "seconds": 93.719
+    },
+    {
+      "id": "S04",
+      "passed": true,
+      "error": null,
+      "phases": [
+        {
+          "name": "analyze",
+          "status": "awaiting_confirmation",
+          "revision_attempts": 0
+        },
+        {
+          "name": "confirm",
+          "status": "draft_ready",
+          "revision_attempts": 0
+        }
+      ],
+      "model_call_count": 5,
+      "failures": [],
+      "seconds": 90.297
+    },
+    {
+      "id": "S05",
+      "passed": true,
+      "error": null,
+      "phases": [
+        {
+          "name": "analyze",
+          "status": "no_supported_claim",
+          "revision_attempts": 0
+        }
+      ],
+      "model_call_count": 0,
+      "failures": [],
+      "seconds": 0.046
+    },
+    {
+      "id": "S06",
+      "passed": true,
+      "error": null,
+      "phases": [
+        {
+          "name": "analyze",
+          "status": "review_blocked",
+          "revision_attempts": 0
+        }
+      ],
+      "model_call_count": 2,
+      "failures": [],
+      "seconds": 45.469
+    },
+    {
+      "id": "S07",
+      "passed": true,
+      "error": null,
+      "phases": [
+        {
+          "name": "analyze",
+          "status": "review_blocked",
+          "revision_attempts": 0
+        }
+      ],
+      "model_call_count": 2,
+      "failures": [],
+      "seconds": 80.547
+    },
+    {
+      "id": "S08",
+      "passed": true,
+      "error": null,
+      "phases": [
+        {
+          "name": "analyze",
+          "status": "review_blocked",
+          "revision_attempts": 0
+        }
+      ],
+      "model_call_count": 2,
+      "failures": [],
+      "seconds": 37.75
+    },
+    {
+      "id": "S09",
+      "passed": true,
+      "error": null,
+      "phases": [
+        {
+          "name": "analyze",
+          "status": "needs_information",
+          "revision_attempts": 0
+        }
+      ],
+      "model_call_count": 2,
+      "failures": [],
+      "seconds": 74.547
+    },
+    {
+      "id": "S10",
+      "passed": false,
+      "error": "AssertionError: missing actual call metadata",
+      "phases": [
+        {
+          "name": "analyze",
+          "status": "needs_information",
+          "revision_attempts": 0
+        }
+      ],
+      "model_call_count": 2,
+      "failures": [
+        {
+          "stage": "Review",
+          "reason": "APITimeoutError: Request timed out."
+        }
+      ],
+      "seconds": 118.781
+    }
+  ],
+  "actual_model_call_count": 30,
+  "failed_calls": 1,
+  "scenarios_with_model_calls": 9,
+  "recorded_input_tokens": 141735,
+  "recorded_output_tokens": 25715,
+  "calls_without_usage": 1,
+  "calls_without_actual_model": 1,
+  "source_hashes_verified": true,
+  "expert_reviewed": false,
+  "blind_test": false,
+  "legal_accuracy": null,
+  "scope": "Frozen public engineering expectations with final role status and metadata checks; missing usage is unknown, not zero-cost."
+}

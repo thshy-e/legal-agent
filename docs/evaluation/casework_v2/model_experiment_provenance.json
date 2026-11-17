@@ -1,0 +1,9 @@
+{
+  "model_report_sha256": "e5e8f4bda77f6d9a80b5b5fffe3cc571617833d885a7356a2d83cbd412babdb8",
+  "executed_protocol_archive": "model_protocol_executed_v4.py",
+  "protocol_sha256": "86e7bdce61502035c25bae6c5fc512add7288911a94f881503f0f427ce698084",
+  "protocol_hash_verified": true,
+  "shared_tool_report": "engineering_results_for_live_v4.json",
+  "shared_tool_report_sha256": "3775af22b6c830f9373538dd784ddace21266aa5fe4384bfb4a7dcc5bdc7689e",
+  "note": "Primary v4 results remain unchanged. Later production draft-scope changes and wage_statement field are not claimed as evaluated by this model batch. Runner v5 additionally binds resume to actual shared tool packets; no new v5 model batch has been run."
+}

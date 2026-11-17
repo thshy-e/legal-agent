@@ -1,0 +1,30 @@
+{
+  "status": "failed",
+  "workflow_version": "casework-20261025-v6",
+  "fixture_sha256": "ce76629253a182315fa628c4d26757fee95b7f53f61089370e0eeaa15377dcf8",
+  "repetitions": 3,
+  "completed": 0,
+  "runs": [
+    {
+      "report": "summary-run01.json",
+      "sha256": "b33082b249de8247b298b7dc1d2f7282b5b5e4be38cf92410f11d113a3d9c6bd",
+      "status": "failed",
+      "seconds": 29.641
+    },
+    {
+      "report": "summary-run02.json",
+      "sha256": "fad1a9e278cf0e9f5ef01e9337846fc86f6f17c7f801720243f8f032f378e4b8",
+      "status": "failed",
+      "seconds": 26.469
+    },
+    {
+      "report": "summary-run03.json",
+      "sha256": "d06e7a6bf90c881bf2159c99e09ada519ec0fdca577a9848d6422543cd960a52",
+      "status": "failed",
+      "seconds": 25.765
+    }
+  ],
+  "expert_reviewed": false,
+  "blind_test": false,
+  "scope": "Repeated engineering smoke of one frozen synthetic scenario, not legal accuracy or general reliability."
+}

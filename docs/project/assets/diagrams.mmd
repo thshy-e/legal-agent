@@ -1,0 +1,29 @@
+%% Editable equivalents of the three diagrams rendered in the Word document.
+flowchart TD
+  UI[浏览器工作台] --> API[FastAPI JSON 和 SSE]
+  API --> QA[自然咨询和只读解释]
+  API --> GRAPH[LangGraph 案件图]
+  QA --> K[地域时间知识注册表]
+  GRAPH --> K
+  GRAPH --> TOOL[事实 条件 Decimal 金额 版本规则]
+  QA --> LLM[受限模型输出]
+  GRAPH --> LLM
+  TOOL --> STORE[本机 JSON 共享状态和记录]
+
+%% Workflow
+flowchart TD
+  I[接待] --> R[检索] --> A[分析] --> C[计算] --> V[初审]
+  V -->|符合一次引用修订政策| AR[分析修订] --> RR[独立复审] --> CONF[确认检查]
+  V --> CONF
+  CONF -->|缺失或阻断| STOP[停止并保留状态]
+  CONF -->|用户确认当前版本| D[规范文书] --> DR[文书一致性审查]
+  DR -->|通过| OUT[当前有效草稿]
+  DR -->|失败 限一次重新生成| D
+
+%% Version lifecycle
+flowchart LR
+  V1[版本1 金额7000.10] --> EDIT[应付改为9000.10并保存]
+  EDIT --> INVALID[旧分析 金额 确认 草稿失效]
+  INVALID --> V2[版本2 重算8000.10]
+  V2 --> CONFIRM[用户重新确认]
+  CONFIRM --> DOC[新版本草稿]

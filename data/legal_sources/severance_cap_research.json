@@ -1,0 +1,137 @@
+{
+  "checked_on": "2026-10-25",
+  "purpose": "research_only_not_activated_severance_parameters",
+  "sources": [
+    {
+      "id": "research-gz-average-2025",
+      "url": "https://tjj.gz.gov.cn/stats_newtjyw/tjsj/tjgb/qtgb/content/post_10894378.html",
+      "sha256": "b0384c2e88847b28acc1c7d7caae1a9977e22f5ef51593eaa4748a61cc52d03b",
+      "characters": 1359,
+      "status": "downloaded"
+    },
+    {
+      "id": "research-sz-average-2025",
+      "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tjsj/tjgb/content/post_12907747.html",
+      "status": "failed",
+      "error": "ConnectError: [SSL: BAD_ECPOINT] bad ecpoint (_ssl.c:1000)"
+    },
+    {
+      "id": "research-sz-cap-reply-20260707",
+      "url": "https://www.sz.gov.cn/hdjlpt/detail?pid=3466400&via=pc",
+      "sha256": "21362c5514854903a828cee67f2c86662df6d611aba66a942715071942956bde",
+      "characters": 584,
+      "status": "downloaded"
+    },
+    {
+      "id": "research-sz-average-2025",
+      "url": "https://tjj.sz.gov.cn/zwgk/zfxxgkml/tjsj/tjgb/content/post_12907747.html",
+      "status": "failed",
+      "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://tjj.sz.gov.cn/zwgk/zfxxgkml/tjsj/tjgb/content/post_12907747.html'\nFor more information check: https://developer.mozilla.org/en-US/docs"
+    },
+    {
+      "id": "research-sz-average-2025-mirror",
+      "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tjsj/tjgb/content/mpost_12907800.html",
+      "sha256": "deac375f5b2d9e04d84907b107a7be69a426f074bcac188f1bbca340cbf0baa2",
+      "characters": 1245,
+      "status": "downloaded"
+    },
+    {
+      "id": "research-sz-tax-2026-5",
+      "url": "https://shenzhen.chinatax.gov.cn/sztax/xxgk/tzgg/202609/c6b762960af44d4c855d8cd0e58646b1.shtml",
+      "sha256": "79066fa1cf5c62979c96a4596cf02061892d277df6ae9b7e1610ff08b6170f51",
+      "characters": 1334,
+      "status": "downloaded"
+    },
+    {
+      "id": "research-gz-award-2026-175-2",
+      "url": "https://www.haizhu.gov.cn/attachment/8/8018/8018922/10799846.pdf",
+      "sha256": "c3e329fd871e6d5f4c686e2888419cb0281a5afaaeb6d5b91bc6f5a22084009c",
+      "pdf_sha256": "0ea6ed342c5a8cc959624dd0450cb9ae5389aa1929fc03ed154dd25a1eb16306",
+      "pages": 9,
+      "status": "downloaded",
+      "snapshot": "snapshots/research-gz-award-2026-175-2.txt"
+    }
+  ],
+  "decision": "pending_applicability_and_rounding",
+  "findings": [
+    "2025 annual average wage statistics are published; do not describe them as unavailable.",
+    "Multiple statistical indicators exist. Official statistical publication alone does not settle the exact Article 47 parameter mapping or rounding.",
+    "Retain pending runtime parameters. Do not reuse social-insurance, housing-fund or tax thresholds.",
+    "Shenzhen official mirror mpost_12907800 is now downloaded and its 2025 annual indicators are verified against the saved text. Earlier request failures are retained as history; legal applicability and rounding remain pending.",
+    "2026 Shenzhen tax notice located as research lead; even a downloaded tax threshold is not alone an Article 47 severance parameter."
+  ],
+  "statistical_observations": [
+    {
+      "city": "Shenzhen",
+      "year": 2025,
+      "source_id": "research-sz-average-2025-mirror",
+      "annual_nonprivate_employed": "191367",
+      "annual_nonprivate_on_post": "193881",
+      "annual_private_employed": "99220",
+      "unit": "CNY/year",
+      "published_on": "2026-07-24",
+      "activated_as_severance_parameter": false
+    }
+  ],
+  "additional_review_items_20261025": [
+    {
+      "url": "https://www.haizhu.gov.cn/attachment/7/7874/7874202/10417786.pdf",
+      "record": "穗海劳人仲案字〔2025〕2926号",
+      "pages": [
+        3
+      ],
+      "finding": "搜索摘要中的私营单位月平均工资6825.91及三倍20477.73是被申请人答辩主张，不是该数值已获仲裁委采纳。不得据此激活广州封顶参数。",
+      "status": "research_only_party_argument_not_adopted_rule"
+    },
+    {
+      "url": "https://rsj.sh.gov.cn/dzb/rsj/2025-10-30/pdf/02.pdf",
+      "published_on": "2025-10-30",
+      "page": 1,
+      "finding": "上海人社报案例评析在跨市事实下援引劳动合同法实施条例第14条及约定适用标准因素；不能仅凭单位所在地字段自动解决跨市封顶口径。非广深统一裁审规则，需结合本地口径核验。",
+      "status": "research_only_cross_city_applicability_requires_review"
+    },
+    {
+      "url": "https://www.haizhu.gov.cn/attachment/8/8018/8018922/10799846.pdf",
+      "record": "穗海劳人仲案非终字〔2026〕175-2号",
+      "decision_date": "2026-01-07",
+      "termination_date": "2025-10-31",
+      "source_id": "research-gz-award-2026-175-2",
+      "finding": "第6页在本委认为及核算段采用13704元×3=41112元为赔偿金工资上限，第8页裁决支付41112元。与2025-2926号的当事人单方答辩不同，属实际个案采用。不能据此认定2026年解除的年度指标、适用开始日或广深统一口径；非终局，后续诉讼及生效未核实。原文对合法性表述有内在文字矛盾，保留原文并列人工核查，不自动修正文意。",
+      "status": "historical_case_adopted_amount_not_general_2026_parameter"
+    },
+    {
+      "source_id": "research-sz-tax-2026-5",
+      "url": "https://shenzhen.chinatax.gov.cn/sztax/xxgk/tzgg/202609/c6b762960af44d4c855d8cd0e58646b1.shtml",
+      "document_number": "2026年第5号",
+      "signed_on": "2026-07-31",
+      "published_on": "2026-09-01",
+      "effective_tax_period_from": "2026-07-01",
+      "finding": "原站已成功保存正文：2025年非私营在岗年均193881元，税务通告按月16157元四舍五入取整；一次性补偿所得免税额581643元，住房公积金和年金工资税前扣除口径上限48471元。后两数值分别属年度免税额和税前扣除基数，不能直接标为劳动合同法47条经济补偿工资基数上限。",
+      "status": "official_tax_scope_verified_not_severance_mapping"
+    }
+  ],
+  "rounding_comparisons_research_only": [
+    {
+      "city": "广州",
+      "statistical_year": 2025,
+      "annual_nonprivate_on_post": "171731",
+      "direct_annual_div_4": "42932.75",
+      "round_month_to_cents_then_times3": "42932.76",
+      "round_month_to_integer_then_times3": "42933",
+      "unit": "CNY/month",
+      "activation": false,
+      "reason": "Arithmetic comparison only; neither indicator selection nor legally required rounding/period is established by this calculation."
+    },
+    {
+      "city": "深圳",
+      "statistical_year": 2025,
+      "annual_nonprivate_on_post": "193881",
+      "direct_annual_div_4": "48470.25",
+      "round_month_to_cents_then_times3": "48470.25",
+      "round_month_to_integer_then_times3": "48471",
+      "unit": "CNY/month",
+      "activation": false,
+      "reason": "Arithmetic comparison only; neither indicator selection nor legally required rounding/period is established by this calculation."
+    }
+  ]
+}

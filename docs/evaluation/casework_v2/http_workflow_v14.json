@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "workflow_version": "casework-20261025-v14",
+  "mode": "rules_only",
+  "stale_confirmation_http": 409,
+  "phases": [
+    {
+      "phase": "sse",
+      "tasks": [
+        "intake",
+        "retrieval",
+        "analysis",
+        "calculation",
+        "analysis_review",
+        "confirmation"
+      ]
+    },
+    {
+      "phase": "confirm",
+      "status": "draft_ready",
+      "amount": "7000.10"
+    },
+    {
+      "phase": "amend",
+      "status": "awaiting_confirmation",
+      "amount": "8000.10"
+    },
+    {
+      "phase": "reconfirm",
+      "status": "draft_ready",
+      "amount": "8000.10"
+    }
+  ],
+  "zero_balance": "no_supported_claim",
+  "analysis_history_persisted": true
+}

@@ -1,0 +1,41 @@
+{
+  "verified_on": "2026-10-26",
+  "tool": "Playwright CLI Chromium",
+  "url": "http://127.0.0.1:18080/",
+  "actual_backend": true,
+  "desktop_viewport": [
+    1440,
+    1000
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "checks": {
+    "hello_without_report": true,
+    "exact_article_and_source_expand": true,
+    "explicit_personal_calculation_enters_case": true,
+    "form_and_confirmation_produce_7000_10_draft": true,
+    "reload_restores_history_and_case": true,
+    "explicit_2026_09_due_wage_revision_produces_8000_10": true,
+    "old_document_invalidated_before_reconfirmation": true,
+    "reconfirmation_produces_version_3_draft": true,
+    "historical_enabled_controls": 0,
+    "thanks_returns_chat_bubble": true,
+    "mobile_document_width": 390,
+    "mobile_viewport_width": 390
+  },
+  "console_errors": 0,
+  "console_warnings": 0,
+  "observed_failure": {
+    "query": "为什么需要工资流水？",
+    "outcome": "citation validation failed; safe conversation failure, current case preserved",
+    "successful_answer": false,
+    "included_in_13_case_batch": false
+  },
+  "screenshots": [
+    "output/playwright/conversation-v16-desktop.png",
+    "output/playwright/conversation-v16-mobile.png"
+  ],
+  "limits": "Public synthetic browser engineering flow, not legal accuracy or expert review."
+}

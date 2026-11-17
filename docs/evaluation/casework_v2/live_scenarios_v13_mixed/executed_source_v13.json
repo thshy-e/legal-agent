@@ -1,0 +1,7 @@
+{
+  "archive": "executed_source_v13.zip",
+  "sha256": "5c085f5e0cc446b726fb2e495ef771696d4a0260c008aa99decadb2cb0a35312",
+  "files": 15,
+  "scope": "Exact executed casework modules, runner and frozen scenario input; supporting repository, knowledge and environment remain required. No credentials or conversation store included.",
+  "matches_report_implementation_hashes": true
+}

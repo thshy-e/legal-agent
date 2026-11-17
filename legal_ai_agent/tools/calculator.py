@@ -339,6 +339,8 @@ def _calculate_compensation_tax(context: dict) -> str:
 def calculate_compensation(context: dict) -> str:
     """统一赔偿/补偿计算入口，供普通代码与 LangChain 工具复用。"""
     context = dict(context or {})
+    if context.get("conditional_only"):
+        return "解除条件待核验。请进入案件协同，确认解除依据、履行地、争议日期及工资口径后测算；未提前通知、没有补偿或突然辞退均不能直接推出 N+1 或 2N。"
     calc_type = str(context.get("calc_type") or context.get("type") or "severance").lower()
     reason = str(context.get("reason", "合法解除"))
 
@@ -599,8 +601,10 @@ def extract_case_facts(query: str) -> dict:
         facts["employment_months"] = employment_months
     if salary > 0:
         facts["salary"] = salary
-    if any(keyword in text for keyword in ["违法辞退", "违法解除", "无理由辞退", "无故辞退", "非法辞退", "突然辞退", "无补偿"]):
-        facts["termination_reason"] = "非法辞退"
+    if re.search(r'不是违法(?:辞退|解除)|不属于违法(?:辞退|解除)', text):
+        facts['termination_reason'] = '待判断辞退'
+    elif any(keyword in text for keyword in ["违法辞退", "违法解除", "非法辞退"]):
+        facts["termination_reason"] = "用户主张违法解除（未核验）"
     elif any(keyword in text for keyword in ["被辞退", "辞退了", "解除劳动合同", "公司辞退"]):
         facts["termination_reason"] = "待判断辞退"
     if "未签" in text:
@@ -749,31 +753,9 @@ def build_calculation_context_from_query(query: str) -> Optional[dict]:
     if salary <= 0:
         return None
 
-    if "代通知金" in text and years == 0:
-        context["calc_type"] = "notice_pay"
-        context["reason"] = "单独代通知金"
-    elif any(
-        keyword in text
-        for keyword in [
-            "违法辞退",
-            "违法解除",
-            "无理由辞退",
-            "无故辞退",
-            "非法辞退",
-            "突然辞退",
-            "无补偿",
-            "没有补偿",
-            "未补偿",
-            "工伤期间被辞退",
-            "医疗期被辞退",
-            "孕期被辞退",
-        ]
-    ):
-        context["reason"] = "非法辞退"
-    elif any(keyword in text for keyword in ["n+1", "N+1", "无过失", "代通知金", "未提前通知"]):
-        context["reason"] = "n_plus_1"
-    else:
-        context["reason"] = "合法解除"
+    context['reason'] = '解除条件待核验'
+    context['conditional_only'] = True
+    if '代通知金' in text and years == 0: context['calc_type']='notice_pay'
 
     if years <= 0 and context.get("calc_type") != "notice_pay":
         return None
@@ -784,4 +766,6 @@ def calculate_from_query(query: str) -> Optional[str]:
     context = build_calculation_context_from_query(query)
     if context is None:
         return calculation_missing_info_message(query) if is_calculation_query(query) else None
+    if context.get('calc_type') is None or context.get('calc_type')=='notice_pay':
+        return '解除补偿须先核对履行地、单位所在地、争议及入离职日期、具体解除理由与工资口径。请进入案件协同；突然辞退或未补偿不直接认定2N，未提前通知也不自动适用N+1。当前仅可说明条件公式：N与2N为备选，代通知金仅在第四十条条件具备时考虑。'
     return calculate_compensation(context)

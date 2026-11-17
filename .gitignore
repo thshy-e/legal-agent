@@ -20,6 +20,9 @@ chroma_db/
 db/conversation_state.json
 db/conversation_state.json.tmp
 db/*.bak
+db/legal_indexes/
+.playwright-cli/
+output/playwright/frontend-inline.js
 
 # IDE
 .idea/
@@ -50,3 +53,12 @@ scripts/legacy/
 
 # Evaluation intermediate outputs; keep final_* summaries for portfolio evidence.
 docs/evaluation/current_results/docx_evaluation_results_*
+*.interrupted.bin
+
+# Generated releases, render pages, browser logs and local QA artifacts.
+# Selected public demo screenshots/videos may be force-added explicitly.
+output/
+
+# School application forms contain team contact information and stay local.
+docs/project/劳法智枢大挑作品申报书.docx
+docs/project/劳法智枢大挑作品申报书（B3及C完善版）.docx

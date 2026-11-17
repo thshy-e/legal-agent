@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-31",
+  "document": "docs\\project\\劳法智枢大挑申报说明书第一版.docx",
+  "sha256": "4d0154c411ed40083f892acff9ff6824d6eeb1b65a3a36817c47db801b671412",
+  "source_sha256": "7a143760df1f2414098b1dfdfa2049adb3ca267a39905b79d7d314857281087b",
+  "pages": 24,
+  "chapters": 9,
+  "tables": 6,
+  "figures": 4,
+  "editable_omml_equations": 4,
+  "references": 13,
+  "abstract_characters": 260,
+  "visual_review": "All 24 pages inspected, revised front matter and chart inspected after final render. No clipping or overlap observed.",
+  "renderer": "Microsoft Word print layout Page.EnhMetaFileBits rasterized to PNG",
+  "table_style": "Three horizontal rules following the supplied reference; user reference overrides generic grid-table defaults.",
+  "format": "A4, Songti 12pt, Times New Roman Latin, 1.5 body spacing, two-level headings, 24pt first-line indent, captions below figures and above tables.",
+  "evidence_date": "Existing engineering records through 2026-10-28, technical explanation 2026-10-30; official public sources checked 2026-10-31",
+  "new_model_calls": 0,
+  "application_tests_rerun": false,
+  "application_source_changed": false,
+  "pending": "Actual applicant and supervisor information, professional assessment, blind tests and participant/mobile testing.",
+  "packaged_renderer": "Attempted render_docx.py; LibreOffice soffice.exe unavailable. Native Word pagination used successfully."
+}

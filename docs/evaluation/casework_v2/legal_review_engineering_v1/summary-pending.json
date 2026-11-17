@@ -1,0 +1,30 @@
+{
+  "packet_sha256": "64db4e02849c86e2235dd0717b9ad33f11ffa4c0d9327bf55f1f7cdc7d64a94b",
+  "ratings_sha256": "3466daabea87fbeefbed2405b1eb1d932ae582fd3a9de5a51924fa3fb31d3e1f",
+  "dataset_sha256": "18553e8d07d29927600589709092b0392fff195d7c7f43b8a7b8faa27b5c7af2",
+  "report_sha256": "31e6ee8e1e7a7c0bea82a1f7031bdda41eb0b692aa706a76dcea7428c781ee9d",
+  "kind": "engineering",
+  "blind_test": false,
+  "expert_reviewed": false,
+  "reviewer_identity_verified": false,
+  "variants": {
+    "rules_engineering": {
+      "available_outputs": 60,
+      "reviewed": 0,
+      "pending": 60,
+      "points": 0,
+      "possible_points": 0,
+      "severe_cases": 0,
+      "severe_errors": {},
+      "assessments": {},
+      "dimension_point_ratio": null
+    }
+  },
+  "reviews": [],
+  "unavailable_outputs": [],
+  "limitations": [
+    "Dimension points are human ratings, not a legal accuracy estimate.",
+    "Reviewer identities and qualifications require independent verification.",
+    "Public engineering inputs are not an independent blind test."
+  ]
+}

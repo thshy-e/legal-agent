@@ -1,0 +1,53 @@
+{
+  "verified_on": "2026-10-25",
+  "unittest": {
+    "command": ".\\venv\\Scripts\\python.exe -m unittest discover -s tests",
+    "tests": 44,
+    "passed": 44
+  },
+  "engineering": {
+    "tasks": 60,
+    "passed": 60,
+    "dataset": "public_engineering_not_blind"
+  },
+  "javascript": {
+    "casework": "node --check passed",
+    "inline": "node --check passed"
+  },
+  "browser": {
+    "tool": "Playwright CLI Chromium",
+    "url": "http://127.0.0.1:18080/",
+    "checks": [
+      "facts and evidence possession",
+      "arrears 7000.10 confirmed draft",
+      "amended due wage produces 8000.10 and clears draft",
+      "confirmation required again",
+      "version 3 revised draft and wage table rendered"
+    ],
+    "console_errors_on_final_flow": 0
+  },
+  "model_ablation": {
+    "status": "not_run",
+    "reason": "DASHSCOPE_API_KEY is not configured"
+  },
+  "expert_reviewed": false,
+  "remaining": [
+    "severance cap statistical applicability needs verification",
+    "live model and embedding verification",
+    "independent blind test and legal expert review"
+  ],
+  "python": "3.12.6",
+  "platform": "Windows",
+  "packages": {
+    "fastapi": "0.135.2",
+    "pydantic": "2.12.5",
+    "langgraph": "1.1.3",
+    "langchain": "1.2.13",
+    "langchain-openai": "1.1.12",
+    "dashscope": "1.25.15",
+    "python-dotenv": "1.2.2",
+    "httpx": "0.28.1"
+  },
+  "knowledge_digest": "ffbbb134adeb",
+  "dataset_sha256": "e0fefc4372977ee664c79bf3538a615e89cacd677a26c8d01f3ad7d96c4c1097"
+}

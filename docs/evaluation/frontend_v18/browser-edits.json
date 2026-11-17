@@ -1,0 +1,6 @@
+{
+  "stale_amounts_labeled": true,
+  "dirty_copy_blocked": true,
+  "discard_restores_valid_summary": true,
+  "discard_does_not_submit": true
+}

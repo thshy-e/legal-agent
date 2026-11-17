@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "url": "http://127.0.0.1:18080",
+  "inputs": "synthetic",
+  "confirmation_actor": "automated_test",
+  "mode": "rules_only",
+  "workflow_version": "casework-20261025-v4",
+  "initial_draft": "7000.10",
+  "amended_draft": "8000.10",
+  "old_document_invalidated": true,
+  "stale_confirmation_http_status": 409,
+  "wage_statement_accepted_and_persisted": true,
+  "real_model_end_to_end_verified": false
+}

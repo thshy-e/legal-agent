@@ -116,23 +116,8 @@ def _keyword_search(db, query, k):
     return [doc for _, doc in docs[:k]]
 
 def build_vector_store(texts, collection_name="labor_law"):
-    """
-    构建并持久化向量库，支持动态管理（增删改）
-    """
-    if "law" in collection_name:
-        docs = split_law_articles(texts, law_name=collection_name)
-    else:
-        docs = _default_split_documents(texts)
-
-    embedding = get_embedding()
-
-    db = Chroma.from_documents(
-        docs,
-        embedding,
-        collection_name=collection_name,
-        persist_directory=PERSIST_DIR
-    )
-    return db
+    """Deprecated unversioned builder; all new builds consume the manifest."""
+    raise ValueError('无元数据文本构建已停用。请更新data/legal_sources/manifest.json并运行python build_db.py --activate；旧库保留。')
 
 def load_vector_store(collection_name="labor_law"):
     """

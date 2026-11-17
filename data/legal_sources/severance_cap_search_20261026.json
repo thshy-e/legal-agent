@@ -1,0 +1,49 @@
+{
+  "checked_on": "2026-10-26",
+  "scope": "Supplemental official-domain discovery, research only; not proof that no other official guidance exists.",
+  "queries": [
+    {
+      "query": "2026 经济补偿 171731",
+      "domains": [
+        "rsj.gz.gov.cn",
+        "gz.gov.cn"
+      ]
+    },
+    {
+      "query": "2026 经济补偿 193881",
+      "domains": [
+        "hrss.sz.gov.cn",
+        "sz.gov.cn"
+      ]
+    },
+    {
+      "query": "2026 经济补偿 封顶 工资 标准",
+      "domains": [
+        "hrss.sz.gov.cn",
+        "szft.gov.cn",
+        "haizhu.gov.cn"
+      ]
+    },
+    {
+      "query": "2026 赔偿金 42932.75",
+      "domains": [
+        "gz.gov.cn",
+        "court.gov.cn"
+      ]
+    }
+  ],
+  "relevant_results": [
+    {
+      "url": "https://www.szft.gov.cn/bmxx/qrlzyj/ztfw/jyfw/cjwt/content/post_12294924.html",
+      "title": "解除或者终止劳动合同的经济补偿按照什么标准支付？列入经济补偿金计发的标准是什么？",
+      "finding": "Official district HR FAQ explains wage composition and minimum-wage floor; retrieved text does not establish a 2026 Article 47 city cap value/rounding/applicability period."
+    },
+    {
+      "url": "https://hrss.sz.gov.cn/tzgg/content/post_12954870.html",
+      "finding": "Official 2026 Shenzhen minimum-wage notice concerns minimum wage, not Article 47 three-times-average cap; existing purpose separation retained."
+    }
+  ],
+  "decision": "No additional evidence sufficient to activate severance_cap in this pass. Existing pending values and manual review questions retained.",
+  "runtime_manifest_changed": false,
+  "expert_reviewed": false
+}

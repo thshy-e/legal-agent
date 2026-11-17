@@ -1,0 +1,16 @@
+[
+  {
+    "file": "purify.min.js",
+    "source": "https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js",
+    "sha256": "e19a6ddfdd500dcef14b126ab2d93c1858e918deaf78c277307cf00e726efe72",
+    "bytes": 21497,
+    "note": "Retrieved through the browser; license header retained; local newline normalization."
+  },
+  {
+    "file": "marked.min.js",
+    "source": "https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js",
+    "sha256": "40f1b022e24bbd432e11e9ef0f00f70eca17c6923c8a03a2aa8a4389fa033c01",
+    "bytes": 39904,
+    "note": "Retrieved through the browser; license header retained; local newline normalization."
+  }
+]

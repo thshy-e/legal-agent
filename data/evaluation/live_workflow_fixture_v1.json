@@ -1,0 +1,46 @@
+{
+  "version": "live-workflow-fixture-v1",
+  "inputs": "synthetic",
+  "initial_request": {
+    "facts": {
+      "workplace": "广州",
+      "employer_city": "广州",
+      "dispute_date": "2026-10-01",
+      "start_date": "2026-01-01",
+      "wage_statement": "我目前仍在该单位工作，与单位存在普通劳动关系，2026年9月正常提供了整月劳动、无缺勤。劳动合同约定9月工资10000.10元，不含争议绩效、无代扣抵扣，9月30日应付、仅收到3000元。这些都是我的陈述，持有材料但未经核验。",
+      "wages": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "due": "10000.10",
+          "paid": "3000"
+        }
+      ],
+      "evidence": {
+        "劳动合同": "claimed_present",
+        "工资流水": "claimed_present",
+        "工作沟通记录": "claimed_present",
+        "考勤": "missing"
+      }
+    }
+  },
+  "amend_request": {
+    "facts": {
+      "wage_statement": "更正先前工资陈述：我仍在职，2026年9月正常提供整月劳动、无缺勤，劳动合同约定9月工资为11000.10元，不含争议绩效、无代扣抵扣，9月30日应付、仅收到3000元。此前10000.10为我填错，现以本次陈述为准，材料未经核验。",
+      "wages": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "due": "11000.10",
+          "paid": "3000"
+        }
+      ]
+    }
+  },
+  "initial_amount": "7000.10",
+  "amended_amount": "8000.10",
+  "selected_claims": [
+    "arrears"
+  ],
+  "note": "Inputs frozen from the preceding failed wage-statement smoke. Repeated runs must use these exact requests, not search for a passing scenario."
+}
